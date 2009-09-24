@@ -1,0 +1,7 @@
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /search
+
+Sitemap: http://padresdivorciados.blogspot.com/feeds/posts/default?orderby=updated

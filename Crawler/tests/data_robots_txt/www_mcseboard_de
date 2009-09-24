@@ -1,0 +1,59 @@
+# robots.txt for http://www.mcseboard.de/
+# Last change NO 2009/07/20
+# 
+#
+
+Sitemap: http://www.mcseboard.de/sitemap_index.xml.gz
+
+#
+User-agent: TurnitinBot
+Disallow: /
+User-agent: Teleport
+Disallow: /
+User-agent: HtTrack 
+Disallow: /
+User-agent: ia_archiver
+Disallow: /
+User-agent: WebZip
+Disallow: /
+User-agent: WebCopier
+Disallow: /
+User-agent: WebBandit
+Disallow: /
+
+User-agent: *
+Disallow: /attachments/
+Disallow: /ads/
+Disallow: /ajax.php
+Disallow: /attachment.php
+Disallow: /calendar.php
+Disallow: /cron.php
+Disallow: /editpost.php
+Disallow: /global.php
+Disallow: /image.php
+Disallow: /inlinemod.php
+Disallow: /joinrequests.php
+Disallow: /login.php
+Disallow: /member.php
+Disallow: /memberlist.php
+Disallow: /memberlist.html
+Disallow: /misc.php
+Disallow: /moderator.php
+Disallow: /newattachment.php
+Disallow: /newreply.php
+Disallow: /newthread.php
+Disallow: /online.php
+Disallow: /poll.php
+Disallow: /printthread.php
+Disallow: /private.php
+Disallow: /profile.php
+Disallow: /register.php
+Disallow: /report.php
+Disallow: /reputation.php
+Disallow: /search.php
+Disallow: /sendmessage.php
+Disallow: /showgroups.php
+Disallow: /subscription.php
+Disallow: /threadrate.php
+Disallow: /usercp.php
+Disallow: /usernote.php

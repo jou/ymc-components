@@ -1,0 +1,128 @@
+===============
+ymcPipe, Design
+===============
+
+The components base classname should be one word only, because there will be
+other components, which extends the base and a components name should not be
+longer then two words.
+
+e.g. ymcExtract, ymcPipe
+
+Interfaces and Classes
+======================
+
+Filters
+-------
+
+Interfaces implemented by Filters
+
+1..n of:
+ymcExtractFilter...Consumer (...= DomDocument, DomNode, DomNodeList, String, StringArray)
+
+1 of:
+ymcExtractFilter...Producer (...= as in Consumer)
+
+All filters must utilize the magic method __set_state() to ease persistency.
+
+Parsers
+-------
+
+The parsing step adds another level of error checking. While Filters can check
+only for syntactical correctness, the parser should add as much semantical
+check as possible. A DateTime parser can check for example whether a filtered
+string representing a date actually is a date. The string "32/01/08" does not
+seem to be a correct date. One also needs to configure the DateTime Parser to
+parse the correct format, e.g. english vs. german date formats.
+
+Collectors
+----------
+
+Collects the output of parsers and gives them a name. Represents the end of a
+parsing graph. If different filter and parsing routes for one page element
+exists, then you define two collectors at the end of those routes giving the
+elements the same name. This implies, that both routes should have the same
+result.
+
+WebDocument
+-----------
+
+Contains Meta Informations about the originally fetched web page like:
+- meta tags
+- page title
+- date of retrieval
+- http header informations of request and response
+
+The WebDocument object is given to all filters during the data extraction
+process.
+
+Exceptions
+----------
+
+The informations about an exception should be structured enough so that they
+can easily be saved to a database and that reports can be created about 
+
+* types of errors
+* which site (newspaper) makes problems
+* the url of the page
+* when has the site been loaded
+* when did the error occur (parsing can be later then loading from the web)
+* how important is the error
+* the exact XPath query or Regular Expression that has been tried
+* the exact flow of filters (with their input and output) applied before the
+  filter which throws the exception
+
+Extraction Graph (Pipe)
+-----------------------
+
+Holds the extraction graph, has methods to build and modify the graph.
+Implements the visitor pattern.
+
+Extraction Graph Node
+---------------------
+
+Graph nodes are filters, parsers and collectors and therefor they all need to
+implement the graph node interface. A graph node can be visited (visitor
+pattern) and knows to which graph it belongs.
+A node belongs to a pipe and can not exist outside of a pipe.
+
+Execution visitor
+-----------------
+
+Traverses the graph and executes all nodes, handles errors.
+
+ResultSet
+---------
+
+Combines the results of all Collector nodes.
+
+Notes
+=====
+
+This project is suitable for test driven Development (PHPUnit):
+* No GUI or Frontend to test the code
+* Resulting project needs to run with little human interaction
+* Individual parts of the project are loosely coupled and easily testable
+
+ezcWorkflow
+-----------
+
+Would not be ideal, because:
+- There are no means to pipe data from one node to the next
+- Error handling is not possible. The ezcWorkflow expects you to model error
+  handling as part of the workflow graph, which would be overly complicated in
+  our case, because we need error handling on every node.
+- The state of executed nodes is not persisted after execution left the node,
+  but we want to know the state of all nodes in case of errors.
+- There is no predefined way to model the fact, that certain nodes require
+  certain types of input 
+
+However large parts of ezcWorkflow are needed by us and can be copied:
+
+- Visitor pattern
+- Graph creation, modification, execution and persistency methods
+- Graph vizualization
+
+
+There is a project drawing graphs with javascript:
+http://code.google.com/p/canviz/
+

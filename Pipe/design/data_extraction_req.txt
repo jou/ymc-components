@@ -1,0 +1,73 @@
+====================
+ymcPipe Requirements
+====================
+
+:Author: Thomas Koch (YMC)
+
+Introduction
+============
+
+Description
+-----------
+
+The component should provide an environment to define, execute, supervise and
+debug chains of data extraction filters (also called wrappers).  The purpose is
+to automatically retrieve predefined sets of data from large numbers of equally
+structured web pages. Such web pages can be
+
+* newsletter articles
+* blog posts
+* webshops
+* social networks
+
+Available Implementations
+-------------------------
+
+* Apache Cocoon: Seems to be overly complicated and to work only on well-formed
+  XML and does not provide Regular Expressions.
+* Web Harvester[1]: Small one-man Project on Sourceforge, java, BSD. Low level
+  of code quality and reported performance issues in the forum. Last release
+  oct07, only 27 revisions in SVN, very few documentation
+* The Author of Web Harvester also wrote htmlCleaner[2], a project to transform
+  erroneous html to XML.
+
+Requirements
+============
+
+* Provide generic Filters to extract data with XPath, Regular Expressions, ...?
+* A later version should include filters based on CSS-Selectors or
+  CSS-Properties of HTML-Tags ("Take the largest text as Title")
+* Filters can be chained to directed acyclic graphs (data extraction graphs)
+* It must be possible to define filters to subtract some unwanted part out of
+  the good text, e.g. advertising in an article text
+* Provide generic Parsers working on input from filters and outputting
+  structured data (DateTime, GeoCoordinates, Prices, Author names...)
+* Provide verbose informations about failures in extraction to help on
+  debugging by non-developers
+* Do not silently ignore errors, but provide also notices and warnings about
+  things that may be problems in the data extraction process.
+* Provide an API for the definition, execution and debugging of data extraction
+  graphs to build a GUI upon
+* Provide an API for other components that persist data extraction graphs to
+  files or databases
+
+Design goals
+============
+
+
+
+Special considerations
+======================
+
+The following tasks are not to be done by this component:
+
+* retrieving input informations from the internet. The data to work on should
+  be retrieved independently by another component.
+* Persisting the output data. This should be the task of the application using
+  this component.
+* Coordination of multiple instances of this component working in parallel.
+  This should also be handled by the application in conjunction with the
+  operation system.
+
+[1] http://sourceforge.net/projects/web-harvest/
+[2] http://sourceforge.net/projects/htmlcleaner/

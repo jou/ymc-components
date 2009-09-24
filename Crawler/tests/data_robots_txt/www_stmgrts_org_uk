@@ -1,0 +1,3 @@
+User-agent: *
+    Disallow: /static/editPages.cgi
+    Disallow: /cgi-bin/train_parser.cgi

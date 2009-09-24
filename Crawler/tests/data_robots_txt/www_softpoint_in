@@ -1,0 +1,46 @@
+sitemap: http://www.softpoint.in/sitemap.xml
+
+User-agent: *
+# disallow all files in these directories
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /wp-*
+Disallow: /ar/
+Disallow: /de/
+Disallow: /el/
+Disallow: /fi/
+Disallow: /fr/
+Disallow: /hi/
+Disallow: /id/
+Disallow: /it/
+Disallow: /iw/
+Disallow: /ja/
+Disallow: /ko/
+Disallow: /nl/
+Disallow: /no/
+Disallow: /pl/
+Disallow: /pt/
+Disallow: /ro/
+Disallow: /stale/
+Disallow: /sv/
+Disallow: /th/
+Disallow: /vi/
+Disallow: /zh/
+Disallow: /ru/
+Disallow: /es/
+Disallow: /bg/
+Disallow: /da/
+Disallow: /hr/
+Disallow: /sk/
+Disallow: /sl/
+Disallow: /tl/
+Disallow: /tr/
+Disallow: /uk/
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /wp-content/uploads/

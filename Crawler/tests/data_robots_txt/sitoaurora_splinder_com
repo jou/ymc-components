@@ -1,0 +1,28 @@
+User-agent: *
+Disallow: /category/
+Disallow: /member/
+Crawl-delay: 120 
+
+User-agent: Slurp
+Crawl-delay: 120 
+
+User-agent: YahooSeeker 
+Disallow: / 
+
+User-agent: TurnitinBot
+Disallow: /
+
+User-agent: girafa
+Disallow: /
+
+User-agent: mirago
+Disallow: /
+
+User-Agent: OmniExplorer_Bot
+Disallow: /
+
+User-agent: linksmanager
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /*splinder=

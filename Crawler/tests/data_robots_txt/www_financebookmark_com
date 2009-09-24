@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wp-admin
+Disallow: /wp-content/plugins
+Disallow: /wp-content/themes
+Disallow: /wp-includes
+Disallow: /?s=
+Sitemap:http://www.financebookmark.com/sitemap.xml

@@ -1,0 +1,11 @@
+# robots.txt zu http://www.danglar.de/
+
+User-agent: *
+Allow: *
+Disallow: /alt/
+Disallow: /version2/
+Disallow: /LoPVIITrailer/
+Disallow: /der-flim/
+Disallow: /img/
+Disallow: /logs/
+Disallow: /Lieder/

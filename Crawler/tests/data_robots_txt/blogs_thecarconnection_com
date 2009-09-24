@@ -1,0 +1,8 @@
+# for WEB server
+User-agent: *
+#
+# special rule
+Disallow: /common/
+Disallow: /pricequote/
+Disallow: /showurl/
+Disallow: /test_creatives.html

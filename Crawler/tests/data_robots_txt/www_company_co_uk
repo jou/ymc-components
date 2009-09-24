@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /?module=roles
+Disallow: /*?theme=rss
+Disallow: /base/rss
+Disallow: /base/email
+Disallow: /?module=roles&func=register
+Disallow: /index.php?module=roles&func=register
+Disallow: /*?theme=print
+Disallow: /index.php/tags*
+Disallow: /index.php/topic*
+Disallow: /*?

@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://new-cell-phone.org/sitemap.xml
+# END XML-SITEMAP-PLUGIN

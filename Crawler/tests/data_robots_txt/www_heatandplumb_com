@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /forum/
+Disallow: /chris/
+Disallow: /cgi-bin/

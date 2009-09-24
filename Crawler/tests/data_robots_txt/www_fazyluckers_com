@@ -1,0 +1,5 @@
+User-agent: Fasterfox
+Disallow: /i
+
+User-agent: Slurp 
+Crawl-delay: 240

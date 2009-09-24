@@ -1,0 +1,10 @@
+* How to deal with id of nodes?
+  - Should it be equal over all versions of a pipe?
+  - May ids be recreated on every save of the pipe, even in the same PHP request?
+
+* Do we need a NodeList class with:
+  - getById( $id )
+  - count
+  - isNodeinList( $node )
+  Would be used as $inNodes, $outNodes of every node and as $pipe->nodes 
+

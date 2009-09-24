@@ -1,0 +1,23 @@
+User-agent: Googlebot	# Google allows wildcards
+User-agent: Slurp		# Yahoo does too
+Disallow: /edit
+Disallow: /print
+Disallow: /healthystirling
+Disallow: /DE/
+Disallow: /de/
+Disallow: /ES/
+Disallow: /es/
+Disallow: /searchsmr
+Disallow: /leweekend
+
+# All others
+User-agent: *
+Disallow: /edit
+Disallow: /print
+Disallow: /healthystirling
+Disallow: /DE/
+Disallow: /de/
+Disallow: /ES/
+Disallow: /es/
+Disallow: /searchsmr
+Disallow: /leweekend

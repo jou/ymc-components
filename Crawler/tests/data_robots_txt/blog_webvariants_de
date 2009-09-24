@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /drafts/
+Disallow: /fcgi-bin/
+Disallow: /redaxo/
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://blog.webvariants.de/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN

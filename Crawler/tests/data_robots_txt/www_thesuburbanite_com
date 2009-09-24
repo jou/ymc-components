@@ -1,0 +1,9 @@
+
+User-agent: Topix.net
+Disallow: /
+User-agent: *
+Disallow: /mi-holland
+User-agent: *
+Disallow: /*?view
+User-agent: *
+Disallow: /!/

@@ -1,0 +1,9 @@
+###
+# robots.txt file created at http://www.yellowpipe.com
+# For domain: http://www.farmprogress.com
+###
+
+User-agent: *
+Disallow:
+Crawl-delay: 10
+

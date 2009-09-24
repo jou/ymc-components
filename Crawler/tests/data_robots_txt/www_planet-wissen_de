@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /medien
+Disallow: /code
+Allow: /
+Disallow: /recommend/index.jsp

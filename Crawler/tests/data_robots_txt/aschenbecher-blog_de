@@ -1,0 +1,30 @@
+User-agent: *
+
+Disallow: /kontakt/
+Disallow: /kontakt/datenschutz/
+Disallow: /comments/feed/
+Disallow: /feed/
+
+User-agent: ia_archiver
+Disallow: /
+User-agent: ia_archiver/1.6
+Disallow: /
+
+User-agent: web collector
+Disallow: /
+User-agent: Sniper
+Disallow: /
+User-agent: sonic
+Disallow: /
+User-agent: eMailReaper
+Disallow: /
+User-agent: Email Magnet
+Disallow: /
+User-agent: Platinum 3
+Disallow: /
+User-agent: Extractor
+Disallow: /
+User-agent: WebWeasel
+Disallow: /
+User-agent: Web Mole
+Disallow: /

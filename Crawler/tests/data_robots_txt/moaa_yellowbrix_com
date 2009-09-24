@@ -1,0 +1,6 @@
+User-agent: Mediapartners-Google*
+Disallow: /
+Allow: /pages/industrywatch/Headlines.nsp
+
+User-agent: *
+Disallow: /

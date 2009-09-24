@@ -1,0 +1,4 @@
+User-agent: *
+Crawl-delay: 5
+Request-rate: 1/5
+Sitemap: http://club-hi5.exteen.com/sitemap.xml

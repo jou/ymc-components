@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /secret
+Disallow: /referrers
+Disallow: /mostread
+Disallow: /month

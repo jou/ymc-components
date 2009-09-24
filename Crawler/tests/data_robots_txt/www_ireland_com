@@ -1,0 +1,15 @@
+User-agent: Mediapartners-Google*
+Disallow:
+ 
+User-agent: *
+Disallow: /*termsconditions
+Disallow: /*moreover
+Disallow: /*HOTEL
+Disallow: /*aboutus
+Disallow: /*privacypolicy
+Disallow: /*contactus
+Disallow: /*accessibility
+Disallow: /*email
+Disallow: /*jsessionid
+Disallow: /*travellocalguides
+Disallow: /*cmpid 

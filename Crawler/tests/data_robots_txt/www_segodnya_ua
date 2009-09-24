@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: /i/
+Disallow: /g/
+Disallow: /pix/
+Disallow: /basket/
+Disallow: /bn/
+Disallow: /sendtofriend/
+Disallow: /advertisement/
+Disallow: /mybasket/

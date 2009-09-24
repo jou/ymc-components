@@ -1,0 +1,154 @@
+ymcHtmlForm
+~~~~~~~~~~~
+
+.. contents:: Table of Contents
+
+Introduction
+============
+
+
+Characteristics
+===============
+
+The component is not a form builder. The data structure of this component is
+optimized to parse the $_POST/$_GET arrays. Building forms requires totally
+different structures and should therefor be handled by another component.
+
+Access to input is abstracted in an interface. This makes it much easier to
+test the component itself and program build upon it with unit tests.
+
+It is possible to program validation rules that depend on multiple elements.
+
+- Form objects can be used
+
+  - inside a template to mark erroneous fields
+
+  - in a system like eZ Publish, where a form is build from many
+    datatypes
+
+  - in the controller to get quick access to validated user input
+
+- Element Groups can be reused in different forms
+
+- Forms can be represented as PHP classes:
+  $regForm = new myAppRegistrationForm
+
+- All Classes can be replaced by other implementations, since checks are
+  done against interfaces.
+
+
+
+Comparission with other PHP libraries
+=====================================
+
+Agavi
+-----
+
+- Agavi: AgaviValidator
+  http://www.agavi.org/
+  interesting
+
+Codeigniter 
+-----------
+
+http://codeigniter.com/user_guide/libraries/form_validation.html
+
+Symfony
+-------
+
+http://www.symfony-project.org/forms/1_2/en/
+
+- Two different components for form parsing and building
+
+Not so interesting
+------------------
+
+- http://phpfuse.net/wiki/index.php?title=API:FuseFormValidator
+
+Crap
+----
+
+- ZF.
+
+- CakePHP: One class FormHelper
+
+- kohanaphp
+  http://dev.kohanaphp.com/projects/formo/repository/browse/trunk/libraries
+  CRAP
+
+Class overview
+==============
+
+ymcHtmlForm, ymcHtmlFormGeneric
+  Represents a form, allows direct access to all elements and is the main
+  access point for applications using this component.
+
+ymcHtmlFormElementsGroup, ymcHtmlFormElementsGroupGeneric
+  Groups elements into logical units.
+
+ymcHtmlFormElement, ymcHtmlFormElementBase
+  Represents one input element.
+
+Usage Examples
+==============
+
+Simple Textboxes
+----------------
+
+Just show two textboxes, a button and the values, if they're valid, that means not empty.
+
+.. include:: examples/simple.php
+   :literal:
+
+Now it's of course annoying to reenter all data only because one field failed.
+So we take the value of the elements and redisplay them::
+
+    <input id="form-element-forename" 
+           type="text" name="forename" 
+           value="<?php echo htmlentities( $form['forename']->value ); ?>" 
+           />
+
+As a next step we could mark the failed fields with a css class:: 
+
+    <input id="form-element-forename" 
+           type="text" name="forename" 
+           class="<?php echo $form['forename']->failed ? 'failed' : ''; ?>"
+           value="<?php echo htmlentities( $form['forename']->value ); ?>" 
+           />
+
+The failed property is true if the field failed the validation.
+
+As you can see, the input element already starts to look messy, so we better
+don't repeat all the stuff for the second element but display both in a foreach
+loop (or use a template engine):
+
+.. include:: examples/redisplay.php
+   :literal:
+   :start-after: <!--BEGINCHANGEDHTML-->
+   :end-before: <!--ENDCHANGEDHTML-->
+
+One class for one form
+----------------------
+
+A design principle that is encouraged by this component is too have one PHP
+class for each HTML form in your application. So instead of adding the form
+elements in the controller one just instantiates the right class:
+
+.. include:: examples/redisplay.php
+   :literal:
+   :start-after: BEGINFORMINIT
+   :end-before: // ENDFORMINIT
+
+This principle seems to be overkill for such a simple form but can quickly
+become useful ones the forms become more complicate.
+
+
+More information
+================
+
+The filters and their parameters are documented in the
+`filter documentation`_.
+
+.. _`filter documentation`: http://php.net/filter
+
+

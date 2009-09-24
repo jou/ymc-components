@@ -1,0 +1,37 @@
+# Robots.txt zu http://www.vitanet.de/
+
+# Wer ueber die Domain www.vitanet.de kommt, sollte
+# das normale Gesundheitsportal spidern koennen, nicht
+# aber die apothekenrelevanten Bereiche
+ 
+User-agent: *
+Disallow: /media/adserver/
+Disallow: /media/content/
+Disallow: /vitanet/kooperationspartner/drei-tasten-handy/
+Disallow: /vitanet/kooperationspartner/drei_tasten_handy/
+Disallow: /apotheke/D11442
+Disallow: /apotheke/D11452
+Disallow: /apotheke/D11453
+Disallow: /apotheke/D11454
+Disallow: /apotheke/D11455
+Disallow: /apotheke/D11467
+Disallow: /apotheke/D11474
+Disallow: /apotheke/D11476
+Disallow: /apotheke/D11488
+Disallow: /apotheke/D11489
+Disallow: /apotheke/D11490
+Disallow: /apotheke/D11491
+Disallow: /apotheke/D11516
+Disallow: /apotheke/D32661
+Disallow: /apotheke/D32810
+
+# Disallow: /apotheken/
+# Disallow: /apotheke/
+
+# Ausnahme: INSUMA
+User-agent: InsumaScout/1.27
+Disallow:
+
+# Yahoo News Crawler
+User-agent: Yahoo-Newscrawler
+Disallow:

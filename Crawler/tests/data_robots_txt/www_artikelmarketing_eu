@@ -1,0 +1,17 @@
+# Alle Robots ausschlieﬂen
+User-agent: *
+Disallow: /blogfeed/
+Disallow: /klugerdd/
+Disallow: /logs/
+Disallow: /usage/
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+
+
+# Massendownloader vom CGI Verzeichnis fernhalten
+User-agent: wget
+User-agent: webzip
+User-agent: webmirror
+User-agent: webcopy
+Disallow: /cgi-bin/

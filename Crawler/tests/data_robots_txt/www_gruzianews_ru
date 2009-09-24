@@ -1,0 +1,10 @@
+User-agent: *
+Disallow:
+
+User-Agent: Yandex
+Disallow:
+Host: www.gruzianews.ru
+
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://www.gruzianews.ru/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN

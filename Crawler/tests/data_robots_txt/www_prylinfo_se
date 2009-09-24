@@ -1,0 +1,7 @@
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /search
+
+Sitemap: http://www.prylinfo.se/feeds/posts/default?orderby=updated

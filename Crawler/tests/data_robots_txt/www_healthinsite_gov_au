@@ -1,0 +1,133 @@
+User-agent: *
+####
+# - trap to catch naught bots - alan
+Disallow: /email-addresses/
+#
+# Block search engine and thesaurus
+####
+Disallow: /search/thesaurus_levels.cfm
+Disallow: /search/thesaurus_search_new.cfm
+Disallow: /search/thesaurus_engine_top.cfm
+Disallow: /search/search_advanced_new.cfm
+Disallow: /search_advanced.cfm
+Disallow: /search_advanced_new.cfm
+Disallow: /search_advanced_meta.cfm
+Disallow: /ve_search_tips.cfm
+Disallow: /thesaurus_engine_go.cfm
+Disallow: /thesaurus_levels.cfm
+Disallow: /thesaurus_engine_top.cfm
+Disallow: /search97cgi
+####
+# Block old pages
+####
+Disallow: /T.cfm
+Disallow: /t.cfm
+Disallow: /D.cfm
+Disallow: /E.cfm
+Disallow: /N.cfm
+Disallow: /C.cfm
+Disallow: /B.cfm
+Disallow: /news.cfm
+####
+# Block internal & external access
+#  Only access via englishified urls
+####
+#Disallow: /content/external
+Disallow: /content/internal
+####
+# Block logon.cfm
+####
+Disallow: /content/logon.cfm
+####
+# Block news lists
+####
+Disallow: /content/news/news.cfm
+#####
+# Block all old deep topics
+#####
+Disallow: /topics/Adolescence/
+Disallow: /topics/Adulthood/
+Disallow: /topics/Ageing/
+Disallow: /topics/Allergies_and_Hypersensitivities/
+Disallow: /topics/Arthritis/
+Disallow: /topics/Asthma/
+Disallow: /topics/Autoimmune_Diseases/
+Disallow: /topics/Birth/
+Disallow: /topics/Breast_Cancer/
+Disallow: /topics/Cancer/
+Disallow: /topics/Child_Health/
+Disallow: /topics/Childhood/
+Disallow: /topics/Chronic_Conditions_and_Injury/
+Disallow: /topics/Chronic_Fatigue_Syndrome/
+Disallow: /topics/Complementary_and_Alternative_Therapies/
+Disallow: /topics/Coping_in_a_crisis/
+Disallow: /topics/Dementia/
+Disallow: /topics/Depression/
+Disallow: /topics/Diabetes/
+Disallow: /topics/Diet_and_Overweight/
+Disallow: /topics/Digestion_and_Stomach_Disorders/
+Disallow: /topics/Drugs/
+Disallow: /topics/Employment/
+Disallow: /topics/End_of_Life/
+Disallow: /topics/Eye_Health_and_Vision_Impairment/
+Disallow: /topics/Family_Life/
+Disallow: /topics/Food_and_Nutrition/
+Disallow: /topics/Health_insurance/
+Disallow: /topics/Heart__Stroke_and_Vascular_Health/
+Disallow: /topics/Hepatitis/
+Disallow: /topics/Hospitalisation/
+Disallow: /topics/Immunisation_and_Vaccine_Preventable_Diseases/
+Disallow: /topics/Infectious_Diseases/
+Disallow: /topics/Injury_Prevention_and_Control/
+Disallow: /topics/Kidney_and_Urinary_Tract_Diseases/
+Disallow: /topics/Legal_and_regulatory_issues/
+Disallow: /topics/Living_with_a_disability/
+Disallow: /topics/Living_with_disease/
+Disallow: /topics/Medicines/
+Disallow: /topics/Men_s_Health/
+Disallow: /topics/Menopause/
+Disallow: /topics/Mental_Health/
+Disallow: /topics/Middle_Age/
+Disallow: /topics/Musculoskeletal_conditions/
+Disallow: /topics/Nervous_System_Diseases/
+Disallow: /topics/Obesity/
+Disallow: /topics/Osteoporosis/
+Disallow: /topics/Pregnancy/
+Disallow: /topics/Sexual_Health/
+Disallow: /topics/Skin_Cancer/
+Disallow: /topics/Smoking/
+Disallow: /topics/Sports__exercise_and_fitness/
+Disallow: /topics/Stroke/
+Disallow: /topics/Suicide_Prevention/
+Disallow: /topics/Support_Services/
+Disallow: /topics/Travel_Health_and_Safety/
+Disallow: /topics/Women_s_Health/
+
+####
+# Block external access to htdig
+#  Only access via englishified urls
+####
+User-agent: htdig
+Disallow: /search/thesaurus_levels.cfm
+Disallow: /search/thesaurus_search_new.cfm
+Disallow: /search/thesaurus_engine_top.cfm
+Disallow: /search/search_advanced_new.cfm
+Disallow: /search_advanced.cfm
+Disallow: /search_advanced_new.cfm
+Disallow: /search_advanced_meta.cfm
+Disallow: /ve_search_tips.cfm
+Disallow: /thesaurus_engine_go.cfm
+Disallow: /thesaurus_levels.cfm
+Disallow: /thesaurus_engine_top.cfm
+Disallow: /search97cgi
+Disallow: /content/internal
+Disallow: /content/external
+Disallow: /content/logon.cfm
+Disallow: /content/news/news.cfm
+
+####
+# Block MJ12 Bot - too aggressive
+####
+User-Agent: MJ12bot
+Disallow:   /
+

@@ -1,0 +1,893 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <title>Creating a user-centric site in Drupal </title>
+  
+  
+<meta name="description" content="A little while ago, while talking in the #drupal mailing list, I showed my latest creation to one of the core developers there. His reaction was 'Wow, I am always surprised what people use Drupal for'. His surprise is somehow justified: I did create a site for a bunch of [strippers in Perth](http://www.allhotstrippers.com). Yes, I would classify the link _quite_ work-safe.    After talking about it for a while, I decided that it would be a good idea to write a short case study about how I created the site. So, here we go.    # The constraints    The site needed to be hosted in Perth.">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+  <!-- BEGIN read now odiogo.com #1 -->
+  <script type="text/javascript"
+    language="javascript" src="http://widget.odiogo.com/odiogo_js.php?feed_id=89932&platform=drupal"></script>
+  <!-- END read now odiogo.com #1 -->
+
+<link rel="shortcut icon" href="/sites/www.freesoftwaremagazine.com/themes/fsm_new/favicon.ico" type="image/x-icon" />
+  <style type="text/css" media="all">@import "/modules/aggregator/aggregator.css";</style>
+<style type="text/css" media="all">@import "/modules/book/book.css";</style>
+<style type="text/css" media="all">@import "/modules/node/node.css";</style>
+<style type="text/css" media="all">@import "/modules/poll/poll.css";</style>
+<style type="text/css" media="all">@import "/modules/system/defaults.css";</style>
+<style type="text/css" media="all">@import "/modules/system/system.css";</style>
+<style type="text/css" media="all">@import "/modules/user/user.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/MAINTAINED_BY_TONY/extra_voting_forms/widgets/default/extra_voting_forms_all.css";</style>
+<style type="text/css" media="all">@import "/modules/comment/comment.css";</style>
+<style type="text/css" media="all">@import "/sites/www.freesoftwaremagazine.com/themes/fsm_new/style.css";</style>
+  <script type="text/javascript" src="/misc/jquery.js"></script>
+<script type="text/javascript" src="/misc/drupal.js"></script>
+<script type="text/javascript" src="/sites/all/modules/MAINTAINED_BY_TONY/extra_voting_forms/extra_voting_forms.js"></script>
+<script type="text/javascript">Drupal.extend({ settings: { "extra_voting_forms": { "only_one_vote": 1, "login_page": "user/login", "base_path": "/", "jquery_timeout": "2000", "hide_karma_form": false } } });</script>
+  <script type="text/javascript"> </script>
+
+</head>
+
+<body>
+  <!-- Karma module -->
+    <!-- /Karma module -->
+
+  <!-- Container -->
+  <div id="container">
+
+
+    <!-- Header -->
+    <div id="header" class="clearfix">
+      <h1><a href="/" title="Back to homepage">Free Software Magazine</a></h1>
+      
+                <div class="ads">
+
+ <script type="text/javascript">
+	sr_adspace_id = 3129407;
+	sr_adspace_width = 728;
+	sr_adspace_height = 90;
+	sr_adspace_type = "graphic";
+	sr_ad_new_window = true;
+	
+</script>
+<script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=3129407">
+</script>
+
+      </div>
+
+
+          
+    
+              <div class="menu1">
+          <ul class="links"><li  class="first menu-1-1-2"><a href="/column" title="Our authors have their say" class="menu-1-1-2">Columns</a></li>
+<li  class="menu-1-2-2"><a href="/community_post" title="Community posts" class="menu-1-2-2">Community posts</a></li>
+<li  class="menu-1-3-2"><a href="/issues" title="A list of all of currently available issues" class="menu-1-3-2">Issues</a></li>
+<li  class="menu-1-4-2"><a href="/book" title="Free Software Magazine books!" class="menu-1-4-2">Books</a></li>
+<li  class="menu-1-5-2"><a href="/forum" title="Free Software Magazine forums" class="menu-1-5-2">Forum</a></li>
+<li  class="last menu-1-6-2"><a href="/aggregator" title="Articles from free software sites" class="menu-1-6-2">FS news</a></li>
+</ul>        </div>
+           
+              <div class="menu2">
+          <ul class="links"><li  class="first menu-1-1-209"><a href="/reviews" title="Free software related book reviews" class="menu-1-1-209">Reviews</a></li>
+<li  class="menu-1-2-209"><a href="/newsletters" title="Newsletters" class="menu-1-2-209">Newsletters</a></li>
+<li  class="menu-1-3-209"><a href="/advertise" title="Advertise on our site" class="menu-1-3-209">Advertise</a></li>
+<li  class="menu-1-4-209"><a href="/sponsors" title="See who helps us make it happen" class="menu-1-4-209">Sponsors</a></li>
+<li  class="menu-1-5-209"><a href="/help_fsm" title="Contribute to FSM offering your help" class="menu-1-5-209">Help FSM</a></li>
+<li  class="menu-1-6-209"><a href="/write_for_us" title="Write for Free Software Magazine!" class="menu-1-6-209">Write for us</a></li>
+<li  class="menu-1-7-209"><a href="/contacts" title="Contact the FSM team" class="menu-1-7-209">Contacts</a></li>
+<li  class="last menu-1-8-209"><a href="/about" title="What Free Software Magazine does and why" class="menu-1-8-209">About</a></li>
+</ul>        </div>
+            
+          </div>
+    <!-- /Header -->
+
+
+
+    <!-- Content -->
+    <div id="content" class="clearfix">
+      <div id="content_inner">
+
+        <div id="content_center" class="column">
+
+          
+          <div class="breadcrumb"><a href="/">Home</a> » <a href="/community_post">Community posts</a> » <a href="/poster/2">Tony Mobily&#039;s posts</a></div>          
+                    
+                                        
+
+                     <!--
+          <p class="topbox">Before reading further... Are you a GNU/Linux fan and thinking of <b>buying a Linux laptop</b>? <script type="text/javascript" language="javascript" src="http://www.tkqlhce.com/placeholder-3081971?target=_top&mouseover=N"></script>. Support vendors that support GNU/Linux!</p>
+          -->
+
+          <p class="topbox">Before reading further... Are you looking for great <b>Linux hosting</b> from a company that <b>cares about GNU/Linux?</b> Pick <a rel="nofollow" href="/out/dreamhost">Dreamhost hosting</a>, get a 10% bonus to the disk space (and support Free Software Magazine in the meantime!)</p>
+
+
+          
+
+          <div class="node node-blog clearfix">
+
+
+<h1 class="title"><a href="/community_posts/creating_user_centric_site_drupal"  >Creating a user-centric site in Drupal</a></h1>
+
+
+
+
+<div class="articledata columnist ">
+      <div class="columnist_badge"><strong>FSM Columnist: Trusted</strong></div>
+    
+  <ul class="clearfix">
+    <li class="author"><a href="/user/2" title="View user profile.">Tony Mobily</a></li>
+    <li class="published">2008-10-24</li>
+        <li class="vote"> 
+    <div class="extra_voting_forms karma_3_small">
+    <form action="/extra_voting_forms/handle" method="post" class="karma_form_promoted" id="xn3043">
+      <div>
+        
+        <span class="karma_score">0</span>
+        <span class="karma_buttons">
+          <label class="karma_up_not_clicked_clickable" for="u3043">
+            <input id="u3043" type="radio" name="karma_vote" value="1"/>
+            <span>Up</span>
+          </label>
+          <label class="karma_down_not_clicked_clickable" for="d3043">
+            <input id="d3043" type="radio" name="karma_vote" value="-1"/>
+            <span>Down</span>
+          </label>
+          <input type="hidden" name="oid" value="3043"/>
+          <input type="hidden" name="otype" value="n"/>
+          <input type="hidden" name="form_style" value="3"/>
+          <input type="hidden" name="form_type" value="form"/>
+          <input type="submit" name="submit" value="Vote" />
+          <input type="hidden" name="js_destination" value="community_posts%2Fcreating_user_centric_site_drupal" />
+        </span>
+      </div>
+    </form></div></li>    <li class="tags">Tags: <a href="/taxonomy/term/878">drupal</a></li>  </ul>
+</div>
+
+
+
+
+
+      <p class="response"><a href="/node/add/blog/3043">Write a full post in response to this!</a></p>
+
+
+
+
+
+  <div class="ads">
+    <script type="text/javascript"><!--
+      google_ad_client = "pub-4408039167229399";
+      /* 468x15, created 2/25/08 */
+      google_ad_slot = "4617332389";
+      google_ad_width = 468;
+      google_ad_height = 15;
+      google_color_link = "669900";
+      google_color_url = "999999";
+      google_color_text = "666666";
+      //-->
+    </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+  </div>
+
+
+
+
+
+
+
+<div class="content">
+  
+  <!-- BEGIN listen now odiogo.com #2 -->
+  <script type="text/javascript" language="javascript">
+showOdiogoReadNowButton ('89932', 'Creating a user-centric site in Drupal', '3043', 290, 55);
+</script>
+<!-- END listen now odiogo.com #2 -->
+<br />
+<!-- BEGIN listen now odiogo.com #3 -->
+<script type="text/javascript" language="javascript">
+showInitialOdiogoReadNowFrame ('89932', '3043', 290, 0);
+</script>
+<!--paging_filter--><p>A little while ago, while talking in the #drupal mailing list, I showed my latest creation to one of the core developers there. His reaction was &#8220;Wow, I am always surprised what people use Drupal for&#8221;. His surprise is somehow justified: I did create a site for a bunch of <a href="http://www.allhotstrippers.com">strippers in Perth</a>. Yes, I would classify the link <em>quite</em> work-safe.</p>
+
+<p>After talking about it for a while, I decided that it would be a good idea to write a short case study about how I created the site. So, here we go.</p>
+
+<h1>The constraints</h1>
+
+<p>The site needed to be hosted in Perth. This was a crucial requirement, dictated by the fact that it was a very localised business, which needed some proximity between the IP of the potential customers and the hosting server. Hosting was therefore much more expensive that it could have been; however, the benefits in terms of search results were potentially quite big.</p>
+
+<p>The site also needed to be fast, without eating too much memory. So, Drupal 6 was obviously a must, but that wasn&#8217;t it. No &#8220;views&#8221;, and in general no &#8220;big&#8221; modules that could potentially increase Drupal&#8217;s footprint quite drastically. Basically, Drupal needed to be as bare as possible.</p>
+
+<p>Another requirement was to make a site that was profile-centric. This was very important: the site itself wasn&#8217;t much at all; the users&#8217; profiles, however, were &#8220;everything&#8221; in case the &#8220;user&#8221; had the role &#8220;stripper&#8221; enabled. This was made even more interesting by the need to have blogs &#8212; and have them <em>within</em> the profile space (as a tab, just to be clear).</p>
+
+<p>One last requirement was that the site would have two classes of users: the normal ones, and strippers. Strippers would have a much more enhanced profile, with photos, blog, and so on; common users, on the other hand, would only need to have the standard Drupal profile. Most importantly, strippers needed to be able to change their profiles&#8217; information and photos whenever they liked. (Amazingly, all of the strippers were totally up-to-date with technology; one of them didn&#8217;t have a computer, but used his iPhone for everything).</p>
+
+<p>Here is how I did all this.</p>
+
+<h1>Hosting in Perth</h1>
+
+<p>This one was easy. I searched the Drupal forums, and I found a post that <a href="http://groups.drupal.org/node/8055">recommended Ilisys</a>. They are also carbon neutral! This goes to show the power of the Drupal forums: I found immensely valuable information in them.</p>
+
+<h1>Advanced profiles</h1>
+
+<p>Strippers needed much more advanced profiles. If a user was a stripper, s/he would need some extra tabs that would display extra information such as photos, a short interview, and a &#8220;stripper summary&#8221;. The module that was the closest to what I needed was <a href="http://drupal.org/project/content_profile">Content Profile</a>. However, it only had about 40% of the features I needed it to have. Also, I had difficulty communicating effectively with the author&#8217;s maintainer, Fago, while creating FriendList. Finally, the issue queue seemed a little too crowded for my own likings. I needed development to be fast. A crucial feature I needed, which was about taking over the &#8220;normal&#8221; profile page, was requested (with patch) in March 2008, but the module&#8217;s author didn&#8217;t think that it was appropriate to have it, and it&#8217;s still pending today (November 2008).</p>
+
+<p>I wrote my own module to achieve the results, and it worked fantastically well. As it turned out, writing a custom module in this situation proved to be crucial since quite a few features were rather specialised. If you see <a href="http://www.allhotstrippers.com/person/Bronson%2BFoxx">Bronson Foxx&#8217;s profile</a> you will see the extra tabs &#8220;Comments&#8221; and &#8220;Interview&#8221;. There are two node types which are marked as &#8220;profile&#8221; ones. If you are the owner and have edit rights, or if you are admin, you get an &#8220;edit&#8221; link which will allow you to change the contents of the node. There is a 1:1 correspondence between a node of type &#8220;interview&#8221; owned by Bronson Foxx and the tab &#8220;Interview&#8221; for the profile Bronson Foxx. This means that there will be zero or one node for each tab &#8212; and never more than one.</p>
+
+<p>Permissions were a rather specialised feature of this module. In particular, tabs will only show up for other users if the <em>owner</em> has rights to edit them. Here, &#8220;edit them&#8221; means that the user needs to have the right to &#8220;edit own $type content&#8221;). This is obvious: if a user doesn&#8217;t have writing access to that profile information, then there is no way for him or her to create it, and therefore show it to other people. Also, the module allows you to decide if a tab should show up if the associated node doesn&#8217;t exist.</p>
+
+<p>This module is not released to the general public. This is because it&#8217;s too close to something that already exists in Drupal, and I have no desire to enter another &#8220;duplication&#8221; war (after the big uproar that my Friendlist module created). If somebody wants to take it on, I will be more than happy to email it to him or her. Until then, it will be a private module.</p>
+
+<p>Please let me know if you are a developer interested in creating a new Drupal project, or if you are interested in merging my module&#8217;s features with Fago&#8217;s &#8220;Content profile&#8221;.</p>
+
+<h1>Caged blogs</h1>
+
+<p>This is the most interesting feature. This was a <em>must</em>: blogging needed to live within the user profile&#8217;s space. This means that I needed:</p>
+
+<ul>
+<li>A tab in the users&#8217; profile, which contained the list of blog entries with a pager</li>
+<li>The ability to display one blog entry <em>within</em> the user&#8217;s profile</li>
+</ul>
+
+<p>Doing this is pretty complicated, because you basically need to work against Drupal&#8217;s way of doing things. For Drupal, a blog entry is a node displayed as /node/12345.
+To do the trick, I created a module called &#8220;caged_blog&#8221;. With this <code>hook_menu()</code> function:</p>
+
+<pre>
+function blog_caged_menu() {
+
+  $items['user/%user/blog'] = array(
+    'title' => 'My blog',
+    'page callback' => 'blog_caged_blog_page_user',
+    'page arguments' => array(1),
+    'access callback' => 'blog_caged_blog_access',
+    'access arguments' => array(1),
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  $items['user/%user/blog/%node'] = array(
+    'title' => 'Blog',
+    'page callback' => 'blog_caged_blog_page',
+    'page arguments' => array(1,3),
+    'access callback' => 'blog_page_user_access',
+    'access arguments' => array(1),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => '15',
+  );
+
+  return $items;
+}</pre>
+
+<p>The first menu item is managed by the function <code>blog_caged_page_user()</code>:</p>
+
+<pre>
+function blog_caged_blog_page_user($account){
+  global $user;
+
+  if( ! _blog_post_exists($account) ){
+
+    $msg_1=t("No blog posts! ");
+    if($user->uid == $account->uid &amp;&amp; user_access('create blog entries')) {
+      $msg_2=t('Add a blog entry &lt;a href="!url">Now!&lt;/a>', array('!url' => url('node/add/blog') ));
+    }
+    return $msg_1 . $msg_2;
+  }
+
+  require_once('modules/blog/blog.pages.inc');
+  return blog_page_user($account);
+}</pre>
+
+<p>The function is a complete cheat: it simply leaches off <code>blog_page_user()</code> in order to return the right contents &#8212; but within the user&#8217;s domain.</p>
+
+<p>Pretty much the same thing applies to the second menu entry, which is used to display a specific blog post:</p>
+
+<pre>
+function blog_caged_blog_page($user,$node){
+
+  // Check that it's a user's blog entry we are talking about. This is to
+  // prevent this from working for ANY kind of node, which would SUCK
+  // as you'd be able to pull any content into the users' page
+  if($node->type != 'blog' || $node->uid != $user->uid){
+    drupal_not_found();
+  }
+
+  // Set the title and return the page!
+  drupal_set_title($node->title);
+  return node_show($node,NULL);
+}</pre>
+
+<p>However, this is not enough. While the module does provide a list of blog entries in the users&#8217; page, it still allows the site to have the /blog URL which will show all of the blog entries, and the /blog/12345 URL which will show the blog entries owned by the user 12345. This last one is a real problem, because it will pop up every time any module links to a blog entry &#8212; the uncaged version will be shown.</p>
+
+<p>To fix this issue, I did two things. First of all, I zapped the two URLs I mentioned above from Drupal&#8217;s routing table:</p>
+
+<pre>
+function blog_caged_menu_alter(&amp;$callback){
+
+  // Kill existing URLs, which will never get used. IMPORTANT:
+  // make absolute sure you set the right redirections for outbound links!
+  $callback['blog/%user_uid_optional']['page callback']='drupal_not_found';
+  $callback['blog']['page callback']='drupal_not_found';
+}</pre>
+
+<p>This will lead to a nice <em>non-functional</em> Drupal site!
+This is where settings.php came in handy, with its custom_rewrite functions.
+In terms of outbound, this is what happens to the links:</p>
+
+<pre>
+function custom_url_rewrite_outbound(&amp;$path, &amp;$options, $original_path) {
+  [...]
+
+  // Small hack because /blog doesn't work and it might still come up
+  // in breadcrumbs
+  if (preg_match('|^blog$|', $path, $matches)) {
+    $path="";
+  }
+
+  // Case #1: check cases if it's node/99 -- URLs will be rewritten
+  // according to their type.
+  // BLOGS: /node/99 into /user/admin/blog/99 
+  if (preg_match('|^node/([0-9]*)$|', $path, $matches)) {
+    $n=db_fetch_object(db_query("SELECT n.nid,n.type, u.name FROM {node} n LEFT JOIN {users} u on u.uid = n.uid WHERE n.nid = %d ",$matches[1]));
+    if($n){
+      $type=$n->type;
+      $nid=$n->nid;
+
+      // BLOGS     
+      if($type == 'blog'){
+        $user=$n->name;
+        $path="person/$user/blog/$nid";
+      }
+    }
+  }
+
+  // Case #2: turn blog/99 into users/admin/blog
+  if (preg_match('|^blog/([0-9]*)$|', $path, $matches)) {
+    $uid = $matches[1];
+    $res=settings_lookup_user_name_by_uid($uid);
+    if($res){
+      $res=urlencode($res);
+      $path="person/$res/blog";
+    }
+
+  }</pre>
+
+<p>The meaning of this is pretty straightforward: any outbound links are rerouted to blog_caged module&#8217;s hooks, which will obviously work as intended.</p>
+
+<p>In terms of inbound, in order to keep things &#8220;clean&#8221;, I made the blog nodes unreachable when accessed through the URL <code>node/12345</code>.</p>
+
+<pre>
+function custom_url_rewrite_inbound(&amp;$result, $path, $path_language=NULL) {
+[...]
+ // Since some nodes are special (profiles, blog posts, etc.), I don't
+  // want them to be accessed at _all_
+  if (preg_match('|^node/([0-9]*)$|', $path, $matches)) {
+    $n=db_fetch_object(db_query("SELECT n.type FROM {node} n WHERE n.nid = %d ",$matches[1]));
+    if($n){
+      $type=$n->type;
+      // BLOGS     
+      if($type == 'blog'){
+        $result="file_not_found";
+      }
+    }
+  }
+[...]</pre>
+
+<p>As you can see, there is some serious rewriting at work. However, it&#8217;s fully worth it: as you can see, in the web site the blogs are fully caged.</p>
+
+<h1>Conclusion</h1>
+
+<p>Well, it&#8217;s definitely true: Drupal is immensely versatile, and widely used for all sorts of web sites. Creating All Hot Strippers was quite challenging: I had some very strict technical constraints which took some of Drupal&#8217;s power away. And yet, the site is undeniably functional and somehow unique. More importantly, it can be expanded later should it be necessary.</p>
+
+<p>My involvement in the company is obviously more than just &#8220;the web designer&#8221;. Let&#8217;s see if you can spot me!</p>
+</div>
+
+     
+ 
+
+
+
+      <p class="response"><a href="/node/add/blog/3043">Write a full post in response to this!</a></p>
+  
+
+
+
+
+
+  <div class="similar clearfix">
+    
+          <div class="ads">
+
+
+<!-- Begin Adify tag for "Blog article bottom" Ad Space (120x240) ID #2501507 -->
+<script type="text/javascript">
+	sr_adspace_id = 2501507;
+	sr_adspace_width = 120;
+	sr_adspace_height = 240;
+	sr_adspace_type = "graphic";
+	sr_ad_new_window = true;
+</script>
+<script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=2501507">
+</script>
+<!-- End Adify tag for "Blog article bottom" Ad Space (120x240) ID #2501507 -->
+
+
+
+      </div>
+      
+          <h1>Similar articles</h1>
+      <div class="item-list"><ul><li><a href="/node/1570" rel="nofollow">Free Software Magazine's blogs just got better!</a></li><li><a href="/node/1518" rel="nofollow">The upcoming Drupal 4.7</a></li><li><a href="/columns/help_fsm_do_you_know_drupal_and_jquery" rel="nofollow">Help Free Software Magazine - do you know Drupal and JQuery?</a></li></ul></div>        
+  </div>
+
+
+  <div class="vote clearfix">
+    
+    <div class="extra_voting_forms karma_3_big">
+    <form action="/extra_voting_forms/handle" method="post" class="karma_form_promoted" id="xn3043">
+      <div>
+        
+        <span class="karma_score">0</span>
+        <span class="karma_buttons">
+          <label class="karma_up_not_clicked_clickable" for="u3043">
+            <input id="u3043" type="radio" name="karma_vote" value="1"/>
+            <span>Up</span>
+          </label>
+          <label class="karma_down_not_clicked_clickable" for="d3043">
+            <input id="d3043" type="radio" name="karma_vote" value="-1"/>
+            <span>Down</span>
+          </label>
+          <input type="hidden" name="oid" value="3043"/>
+          <input type="hidden" name="otype" value="n"/>
+          <input type="hidden" name="form_style" value="3"/>
+          <input type="hidden" name="form_type" value="form"/>
+          <input type="submit" name="submit" value="Vote" />
+          <input type="hidden" name="js_destination" value="community_posts%2Fcreating_user_centric_site_drupal" />
+        </span>
+      </div>
+    </form></div>    <h1>
+      Do you like this post?<br />
+      <strong>Vote for it!</strong></h1>
+  </div>
+
+
+  <h1>Copyright information</h1>
+  <p>This entry is (C) Copyright by its author, 2004-2008. Unless a different license is specified in the entry's body, the following license applies: "Verbatim copying and distribution of this entire article is permitted in any medium without royalty provided this notice is preserved and appropriate attribution information (author, original site, original URL) is included". </p>
+  
+      <div class="biography">
+      <h1>Biography</h1>
+      <p><a href="/user/2" title="View user profile.">Tony Mobily</a>: Tony is the founder and the Editor In Chief of Free Software Magazine</p>    </div>
+  
+
+<ul class="links"><li  class="first blog_usernames_blog"><a href="/poster/2" title="Read Tony Mobily&#039;s latest posts." class="blog_usernames_blog">Tony Mobily&#039;s posts</a></li>
+<li  class="comment_forbidden"><span class="comment_forbidden"><a href="/user/login?destination=node/3043%2523comment-form">Login</a> or <a href="/user/register?destination=node/3043%2523comment-form">register</a> to post comments</span></li>
+<li  class="statistics_counter"><span class="statistics_counter">81 reads</span></li>
+<li  class="print"><a href="/gaining_extra_features" title="" class="print">Printer friendly version (unavailable!)</a></li>
+<li  class="service_links_delicious"><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.freesoftwaremagazine.com%2Fcommunity_posts%2Fcreating_user_centric_site_drupal&amp;title=Creating+a+user-centric+site+in+Drupal" title="Bookmark this post on del.icio.us." rel="nofollow" class="service_links_delicious"><img src="/sites/all/modules/service_links/delicious.png" alt="Delicious" /></a></li>
+<li  class="service_links_digg"><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.freesoftwaremagazine.com%2Fcommunity_posts%2Fcreating_user_centric_site_drupal&amp;title=Creating+a+user-centric+site+in+Drupal" title="Digg this post on digg.com." rel="nofollow" class="service_links_digg"><img src="/sites/all/modules/service_links/digg.png" alt="Digg" /></a></li>
+<li  class="service_links_reddit"><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.freesoftwaremagazine.com%2Fcommunity_posts%2Fcreating_user_centric_site_drupal&amp;title=Creating+a+user-centric+site+in+Drupal" title="Submit this post on reddit.com." rel="nofollow" class="service_links_reddit"><img src="/sites/all/modules/service_links/reddit.png" alt="Reddit" /></a></li>
+<li  class="last service_links_fsdaily"><a href="http://www.fsdaily.com/submit?url=http%3A%2F%2Fwww.freesoftwaremagazine.com%2Fcommunity_posts%2Fcreating_user_centric_site_drupal" title="Bookmark this post on FSDaily." rel="nofollow" class="service_links_fsdaily"><img src="/sites/all/modules/service_links/fsdaily.png" alt="FSDaily" /></a></li>
+</ul>
+</div>
+<div id="comments"></div>        </div>
+
+        <div id="content_left" class="column">
+          
+                      <div class="ads">
+
+
+<!-- Begin CJ left hand ad -->
+<SCRIPT type="text/javascript" LANGUAGE="javascript" src="http://www.qksz.net/1e-fixh"> </SCRIPT>
+<br />
+<!-- END CJ left hand ad -->
+
+
+<!-- Begin Adify tag for "Left hand tower" Ad Space (160x600) ID #2501707 -->
+<script type="text/javascript">
+	sr_adspace_id = 2501707;
+	sr_adspace_width = 160;
+	sr_adspace_height = 600;
+	sr_adspace_type = "graphic";
+	sr_ad_new_window = true;
+	
+</script>
+<script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=2501707">
+</script>
+<!-- End Adify tag for "Left hand tower" Ad Space (160x600) ID #2501707 -->
+
+
+            </div>
+                  
+            <div class="block block-block" id="block-block-62">
+        <div class="content"><h1>Looking for <a href="/linux_hosting/reviews_coupons_user_comments">Linux hosting, reviews, coupons</a>, etc.? See out user-voted list</h1>
+<ol>
+<li><a href="/linux_hosting/dreamhost_review">Dreamhost (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/hostpapa_review">HostPapa (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/hostmonster_review">Hostmonster (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/inmotion_review">InMotion (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/dot5hosting_review">Dot5Hosting (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/fastdomain_review">FastDomain (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/startlogic_review">StartLogic (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/bluehost_review">BlueHost (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/3fn_review">3fn (reviews, coupons)</a></li>
+</ol>
+</div>
+ </div>
+  <div class="block block-block" id="block-block-30">
+        <div class="content"><p><!-- START TD Content Module v1.1 --></p>
+<script language="JavaScript" type="text/javascript">
+ord=Math.random()*10000000000000000;
+document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/idg.us.cpw.tdn/;pos=tdn;sz=160x192;ord=' + ord + '?" type="text/javascript"></scr' + 'ipt>');
+</script><p><noscript><a href="http://ad.doubleclick.net/jump/idg.us.cpw.tdn/;pos=tdn;sz=160x192;ord=123456789?" target="_blank"><img src="http://ad.doubleclick.net/ad/idg.us.cpw.tdn/;pos=tdn;sz=160x192;ord=123456789?" width="160" height="192" border="0" alt=""></a></noscript><br />
+<!-- END TD Content Module v1.1 --> </p>
+<p><!-- Begin Adify tag for "Free Software Mag160" Ad Space (160x600) ID #1027607 --></p>
+<script type="text/javascript">
+<!--
+       sr_adspace_id = 1027607;
+       sr_adspace_width = 160;
+       sr_adspace_height = 600;
+       sr_adspace_type = "graphic";
+       sr_color_back = "#FFFFFF";
+       sr_color_text = "#000000";
+       sr_color_url = "#E15F00";
+       sr_color_title = "#3F66B3";
+       sr_color_border = "#3366CC";
+       sr_color_your_ad = "#2852A3";
+       sr_color_your_adbk = "#FFDD81";
+       sr_text_your_ad = "Advertise with us";
+       sr_ad_new_window = true;
+
+
+-->
+</script><script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=1027607">
+</script><script type="text/javascript">srExecute();</script><p><!-- End Adify tag for "Free Software Mag160" Ad Space (160x600) ID #1027607 --></p>
+</div>
+ </div>
+  <div class="block block-popular_blocks" id="block-popular_blocks-3">
+          <h2 class="title">Best voted contents</h2>
+        <div class="content"><ul><ul>
+<li>
+  <strong><a href="/columns/why_bizarre_cathedral_licence_non_free">Why is The Bizarre Cathedral licence &quot;non-free&quot;?</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-21</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/free_software_tools_for_designing_productive_community_sites">Free software tools for designing productive community sites</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-10-07</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/deploying_cc_common_good_buy4commons">Deploying CC+ for the common good: Buy4Commons</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-10-20</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/supporting_your_free_software_dont_burn_out">Supporting your free software? Don&#039;t burn out</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-10-15</small>
+</li>
+    </ul></ul></div>
+ </div>
+  <div class="block block-block" id="block-block-60">
+        <div class="content"><p><!-- Begin Adify tag for "No Privacy Policy Badge - 125x125 Dark" Widget Space (125x125) ID #29472 --></p>
+<script type="text/javascript">
+	sr_widget_id = 29472;
+	sr_widget_width = 125;
+	sr_widget_height = 125;
+</script><script type="text/javascript" src="http://feed.afy11.net/srwidget.js?wId=29472">
+</script><p><!-- End Adify tag for "No Privacy Policy Badge - 125x125 Dark" Widget Space (125x125) ID #29472 --></p>
+</div>
+ </div>
+        </div>
+    
+        <div id="content_right" class="column">
+                      <div class="ads">
+
+
+<!-- Begin Adify tag for "Right column big square - bigger" Ad Space (336x280) ID #3062507 -->
+<script type="text/javascript">
+	sr_adspace_id = 3062507;
+	sr_adspace_width = 336;
+	sr_adspace_height = 280;
+	sr_adspace_type = "graphic";
+	sr_ad_new_window = true;
+	
+</script>
+<script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=3062507">
+</script>
+<!-- End Adify tag for "Right column big square - bigger" Ad Space (336x280) ID #3062507 -->
+
+
+            </div>
+                
+            <div class="block block-block" id="block-block-58">
+        <div class="content"><a href="/columns/bizarre_cathedral_28">
+
+<img src="/files/www.freesoftwaremagazine.com/nodes/3041/ss/strip.jpg" />
+
+</a></div>
+ </div>
+          
+          <div id="content_right_subcolumn1">
+
+                      <div class="block block-subscribe">
+              <a href="/user/register" class="subscribe" title="Subscribe for FREE now! You'll receive a free subscription to Free Software Magazine and the Free Software Magazine newsletter!"><strong>Subscribe for FREE now!</strong> You'll receive a free subscription to Free Software Magazine and the Free Software Magazine newsletter!</a>
+              <a href="/user/user" class="login" title="Login">Login</a>
+            </div>
+                        <div class="block block-block" id="block-block-61">
+        <div class="content"><p><a href="http://www.jdoqocy.com/click-3120337-10544984" target="_top"><br />
+<img src="http://www.tqlkg.com/image-3120337-10544984" width="120" height="90" alt="Two free webcam w/ the purchase of select Dell PCs" border="0"/></a></p>
+<p></p>
+</div>
+ </div>
+  <div class="block block-similar" id="block-similar-0">
+          <h2 class="title">Similar entries</h2>
+        <div class="content"><div class="item-list"><ul><li><a href="/node/1570" rel="nofollow">Free Software Magazine's blogs just got better!</a></li><li><a href="/node/1518" rel="nofollow">The upcoming Drupal 4.7</a></li><li><a href="/columns/help_fsm_do_you_know_drupal_and_jquery" rel="nofollow">Help Free Software Magazine - do you know Drupal and JQuery?</a></li></ul></div></div>
+ </div>
+  <div class="block block-block" id="block-block-51">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-52">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=2");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+
+</div>
+ </div>
+  <div class="block block-popular_blocks" id="block-popular_blocks-2">
+          <h2 class="title">Buzz authors</h2>
+        <div class="content"><ul><li> <a href="/poster/25804">Laurie Langham</a></li><li> <a href="/poster/36">Rosalyn Hunter</a></li><li> <a href="/poster/3653">Gary Richmond</a></li><li> <a href="/poster/2585">Rob Strover</a></li><li> <a href="/poster/8833">Ryan Cartwright</a></li></ul></div>
+ </div>
+  <div class="block block-aggregator" id="block-aggregator-category-2">
+          <h2 class="title">All news</h2>
+        <div class="content"><div class="item-list"><ul><li><a href="http://blog.nixternal.com/2008.10.30/ant-rpm-why-do-my-dashes-become-underscores/">Richard Johnson: Ant, RPM, why do my dashes become underscores?</a>
+</li><li><a href="http://www.mythbuntu.org/8.10/release">Mythbuntu: Mythbuntu 8.10 Intrepid Ibex Is Here!</a>
+</li><li><a href="http://joeb454.co.uk/2008/10/31/ubuntu-810-intrepid-ibex-pt-1/">Joe Barker: Ubuntu 8.10 (Intrepid Ibex) Pt. 1</a>
+</li><li><a href="http://jbailey.livejournal.com/61645.html">Jeff Bailey: Sickness, birthday, and planning for the next year.</a>
+</li><li><a href="http://www.jonobacon.org/?p=1371">Jono Bacon: Intrepid Is Out! San Fran Drinks Tonight.</a>
+</li></ul></div><div class="more-link"><a href="/aggregator/categories/2" title="View this category&#039;s recent news.">more</a></div></div>
+ </div>
+  <div class="block block-block" id="block-block-53">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=3");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-59">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=8");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-54">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=4");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-55">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=5");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-56">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=6");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-47">
+        <div class="content"><script type="text/javascript">
+  var box_width = "160px";
+  var box_height = "450px";
+  var text_size = "8";
+  
+  var section = "All";
+  var how_many = 8;
+  var show_karma = 1;
+  
+  var logo_style = "light";
+  var bg_color = "eaf5fa";
+  var text_color = "666666";
+  var link_color = "333333";
+  var border_color = "cccccc";
+  var score_bg_color = "ffe995";
+  var score_text_color = "663300";
+  var score_border_color = "ffe995";
+</script><script type="text/javascript" src="http://www.fsdaily.com/files/www.fsdaily.com/drigg_box.js"></script></div>
+ </div>
+          </div>
+          
+          <div id="content_right_subcolumn2">
+              <div class="block block-block" id="block-block-39">
+          <h2 class="title">Other sites</h2>
+        <div class="content"><ul>
+<li><a href="http://www.thetop10everything.com/">The Top 10 Everything</a> (Dave). The good, the bad and the ugly.</li> 
+<li><a href="http://www.fsdaily.com/">Free Software news</a> (Dave & Bridget). All about free software -- free as in freedom!</li>
+<li><a href="http://www.illiterarty.com/">Book Reviews: Illiterarty</a> (Bridget). Book reviews, blogs, and short stories.</li>
+</ul>
+</div>
+ </div>
+  <div class="block block-search" id="block-search-0">
+        <div class="content"><form action="/community_posts/creating_user_centric_site_drupal"  accept-charset="UTF-8" method="post" id="search-block-form">
+<div><div class="container-inline"><div class="form-item" id="edit-search-block-form-keys-wrapper">
+ <input type="text" maxlength="128" name="search_block_form_keys" id="edit-search-block-form-keys"  size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+</div></form>
+</div>
+ </div>
+  <div class="block block-popular_blocks" id="block-popular_blocks-1">
+          <h2 class="title">Hot topics - last 60 days</h2>
+        <div class="content"><ul>
+<li>
+  <strong><a href="/columns/linux_has_horse_bolted">Linux: has the horse bolted?</a></a></strong><br />
+  <small><a href="/user/25804">Laurie Langham</a>, 2008-09-10</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/copyleft_has_no_impact_project_activity">Copyleft has no impact on project activity?!</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-09-10</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/ten_easy_ways_attract_women_your_free_software_project">Ten easy ways to attract women to your free software project</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-09-22</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/why_bizarre_cathedral_licence_non_free">Why is The Bizarre Cathedral licence &quot;non-free&quot;?</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-21</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/becoming_free_software_developer_part_v_when_and_where_did_you_learn">Becoming a free software developer, part V: When and where did you learn?</a></a></strong><br />
+  <small><a href="/user/36">Rosalyn Hunter</a>, 2008-09-24</small>
+</li>
+    </ul></div>
+ </div>
+  <div class="block block-popular_blocks" id="block-popular_blocks-0">
+          <h2 class="title">Hot topics - last 21 days</h2>
+        <div class="content"><ul>
+<li>
+  <strong><a href="/columns/why_bizarre_cathedral_licence_non_free">Why is The Bizarre Cathedral licence &quot;non-free&quot;?</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-21</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/fighting_the_legacy_reputations_of_linux_seventeen_years_later">Fighting the &quot;legacy&quot; reputations of GNU/Linux, seventeen years later</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-13</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/supporting_your_free_software_dont_burn_out">Supporting your free software? Don&#039;t burn out</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-10-15</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/bizarre_cathedral_27">The Bizarre Cathedral - 27</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-19</small>
+</li>
+    </ul></div>
+ </div>
+  <div class="block block-block" id="block-block-49">
+        <div class="content"><div class="ad_3fn">
+<a href="http://www.3fn.net/" target="blank"><img src="/images/3fn150x75hosting.gif">Dedicated server</a>
+</div>
+</div>
+ </div>
+  <div class="block block-odiogo" id="block-odiogo-0">
+          <h2 class="title">Odiogo</h2>
+        <div class="content">
+<script type="text/javascript" language="javascript">showOdiogoSubscribeButton(_odiogo_directory_name);</script>
+</div>
+ </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /Content -->
+
+
+
+    <!-- Footer -->
+    <div id="footer">
+    </div>
+    <!-- /Footer -->
+
+
+  </div>
+</div>
+<!-- /Container --> 
+          <img src="sites/www.freesoftwaremagazine.com/themes/fsm_new/img/footer_idg.gif" />
+
+
+
+ <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+ <script type="text/javascript">
+  _uacct = "UA-113503-1";
+  urchinTracker();
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /
+# -------------------------------
+User-agent: Googlebot
+User-agent: Yahoo Slurp
+User-agent: MSNBot
+User-agent: Google AdSense
+User-agent: YahooSeeker Yahoo! Blog crawler
+User-agent: Yahoo-Blogs
+User-agent: Yahoo-MMCrawler
+Disallow:
+

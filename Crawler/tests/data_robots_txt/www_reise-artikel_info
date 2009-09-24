@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /anleitung
+Disallow: /regeln
+Disallow: /impressum
+Disallow: /wp-login
+Disallow: /kontakt
+Sitemap: http://www.reise-artikel.info/sitemap.xml.gz
+

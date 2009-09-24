@@ -1,0 +1,10 @@
+# robots.txt pour le site de référencement pour tarifmedia.com
+# commentaires : webmaster@tarifmedia.com
+User-agent: *
+Disallow: /adm/
+Disallow: /innaccessible/
+Disallow: /logs/
+Disallow: /newsletter/
+Disallow: /new_newsletter/
+Disallow: /tests/
+Disallow: /test.cfm

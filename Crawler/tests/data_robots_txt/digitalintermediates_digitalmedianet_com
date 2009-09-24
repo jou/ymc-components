@@ -1,0 +1,35 @@
+User-agent: *
+Disallow: /3dvisions99
+Disallow: /aImages
+Disallow: /aInternalPromos
+Disallow: /cgi-bin
+Disallow: /chatfiles
+Disallow: /chatplugins
+Disallow: /chatvis
+Disallow: /dion2
+Disallow: /doc
+Disallow: /download
+Disallow: /images
+Disallow: /Infoxpress
+Disallow: /Intertec
+Disallow: /Library
+Disallow: /lbff
+Disallow: /Mediakit
+Disallow: /plugin
+Disallow: /polldir
+Disallow: /ProductFinder
+Disallow: /rank
+Disallow: /sponsors
+Disallow: /submit
+Disallow: /Tests
+Disallow: /Timer
+Disallow: /_private
+Disallow: /tops
+Disallow: /topsites
+Disallow: /Utility
+Disallow: /video
+Disallow: /xav
+
+User-agent: BecomeBot 
+Crawl-Delay: 30 
+

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://www.kaffee-pad.net/sitemap.xml.gz

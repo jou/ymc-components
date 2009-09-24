@@ -1,0 +1,43 @@
+# Robots.txt file for http://www.vehix.com
+#
+#
+# List of all web robots: <http://www.robotstxt.org/wc/active/html/index.html>
+# More details of robots: <http://en.wikipedia.org/wiki/Robots.txt>
+#
+# Any use of the robots OR FAILURE to obey the robots exclusion standards
+# set forth at <http://www.robotstxt.org/wc/exclusion.html> is strictly 
+# prohibited.
+#
+
+User-agent: Oodlebot/1.0
+Disallow: /
+
+User-agent: Oodlebot
+Disallow: /
+
+User-agent: *
+Crawl-delay: 2
+Visit-time: 0400-1300
+Disallow: /_css/
+Disallow: /_flash/
+Disallow: /_hats/
+Disallow: /_images/
+Disallow: /_js/
+Disallow: /_masterPages/
+Disallow: /_scripts/
+Disallow: /_sitemaps/
+Disallow: /_styleSheets/
+Disallow: /_templates/
+Disallow: /_thirdParty/
+Disallow: /_userControls/
+Disallow: /_video/
+Disallow: /_webServices/
+Disallow: /_widgets/
+Disallow: /_xml/
+Disallow: /advertising/
+Disallow: /akamai/
+Disallow: /commercials/
+Disallow: /error/
+Disallow: /remoteTools/
+Disallow: /WebV/
+Sitemap: http://www.vehix.com/sitemap.xml.gz

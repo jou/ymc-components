@@ -1,0 +1,17 @@
+    User-agent: Googlebot
+    Disallow: /hoppe/
+    Disallow: /ebay/
+    Disallow: /paule/
+    Disallow: /about.php?
+    Disallow: /biggle.php?
+    Disallow: /ebay/
+    Disallow: /form/
+    Disallow: /downloads/
+    Disallow: /blog/wp-content/
+    Disallow: /blog/wp-admin/
+    Disallow: /blog/fonts/
+    Disallow: /blog/greybox/
+    Disallow: /blog/style/
+    Disallow: /blog/wpau-backup/
+    Disallow: /blog/wp-includes/
+    

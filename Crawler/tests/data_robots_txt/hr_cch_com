@@ -1,0 +1,13 @@
+# File to tell robots where I do not want them browsing.
+# URL: http://www.cch.com/robots
+#
+#  5/7/09 RHG - file updated.
+#
+User-agent: *
+Disallow: /cgi/			# I don't want robots running scripts.
+Disallow: /bin/			# I don't want robots running scripts.
+Disallow: /gifs/		# They shouldn't be in the images either.
+Disallow: /primesrc/		# Stay out of Primesource
+Disallow: /cforms/
+Sitemap: http://hr.cch.com
+#HR

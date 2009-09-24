@@ -1,0 +1,17 @@
+##ACAP version=1.0
+
+# robots.txt for fido
+
+User-agent: *
+Disallow: /admin/
+Disallow: /images/
+Disallow: /pdf.php
+
+# robots.txt for fido
+ACAP-crawler: *
+# User-agent: *
+ACAP-disallow-crawl: /admin/
+# Disallow: /admin/
+ACAP-disallow-crawl: /images/
+# Disallow: /images/
+ACAP-disallow-crawl: /pdf.php

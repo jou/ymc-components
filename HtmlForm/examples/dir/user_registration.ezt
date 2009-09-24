@@ -1,0 +1,14 @@
+{use $form}
+
+<fieldset>
+  {foreach $form->group->elements as $e}
+    <div style="float:clear;">
+      <div style="float:left;width:10em;text-align:right">
+        <label style="width:20em;" class="{if $e->failed}failed{/if}" for="nickname">{$e->name}:</label>
+      </div>
+    <input name="{$e->name}" value="{$e->value}" type="{$e->type}">
+    </div>
+    <br/>
+  
+  {/foreach}
+</fieldset>

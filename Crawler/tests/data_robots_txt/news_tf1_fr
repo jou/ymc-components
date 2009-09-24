@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /src/
+Disallow: /xml/
+Disallow: /pdf/
+Disallow: /ajax/
+Disallow: /impression/
+Disallow: /communiquer/
+Disallow: /*?
+Sitemap: http://tf1.lci.fr/sitemap-infos.xml

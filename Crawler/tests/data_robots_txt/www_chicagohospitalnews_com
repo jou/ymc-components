@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /globalincludes/
+Disallow: /images/
+Disallow: /message/
+Disallow: /missing/
+Disallow: /videos/

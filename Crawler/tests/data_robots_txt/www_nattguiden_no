@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /nattguiden/bounce
+Disallow: /bounce
+Disallow: /aktuelt
+Disallow: /dj
+Disallow: /utested
+Disallow: /reportasjer
+Disallow: /konsert
+Allow: /

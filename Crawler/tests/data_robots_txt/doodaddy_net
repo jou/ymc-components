@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://doodaddy.net/sitemap.xml.gz

@@ -1,0 +1,169 @@
+
+
+
+User-agent: *
+
+Disallow: /abbey
+
+Disallow: /admin
+
+Disallow: /APS
+
+Disallow: /aspnet_client
+
+
+
+Disallow: /bridge
+
+Disallow: /carehomes
+
+Disallow: /Class
+
+Disallow: /clearspace
+
+Disallow: /cornwall
+
+Disallow: /Courchevel
+
+Disallow: /dance
+
+Disallow: /database
+
+Disallow: /dudley
+
+Disallow: /eatwise
+
+Disallow: /emerald
+
+Disallow: /equation
+
+Disallow: /FarnhamDiary
+
+Disallow: /feature
+
+Disallow: /features
+
+Disallow: /folk
+
+
+
+
+
+Disallow: /freedom
+
+Disallow: /griffiths
+
+Disallow: /Glebe
+
+Disallow: /guest
+
+Disallow: /Henley
+
+Disallow: /horse
+
+Disallow: /IC
+
+Disallow: /indy
+
+Disallow: /internettoday
+
+Disallow: /IT
+
+Disallow: /ITW
+
+Disallow: /jim
+
+Disallow: /jobs
+
+
+
+Disallow: /jujutsunew
+
+Disallow: /jumpsites
+
+Disallow: /kk
+
+Disallow: /leafletdist
+
+Disallow: /mansbridge
+
+Disallow: /mansbridgex
+
+Disallow: /news
+
+Disallow: /OnlineFTP
+
+Disallow: /OPW
+
+
+
+Disallow: /papers
+
+Disallow: /plant
+
+
+
+Disallow: /Property
+
+Disallow: /PropertyReview
+
+Disallow: /Radio Mag (New)
+
+Disallow: /RadioMag
+
+Disallow: /radiomagnew
+
+Disallow: /raw
+
+Disallow: /RC
+
+Disallow: /sethsemail
+
+Disallow: /ShaunCouling
+
+Disallow: /Shiatsu
+
+Disallow: /submit
+
+
+
+Disallow: /talkshiatsu
+
+Disallow: /tavsings
+
+
+
+
+Disallow: /test
+
+Disallow: /testprograms
+
+
+
+Disallow: /Tindle
+
+Disallow: /tindlepool
+
+
+Disallow: /today
+
+Disallow: /tomorrow
+
+Disallow: /training
+
+Disallow: /UploadPDFs
+
+
+
+
+
+
+
+Disallow: /hold.cfm
+
+Disallow: /index.cfm
+
+Disallow: /index2.cfm
+
+
+

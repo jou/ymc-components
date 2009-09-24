@@ -1,0 +1,71 @@
+#
+# This is the robots.txt file.  It should be in the root (/)
+# of your web site.
+#
+# This file is used to tell search engine crawlers what
+# directories they should ignore when indexing.
+#
+# Lines beginning with # are comments, and are not processed
+# by crawlers.
+#
+# The format is a series of records.  Each record begins with
+# a User-agent: statement, and is followed by at least one
+# Disallow: statement.  The preset records below demonstrate
+# this format.
+#
+# Records are separated by blank lines
+#
+# For further information, visit
+# http://info.webcrawler.com/mak/projects/robots/norobots.html
+#
+
+# Leave these records intact:
+User-agent: stress-agent
+Disallow: /
+
+# Edit this record as appropriate for your site.  Add any
+# other directories you want crawlers to ignore.
+User-agent: *
+Disallow: /images/
+Disallow: /scripts/
+Disallow: /_
+Disallow: /nosvs/
+
+User-agent: msnbot #MSN
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST
+
+User-agent: Slurp #YAHOO
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST
+
+User-agent: Googlebot # Google
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST
+
+User-agent: VoilaBot # French Search Engine
+# VoilaBot-Not 100% this is a good bot. monitor see obeys robots.txt
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST
+
+User-agent: Teoma # AskJeeves
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST
+
+User-agent: baiduspider # Baidu
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST
+
+User-agent: Gigabot # Gigabot-Not 100% this is a good bot. monitor see obeys robots.txt
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST
+
+User-agent: Larbin # Larbin-Not 100% this is a good bot. monitor see obeys robots.txt
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST
+
+User-agent: ConveraCrawler 
+# Converas RetrievalWare Internet Spider-Not 100% this is a good bot. 
+# monitor see obeys robots.txt
+Crawl-delay: 10
+Visit-time: 0600-0845 # and then only between 1 am to 3:45 am EST

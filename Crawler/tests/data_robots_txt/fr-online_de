@@ -1,0 +1,34 @@
+User-agent: Googlebot
+Disallow:
+
+User-agent: Mediapartners-Google*
+Disallow:
+
+User-agent: Yahoo-Newscrawler
+Disallow:
+
+User-agent: *
+Disallow: /_events/
+Disallow: /_genioskal/
+Disallow: /_img/
+Disallow: /_import/
+Disallow: /_inc/
+Disallow: /tools/
+Disallow: /bin/
+Disallow: /cgi/
+Disallow: /cgi-bin/
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: WebCapture
+Disallow: /

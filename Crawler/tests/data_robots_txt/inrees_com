@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /phpmyvisites/
+Disallow: /admin/
+Disallow: /includes/events/
+
+Sitemap: http://www.inrees.com/sitemap.xml

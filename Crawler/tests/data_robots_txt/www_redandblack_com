@@ -1,0 +1,9 @@
+User-agent: Mediapartners-Google* 
+Disallow: 
+
+User-agent: GoogleBot
+Disallow: 
+
+User-agent: *
+Disallow: /home/index.cfm?event=displayArticlePrinterFriendly&
+Disallow: /home/index.cfm?event=displayEmailArticleForm&

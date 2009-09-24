@@ -1,0 +1,17 @@
+#User-agent: slurp
+#Disallow: /cgi-bin/
+User-agent: Slurp
+Disallow: /cgi-bin/2000/search.pl
+
+#User-agent: msnbot
+#Disallow: /cgi-bin/
+
+User-agent: Yandex
+Disallow: /cgi-bin/
+
+User-agent: Yandex/1.01.001
+Disallow: /cgi-bin/
+
+User-agent: *
+Disallow: 
+

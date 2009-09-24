@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /.shared
+Disallow: /services/
+Disallow: /atom/

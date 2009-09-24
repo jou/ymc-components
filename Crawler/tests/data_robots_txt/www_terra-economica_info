@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /IMG/pdf
+
+User-agent: Googlebot
+Disallow: /*.pdf$
+

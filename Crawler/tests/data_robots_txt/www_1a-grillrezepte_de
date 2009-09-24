@@ -1,0 +1,12 @@
+User-agent:*
+
+# WordPress
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: */feed/
+Disallow: */trackback/
+Allow: /feed/
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://www.1a-grillrezepte.de/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN

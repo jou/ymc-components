@@ -1,0 +1,28 @@
+# Allow Archiver
+User-agent: ia_archiver
+Allow: /
+
+
+User-agent: Slurp
+Crawl-delay: 60
+
+
+User-agent: *
+
+Disallow: *.php
+Disallow: *.js
+Disallow: *.jsp
+Disallow: *.cfm
+Disallow: *.asp
+Disallow: *.html
+Disallow: *.htm
+Disallow: *.aspx
+Disallow: *.cgi
+
+Disallow: /includes/
+Disallow: /install/
+Disallow: /customavatars/
+Disallow: /archive/
+Disallow: /sitemap/
+
+Sitemap: http://australianspeedway.com/forum/sitemap_index.xml.gz

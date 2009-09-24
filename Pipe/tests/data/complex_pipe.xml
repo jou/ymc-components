@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ymcpipe name="unnamed" version="">
+  <node id="1" name="" node-class="ymcPipeBasicNodeMock">
+    <configuration configuration-class="ymcPipeBasicNodeConfigurationMock">
+      <property key-type="string" key-name="test" value-type="string"><![CDATA[value]]></property>
+    </configuration>
+  </node>
+  <node id="2" name="" node-class="ymcPipeBasicNodeMock">
+    <configuration configuration-class="ymcPipeBasicNodeConfigurationMock">
+      <property key-type="string" key-name="test" value-type="string"><![CDATA[value]]></property>
+    </configuration>
+  </node>
+  <node id="3" name="" node-class="ymcPipeBasicNodeMock">
+    <configuration configuration-class="ymcPipeBasicNodeConfigurationMock">
+      <property key-type="string" key-name="test" value-type="string"><![CDATA[value]]></property>
+    </configuration>
+    <outNode id="2"/>
+    <outNode id="1"/>
+  </node>
+  <node id="4" name="" node-class="ymcPipeBasicNodeMock">
+    <configuration configuration-class="ymcPipeBasicNodeConfigurationMock">
+      <property key-type="string" key-name="test" value-type="string"><![CDATA[value]]></property>
+    </configuration>
+    <outNode id="3"/>
+  </node>
+  <node id="5" name="" node-class="ymcPipeBasicNodeMock">
+    <configuration configuration-class="ymcPipeBasicNodeConfigurationMock">
+      <property key-type="string" key-name="test" value-type="string"><![CDATA[value]]></property>
+    </configuration>
+    <outNode id="3"/>
+  </node>
+  <node id="6" name="" node-class="ymcPipeBasicNodeMock">
+    <configuration configuration-class="ymcPipeBasicNodeConfigurationMock">
+      <property key-type="string" key-name="test" value-type="string"><![CDATA[value]]></property>
+    </configuration>
+    <outNode id="4"/>
+  </node>
+  <node id="7" name="" node-class="ymcPipeBasicNodeMock">
+    <configuration configuration-class="ymcPipeBasicNodeConfigurationMock">
+      <property key-type="string" key-name="test" value-type="string"><![CDATA[value]]></property>
+    </configuration>
+    <outNode id="5"/>
+  </node>
+</ymcpipe>

@@ -1,0 +1,10 @@
+########
+User-Agent: *
+Disallow: /mmedia/
+Disallow: /pages/
+Disallow: /upload/
+Disallow: /digitalworkroom/
+Disallow: /_stat/
+Disallow: /auswertung/
+
+

@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /dublin/
+Disallow: /eurotimes/
+Disallow: /survey/
+Disallow: /promotion/
+Disallow: /Storage/
+Disallow: /ITImage/
+
+User-agent: Mediapartners-Google*
+Disallow: /Storage/
+Disallow: /ITImage/
+Disallow: /newspaper/tools/

@@ -1,0 +1,6 @@
+
+User-agent: *
+
+Disallow: /~/coldharbour.aspx
+Disallow: /Admin
+Disallow: /images

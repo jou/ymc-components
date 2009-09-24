@@ -1,0 +1,53 @@
+# Disallow all crawlers access to certain pages.
+
+User-agent: *
+Disallow: /exec/obidos/account-access-login
+Disallow: /exec/obidos/change-style
+Disallow: /exec/obidos/dt/assoc/handle-buy-box
+Disallow: /exec/obidos/flex-sign-in
+Disallow: /exec/obidos/handle-buy-box
+Disallow: /exec/obidos/tg/cm/member
+Disallow: /exec/obidos/refer-a-friend-login
+Disallow: /exec/obidos/subst/partners/friends/access.html
+Disallow: /exec/obidos/subst/marketplace/sell-your-stuff.html
+Disallow: /exec/obidos/subst/marketplace/sell-your-collection.html
+Disallow: /exec/obidos/subst/gifts/gift-certificates
+Disallow: /exec/obidos/subst/associates/join
+Disallow: /gp/cart
+Disallow: /gp/flex
+Disallow: /gp/sign-in
+Disallow: /gp/slides/make-money
+Disallow: /gp/yourstore
+Disallow: /gp/legacy-handle-buy-box.html
+Disallow: /gp/customer-reviews/write-a-review.html
+Disallow: /gp/vote
+Disallow: /gp/reader
+Disallow: /gp/gfix
+Disallow: /gp/customer-images
+Disallow: /gp/music/clipserve
+Disallow: /gp/richpub/listmania/createpipeline
+Disallow: /gp/history
+Disallow: /gp/item-dispatch
+Disallow: /gp/recsradio
+Disallow: /dp/product-availability/
+Disallow: /dp/rate-this-item/
+
+# Sitemap files
+Sitemap: http://www.amazon.fr/sitemap_index_0.xml
+Sitemap: http://www.amazon.fr/sitemap_index_1.xml
+Sitemap: http://www.amazon.fr/sitemap_index_2.xml
+Sitemap: http://www.amazon.fr/sitemap_index_3.xml
+Sitemap: http://www.amazon.fr/sitemap-fr-tbb.xml
+Sitemap: http://www.amazon.fr/sitemap_index_pg_books.xml
+Sitemap: http://www.amazon.fr/sitemap_index_pg_electronics.xml
+Sitemap: http://www.amazon.fr/sitemap_index_pg_misc.xml
+Sitemap: http://www.amazon.fr/sitemap_index_pg_music.xml
+Sitemap: http://www.amazon.fr/sitemap-manual-index.xml
+Sitemap: http://www.amazon.fr/sitemap-search-index.xml
+Sitemap: http://www.amazon.fr/sitemap_b_197.xml
+Sitemap: http://www.amazon.fr/sitemap_b_241.xml
+Sitemap: http://www.amazon.fr/sitemap_b_340.xml
+Sitemap: http://www.amazon.fr/sitemap_index_pg_books.xml
+Sitemap: http://www.amazon.fr/sitemap_index_pg_electronics.xml
+Sitemap: http://www.amazon.fr/sitemap_index_pg_misc.xml
+Sitemap: http://www.amazon.fr/sitemap_index_pg_music.xml

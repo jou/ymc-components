@@ -1,0 +1,15 @@
+# robots.txt for http://www.statcan.gc.ca/
+
+
+User-agent: *
+Allow: /estat/licence-eng.htm
+Allow: /estat/licence-fra.htm
+Disallow: /estat/
+Disallow: /stcsr/cs.html
+Disallow: /error-erreur/
+
+Disallow: /pub/12-591-x/2006001/
+Disallow: /pub/12-591-x/12-591-x2006001-eng.htm
+Disallow: /pub/12-591-x/12-591-x2006001-fra.htm
+
+

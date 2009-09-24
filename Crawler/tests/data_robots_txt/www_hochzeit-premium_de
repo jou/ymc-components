@@ -1,0 +1,10 @@
+# robots.txt Regeln
+
+#Regeln für alle Crawler
+User-agent: *
+Disallow: /accounts/
+
+# Sitemaps einreichen
+
+Sitemap: http://www.hochzeit-premium.de/sitemap.xml
+Sitemap: http://www.hochzeit-premium.de/sitemap.xml.gz

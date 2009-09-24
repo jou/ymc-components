@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:*/utile/
+Disallow: /a.html?*
+Disallow: /m.html

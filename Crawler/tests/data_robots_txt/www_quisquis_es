@@ -1,0 +1,4 @@
+# robots.txt http: //www.quisquis.es/
+
+User-agent: *
+Disallow:

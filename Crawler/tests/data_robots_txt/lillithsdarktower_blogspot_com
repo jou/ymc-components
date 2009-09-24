@@ -1,0 +1,7 @@
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /search
+
+Sitemap: http://lillithsdarktower.blogspot.com/feeds/posts/default?orderby=updated

@@ -1,0 +1,14 @@
+{use $form}
+
+{var $e = $form['agents']}
+
+{foreach $e->value as $key => $value}
+  <div>
+    <label for="{$e->name}[{$key}]">{$e->name}[{$key}]</label>
+    <input type="checkbox" {if $value}checked="checked"{/if} name="{$e->name}[{$key}]"
+           id="{$e->name}[{$key}]"
+    />
+  <div>
+{/foreach}
+
+<input type="hidden" name="dummy" value="datahasbeensent" />

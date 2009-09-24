@@ -1,0 +1,42 @@
+User-agent: seekbot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-Agent: Spinn3r
+Disallow: /
+
+
+User-agent: *
+Disallow: /srv/account/
+Disallow: /srv/admin/
+Disallow: /srv/badstubs/
+Disallow: /srv/bloglists/
+Disallow: /srv/cache/
+Disallow: /srv/comments/
+Disallow: /srv/company/
+Disallow: /srv/core/
+Disallow: /srv/cronjob/
+Disallow: /srv/design/
+Disallow: /srv/domains/
+Disallow: /srv/emailsub/
+Disallow: /srv/feeds/
+Disallow: /srv/forwarding/
+Disallow: /srv/friends/
+Disallow: /srv/help/
+Disallow: /srv/media/
+Disallow: /srv/payment/
+Disallow: /srv/pdfexport/
+Disallow: /srv/profile/
+Disallow: /srv/register/
+Disallow: /srv/search/
+Disallow: /srv/support/
+Disallow: /srv/templates/
+Disallow: /srv/tinymce/
+Disallow: /srv/wahlde/
+Disallow: /admin/
+Disallow: /htsrv/
+Disallow: /my/
+Disallow: /service/
+Disallow: /captcha.php

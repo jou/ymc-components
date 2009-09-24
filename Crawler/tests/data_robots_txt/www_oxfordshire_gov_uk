@@ -1,0 +1,24 @@
+# WebSphere Portal Server is a spider trap.  We have tagged the pages
+# with INDEX, NOFOLLOW.  Robots which do not obey NOFOLLOW are excluded.
+
+User-agent: Googlebot         # Google (powers AOL, HotBot)
+User-agent: Teoma             # Teoma (powers Ask, HotBot)
+User-agent: msnbot            # MSN
+User-agent: Slurp	      # Inktomi Slurp (powers Yahoo, Altavista, AllTheWeb.com, www.hotbot.com)
+Disallow: /wps/portal/insite
+Disallow: /wps/myportal/insite
+Disallow: /wps/portal/intranet
+Disallow: /wps/myportal/intranet
+Disallow: /wps/portal/publicnet
+Disallow: /wps/myportal/publicnet
+Disallow: /content/
+Disallow: /content/shc/
+Disallow: /content/yhmh/
+Disallow: /nocache/
+
+User-agent: *
+Disallow: /wps/
+Disallow: /content/
+Disallow: /content/shc/
+Disallow: /content/yhmh/
+Disallow: /nocache/

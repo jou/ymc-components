@@ -1,0 +1,20 @@
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://wallyday.com/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN
+
+User-agent: *
+Disallow: /comments/feed/
+Disallow: /feed/
+Disallow: /feed/atom/
+Disallow: /feed/rss/
+Disallow: /rss/
+Disallow: /trackback/
+Disallow: /wp/
+Disallow: /*/comments/feed/$
+Disallow: /*/feed/$
+Disallow: /*/feed/atom/$
+Disallow: /*/feed/rss/$
+Disallow: /*/rss/$
+Disallow: /*/trackback/$
+User-Agent: MediaPartners-Google
+Allow: /

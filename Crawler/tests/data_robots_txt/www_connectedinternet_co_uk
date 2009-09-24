@@ -1,0 +1,49 @@
+Sitemap: http://www.connectedinternet.co.uk/sitemap.xml
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /z/
+Disallow: /stats/
+Disallow: /dh_
+Disallow: /wp-content/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-
+Disallow: /feed/
+Disallow: /trackback/
+Disallow: */trackback/
+Disallow: /cgi-bin/
+Disallow: /adlogger/
+Disallow: /ads/
+Disallow: /mint/
+Disallow: /*?*
+
+User-agent: *
+Allow: /wp-content/uploads/
+Allow: /wp-skins/
+
+User-agent: Googlebot
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.cgi$
+Disallow: /*.xhtml$
+Disallow: /*.php*
+Disallow: */trackback*
+Disallow: /*?*
+Disallow: /z/
+Disallow: /wp-*
+Disallow: /*.inc$
+Disallow: /*.css$
+Disallow: /*.txt$
+Allow: /wp-content/uploads/
+
+User-agent: Googlebot-Image
+Disallow:
+Allow: /*
+
+User-agent: Mediapartners-Google*
+Disallow:
+Allow: /*
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://www.connectedinternet.co.uk/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN

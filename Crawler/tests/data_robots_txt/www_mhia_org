@@ -1,0 +1,141 @@
+User-agent: *
+Disallow: /about/mhefi/application/
+Disallow: /about/vcard/
+Disallow: /admin/
+Disallow: /App_Browsers/
+Disallow: /App_Code/
+Disallow: /App_Data/
+Disallow: /Assets/
+Disallow: /bin/
+Disallow: /controls/
+Disallow: *disclaimer*.aspx
+Disallow: /exceptions/
+Disallow: /images/
+Disallow: /industrygroups/conv/vrclift/glossary.xml
+Disallow: /learning/marketresearch/analysis/reports/
+Disallow: /media/elessons/
+Disallow: /media/industrygroups/
+Disallow: /media/flvplayer.aspx
+Disallow: /members/siteviewer.aspx
+Disallow: /members/site/
+Disallow: /members/export
+Disallow: /obj/
+Disallow: /scripts/
+Disallow: /search.aspx
+Disallow: /searchtips.aspx
+Disallow: /services/
+Disallow: /styles/
+Disallow: /opensearch.xml
+#Disallow: /vango/
+Disallow: /about/brochure.aspx
+###############################
+# Google, Yahoo, Live webmaster validation
+###############################
+Disallow: /google1ab52a85242e5e87.html
+Disallow: /y_key_fc77865a3529de76.html
+Disallow: /LiveSearchSiteAuth.xml
+###############################
+# Pages that require authentication
+###############################
+Disallow: /about/societies/mhms/members/
+Disallow: /mymhia/
+Disallow: /signin.aspx
+Disallow: /passwordreset.aspx
+###############################
+# Downloads
+###############################
+Disallow: /downloads/industrygroups/*/casestudies/
+Disallow: /downloads/industrygroups/*/members/
+Disallow: /downloads/learning/marketresearch/members/
+Disallow: /downloads/free/
+Disallow: /downloads/members/
+Disallow: /downloads/*.xls
+###############################
+# Dynamic Pages
+###############################
+Disallow: /industrygroups/cmaa/buyersguide/download.aspx
+Disallow: /learning/resources/casestudies.aspx
+Disallow: /learning/resources/freedownloads.aspx
+Disallow: /learning/resources/downloadfile.aspx
+Disallow: /learning/resources/freedownloadDetail.aspx
+Disallow: /learning/glossary.aspx
+Disallow: /learning/default.aspx
+Disallow: /industrygroups/*/contact.aspx
+Disallow: /industrygroups/*/elessons.aspx
+Disallow: /industrygroups/*/news/members.aspx
+Disallow: /members/directory.aspx
+Disallow: /members/search.aspx
+Disallow: /members/map.aspx
+Disallow: /members/listing.aspx
+Disallow: /news/releaseDetail.aspx
+###############################
+# Subwebs
+###############################
+Disallow: /subwebs/
+###############################
+# Emails
+###############################
+Disallow: /subwebs/emails/
+###############################
+# SCE Seminars
+###############################
+Disallow: /subwebs/SCESeminars/
+Disallow: /subwebs/SCEWebinars/2007/
+###############################
+# Emhove
+###############################
+Disallow: /subwebs/emhove/
+###############################
+# Non HTML types
+###############################
+Disallow: *.swf
+Disallow: *.jpg
+Disallow: *.gif
+Disallow: *.png
+Disallow: *.tif
+Disallow: *.css
+Disallow: *.js
+Disallow: *.db
+Disallow: *.vcs
+Disallow: *.wp
+Disallow: *.mdb
+Disallow: *.dwg
+Disallow: *.ico
+Disallow: *.flv
+Disallow: *.db
+Disallow: *.inc
+Disallow: *.htc
+Disallow: *.exe
+Disallow: *.dat
+Disallow: *.kml
+Disallow: *.xsl
+Disallow: *.xslt
+Disallow: .ds_store
+###############################
+# ASP.NET specific
+###############################
+Disallow: *.asax
+Disallow: *.ascx
+Disallow: *.ashx
+Disallow: *.asmx
+#Disallow: *.axd
+Disallow: *.cs
+Disallow: *.resx
+Disallow: *.dll
+Disallow: *.config
+Disallow: *.sitemap
+Disallow: *.csproj*
+Disallow: *_vti*
+Disallow: *.sln
+###############################
+# ColdFusion specific
+###############################
+Disallow: Application.cfm
+###############################
+# Temporary
+###############################
+
+###############################
+# Sitemap
+###############################
+Sitemap: http://www.mhia.org/sitemap.xml

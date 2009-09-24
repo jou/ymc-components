@@ -1,0 +1,21 @@
+# http://www.stattweb.de/robots.txt
+
+User-agent: *
+Disallow: /cgi-bin/baseportal.pl?htx=/stattweb.de/ArchivDruck
+Disallow: /cgi-bin/baseportal.pl?htx=/stattweb.de/AdminV2
+Disallow: /cgi-bin/baseportal.pl?htx=/stattweb.de/LinksZ
+Disallow: /cgi-bin/baseportal.pl?htx=/stattweb.de/Kontakt
+Disallow: /cgi-bin/baseportal.pl?htx=/stattweb.de/Addresses
+Disallow: /cgi-bin/baseportal.pl?htx=/stattweb.de/Einzelseiten&seite=Impressum
+Disallow: /baseportal/Einzelseiten&seite=Impressum
+Disallow: /baseportal/ArchivDruck
+Disallow: /baseportal/AdminV2
+Disallow: /baseportal/LinksZ
+Disallow: /baseportal/Statistik
+Disallow: /baseportal/Kontakt
+Disallow: /baseportal/Favoriten
+Disallow: /baseportal/Addresses
+Disallow: /logadmin.html
+Disallow: /logout.html
+Disallow: /sperrung.html
+Disallow: /zsperr.html

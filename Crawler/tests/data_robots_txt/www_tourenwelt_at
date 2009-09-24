@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /phpMyAdmin/
+Disallow: /phpmyadmin/
+Sitemap: http://www.tourenwelt.at/sitemap.php

@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /dropsafe
+Disallow: /dropsafe/
+
+User-agent: googlebot
+Disallow:
+
+User-agent: baiduspider
+Disallow:
+
+User-agent: msnbot
+Disallow:

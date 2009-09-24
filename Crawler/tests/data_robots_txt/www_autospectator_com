@@ -1,0 +1,66 @@
+# $Id: robots.txt,v 1.7.2.1 2007/03/23 18:57:07 drumm Exp $
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+# http://www.robotstxt.org/wc/robots.html
+#
+# For syntax checking, see:
+# http://www.sxw.org.uk/computing/robots/check.html
+
+User-agent: *
+Crawl-delay: 10
+# Directories
+Disallow: /cars/database/
+Disallow: /cars/includes/
+Disallow: /cars/misc/
+Disallow: /cars/modules/
+Disallow: /cars/sites/
+Disallow: /cars/themes/
+Disallow: /cars/scripts/
+Disallow: /cars/updates/
+Disallow: /cars/profiles/
+Disallow: /modules/
+# Files
+Disallow: /cars/xmlrpc.php
+Disallow: /cars/cron.php
+Disallow: /cars/update.php
+Disallow: /cars/install.php
+Disallow: /cars/INSTALL.txt
+Disallow: /cars/INSTALL.mysql.txt
+Disallow: /cars/INSTALL.pgsql.txt
+Disallow: /cars/CHANGELOG.txt
+Disallow: /cars/MAINTAINERS.txt
+Disallow: /cars/LICENSE.txt
+Disallow: /cars/UPGRADE.txt
+# Paths (clean URLs)
+Disallow: /cars/admin/
+Disallow: /cars/aggregator/
+Disallow: /cars/comment/reply/
+Disallow: /cars/contact/
+Disallow: /cars/logout/
+Disallow: /cars/node/add/
+Disallow: /cars/search/
+Disallow: /cars/user/register/
+Disallow: /cars/user/password/
+Disallow: /cars/user/login/
+# Paths (no clean URLs)
+Disallow: /cars/?q=admin/
+Disallow: /cars/?q=aggregator/
+Disallow: /cars/?q=comment/reply/
+Disallow: /cars/?q=contact/
+Disallow: /cars/?q=logout/
+Disallow: /cars/?q=node/add/
+Disallow: /cars/?q=search/
+Disallow: /cars/?q=user/password/
+Disallow: /cars/?q=user/register/
+Disallow: /cars/?q=user/login/

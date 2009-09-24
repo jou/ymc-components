@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /_phpmyadmin_/
+Disallow: /logs/
+Disallow: /webstats/
+Disallow: /mysqldumper/
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://www.4x4news.de/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN

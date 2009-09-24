@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://moovoom.com/sitemap.xml.gz

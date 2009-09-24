@@ -1,0 +1,7 @@
+# /robots.txt file for http://www.whichbingo.co.uk
+
+User-agent: *
+Disallow: /control
+Disallow: /bingo/links/
+
+Sitemap: http://www.whichbingo.co.uk/sitemap.xml

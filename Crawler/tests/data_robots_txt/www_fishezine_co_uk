@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /work/
+Disallow: /work
+Disallow: /blog/
+Disallow: /blog
+Disallow: /discuss/add_comment.php
+Disallow: /forum/viewboard.php
+Disallow: /forum/viewthread.php
+Disallow: /forum/addpost.php
+Disallow: /submitarticle.php
+Disallow: /rate/
+Disallow: /rate
+Disallow: /search/
+Disallow: /search
+
+
+Allow: /discuss/read_comments.php

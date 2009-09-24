@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /nymedlem.asp
+Disallow: /samtligafilm.asp
+Disallow: /*filmpage
+Disallow: /visakommentar_film.asp
+Disallow: /rekommendation.asp

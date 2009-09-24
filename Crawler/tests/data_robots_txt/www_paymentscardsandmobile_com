@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /_mm/
+Disallow: /_notes/
+Disallow: /_baks/
+Disallow: /MMWIP/
+
+User-agent: googlebot
+Disallow: *.csi
+
+Sitemap: <http://www.europeancardreview.co.uk/sitemap.xml>

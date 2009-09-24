@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /cgi-bin
+Disallow: /kontakt.php
+Disallow: /impressum.php
+Disallow: /login.php
+Disallow: /wir.php
+Disallow: /agb.php

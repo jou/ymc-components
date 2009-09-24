@@ -1,0 +1,35 @@
+#
+# robots.txt for http://thunderlounge.com/
+#
+# $Id: robots.txt,v 2.0 2008/02/28 18:00:00 dom Exp $
+#
+# exclude form result pages, image directory, and script directory
+
+User-agent: googlebot-Image
+Disallow: /
+
+User-agent: *
+Crawl-delay: 15
+Allow: /
+Disallow: /wp-content
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /adserv
+Disallow: /cgi-bin
+Disallow: /media
+Disallow: /wp-signup.php
+Disallow: /wp-activate.php
+Disallow: /wp-login.php
+Disallow: /login.php
+Disallow: /maintenance.php
+Disallow: /index2.php
+Disallow: /*.php
+Disallow: */trackback
+Disallow: /gallery
+Disallow: /avatars
+Disallow: /files
+Disallow: *.jpg
+Disallow: *.gif
+Disallow: *.png
+Disallow: /index2.php
+Disallow: /mail_post.php

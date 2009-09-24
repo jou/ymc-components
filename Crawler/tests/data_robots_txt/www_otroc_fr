@@ -1,0 +1,16 @@
+User-Agent: Mediapartners-Google
+Disallow :
+User-Agent: *
+Disallow: /gestion
+Disallow: /stats
+Disallow: /conditions-generales.html
+Disallow: /gerer-vos-annonces.html
+Disallow: /contact.html
+Disallow: /pop_alert.php
+Disallow: /contact-vendeur.html
+Disallow: /oublie_mdp.php
+Disallow: /offres_consult.php
+Disallow: /offres_contact.php
+Disallow: /offres_creation.php
+Disallow: /t.php
+Allow: /

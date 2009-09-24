@@ -1,0 +1,127 @@
+# Disallow Google ad bots from the entire site
+User-agent: Mediapartners-Google*
+Disallow: /
+
+# Disallow Google Adsense from the entire site
+User-agent: Google AdSense
+Disallow: /
+
+# Disallow specific bots from indexing or crawling the site at all
+# Most recent additions first.
+
+User-agent: GigaBot
+Disallow: /
+
+User-agent: Voyager
+Disallow: /
+
+User-agent: BaiDuSpider
+Disallow: /
+
+User-agent: BackRub/*.*
+Disallow: /
+
+User-agent: Grub.org
+Disallow: /
+
+User-agent: BotRightHere
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: psbot
+Disallow: /
+
+User-agent: Walhello appie
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: CherryPicker
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: CopyRightCheck
+Disallow: /
+
+User-agent: Crescent
+Disallow: /
+
+# Russian only search engine 
+User-agent: yandex bot
+Disallow: / 
+
+# Russian only search engine again
+User-agent: YaDirectBot/1.0
+Disallow: /
+
+User-agent: R6_CommentReader
+Disallow: /
+
+User-agent: Commentful
+Disallow: /
+
+User-agent: CoComments
+Disallow: /
+
+User-agent: Co.mments
+Disallow: /
+
+User-agent: YodaoBot 1.0
+Disallow: /
+
+User-agent: YoudaoBot 1.0
+Disallow: /
+
+User-agent: Yeti/1.0
+Disallow: /
+
+# In development search engine
+User-agent: ScoutJet
+Disallow: /
+
+User-agent: googlebot-image
+Disallow: /
+
+User-agent: googlebot-mobile
+Disallow: /
+
+User-agent: twiceler
+Disallow: /
+
+User-agent: butterfly
+Disallow: /
+
+# We are building a large document index for a next-generation search engine.
+# http://www.discoveryengine.com/discobot.html
+User-agent: discobot
+Disallow: /
+
+# http://swoogle.umbc.edu/
+User-agent: Swooglebot
+Disallow: /
+
+User-agent: MLBot
+Disallow: / 
+
+User-agent: *
+Crawl-delay: 120
+Disallow: /cgi-bin/
+Disallow: /plesk-stat/
+Disallow: /wp-includes/
+Disallow: /wp-admin/
+Disallow: /img/
+

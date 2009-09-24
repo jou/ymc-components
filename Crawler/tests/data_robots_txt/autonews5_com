@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /mail
+Disallow: /wp-admin
+Disallow: /wp-login.php
+Disallow: /wp-content
+
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://autonews5.com/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN
+

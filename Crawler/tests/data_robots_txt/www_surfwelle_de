@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /afl/
+Disallow: /blb/
+Disallow: /npl/
+Disallow: /out/
+Disallow: /shop/
+Disallow: /zax/

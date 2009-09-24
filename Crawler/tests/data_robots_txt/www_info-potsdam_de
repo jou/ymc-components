@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Disallow: /css/
+Disallow: /js/
+
+User-agent: scooter
+Disallow: /css/
+Disallow: /js/
+
+User-agent: *
+Disallow: /admin/
+Disallow: /conf/
+Disallow: /wetter/
+Disallow: /banner/
+Disallow: /upload/
+Disallow: /stat/
+Disallow: /source/
+Disallow: /webmailer/

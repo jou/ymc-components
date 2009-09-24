@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /shop/printshop
+Disallow: /item/reply
+Disallow: /item/share
+Disallow: /item/email
+Disallow: /photos/hi-res
+Disallow: /content
+Disallow: /music
+Disallow: /tag

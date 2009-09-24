@@ -1,0 +1,12 @@
+User-agent: Googlebot-Image
+Disallow: / 
+
+User-agent:	*
+Disallow:	/free
+Disallow:	/images
+Disallow:	/files
+Disallow:	/shows
+Disallow:	/rss
+Disallow:	/nasaroses
+Disallow:	/article/nasaroses
+Disallow:	/NASARoses

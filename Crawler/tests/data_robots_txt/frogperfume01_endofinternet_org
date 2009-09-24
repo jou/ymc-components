@@ -1,0 +1,20 @@
+User-Agent: *
+
+Disallow: /suite/
+
+Disallow: /wp-content/
+
+Disallow: /wp-admin/
+
+Disallow: /wp-includes/
+
+Disallow: /cgi-bin/
+
+Disallow: /images/
+Disallow: /app/
+Disallow: /csvs/
+Disallow: /fulldom.php
+Disallow: /fulldomsub.php
+Disallow: /fixposts.php
+Disallow: /bc2atchy.php
+Disallow: /domains.csv

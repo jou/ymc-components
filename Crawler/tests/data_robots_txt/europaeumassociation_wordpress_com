@@ -1,0 +1,20 @@
+Sitemap: http://europaeumassociation.wordpress.com/sitemap.xml
+
+User-agent: IRLbot
+Crawl-delay: 3600
+
+User-agent: *
+Disallow: /next/
+
+# har har
+User-agent: *
+Disallow: /activate/
+
+User-agent: *
+Disallow: /signup/
+
+User-agent: *
+Disallow: /related-tags.php
+
+User-agent: *
+Disallow:

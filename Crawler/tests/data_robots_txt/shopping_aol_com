@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+User-agent: *<br/>
+Disallow: /aol/<br/>
+Disallow: /aolc/<br/>
+Disallow: /aolr/<br/>
+Disallow: /aolla/<br/>
+Disallow: /css/<br/>
+Disallow: /img/<br/>
+Disallow: /u2/<br/>
+Disallow: /ppcms/<br/>
+Disallow: /aalerts<br/>
+Disallow: /ealerts<br/>
+Disallow: /dalerts<br/>
+Disallow: /instore/ppxredirect<br/>
+Disallow: /instore/ppeembed<br/>
+Disallow: /instore/azlist<br/>
+Disallow: /instore/search<br/>
+Disallow: /instore/FavStores<br/>
+Disallow: /tutorial/<br/>
+Disallow: /termsAndConditions.html<br/>
+Disallow: /_cqr/<br/>
+Disallow: /pages/Catalog-Listing/<br/>
+Disallow: /pages/Gift-Registries/<br/>
+Disallow: /pages/Gift-Cards/<br/>
+Disallow: /articles/articles/forward/<br/>
+Disallow: /pp<br/>
+Disallow: /*PostURL<br/>
+Sitemap: http://shopping.aol.com/shopping-sitemap.xml
+

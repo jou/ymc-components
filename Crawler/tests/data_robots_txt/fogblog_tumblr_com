@@ -1,0 +1,7 @@
+Sitemap: http://fogblog.tumblr.com/sitemap1.xml
+
+User-agent: *
+Disallow: /private
+Disallow: /random
+Crawl-delay: 1
+

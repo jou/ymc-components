@@ -1,0 +1,14 @@
+User-agent: Mediapartners-Google*
+Disallow:
+
+User-agent: *
+Disallow: /cc-common/
+Disallow: /jacor-common/
+Disallow: /iplaylist/
+Disallow: /admin/
+Disallow: /timages/
+Disallow: /_template/
+Disallow: /script/
+Disallow: /cgi-bin/
+Disallow: /media/
+Disallow: /pages/

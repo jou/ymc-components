@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /portlet/
+Disallow: /circare/
+Crawl-delay: 5
+
+Sitemap: http://www.connpost.com/sitemap.xml

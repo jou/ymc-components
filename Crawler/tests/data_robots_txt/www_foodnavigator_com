@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /content/search
+Disallow: /noct/index.php
+Disallow: /noct/
+Crawl-delay: 10

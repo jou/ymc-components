@@ -1,0 +1,5 @@
+# robots.txt for http://www.naukrihub.com/
+User-agent: *
+Disallow: /cgi-bin/ # This is an infinite virtual URL space
+Disallow: /stats/ # these will soon disappear
+

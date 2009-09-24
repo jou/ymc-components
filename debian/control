@@ -1,0 +1,27 @@
+Source: ymc-components
+Section: web
+Priority: optional
+Build-Depends: debhelper (>= 7.0.15)
+Maintainer: Thomas Koch <thomas.koch@ymc.ch>
+Standards-Version: 3.8.3
+
+Package: ymc-curl
+Depends: ${misc:Depends}
+Architecture: all
+Description: Some helper classes for php-curl
+ Provides a request, response and multihandle class.
+
+Package: ymc-htmlform
+Depends: ${misc:Depends}
+Architecture: all
+Description: Component to support the validation of HTML forms.
+ Everything can be overridden and addapted
+ Forms are PHP classes
+ Written in the style of eZ Components.
+
+Package: ymc-pipe
+Depends: ${misc:Depends}
+Architecture: all
+Description: PHP based, graph oriented data manipulation framework
+ Data can be manipulated by nodes of graph, where every node gets the 
+ output of incoming nodes as input.

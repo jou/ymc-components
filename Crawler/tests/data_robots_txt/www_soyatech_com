@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /product_documents/ 
+Disallow: /admin/ 
+Disallow: /export/
+Disallow: /plesk-stat/
+Disallow: /notrack.htm
+Disallow: /info.php?id=231

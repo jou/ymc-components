@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /sales/
+Disallow: /redaktion/
+Disallow: /sms/
+Disallow: /nyt/rss.php
+Sitemap: http://bold.dk/sitemap.php

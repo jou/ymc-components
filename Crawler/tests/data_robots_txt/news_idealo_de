@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /archiv/
+Disallow: /S/0/
+Disallow: /*?p=*
+Disallow: /anbieter/

@@ -1,0 +1,25 @@
+
+User-agent: Googlebot
+Disallow: /wp-feed.php
+Disallow: /wp-register.php
+Disallow: /wp-login.php
+Disallow: /2006/
+Disallow: /2007/
+Disallow: /2008/
+Disallow: */feed/
+Disallow: /?=*
+Allow: /feed/
+
+User-agent: *
+Disallow: /wp-feed.php
+Disallow: /wp-register.php
+Disallow: /wp-login.php
+Disallow: /2006/
+Disallow: /2007/
+Disallow: /2008/
+Disallow: */feed/
+Disallow: /?=*
+Allow: /feed/
+
+Sitemap: http://www.artikel-fakten.de/sitemap.xml
+

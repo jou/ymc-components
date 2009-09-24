@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /story/print
+Disallow: /story/sendcomment
+Disallow: /story/sendlink
+Disallow: /scripts

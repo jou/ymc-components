@@ -1,0 +1,42 @@
+User-Agent: Mediapartners-Google* 
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /shared-content/
+
+User-Agent: Googlebot
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /shared-content/
+
+User-Agent: MSNBot
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /shared-content/
+
+User-Agent: Scooter
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /shared-content/
+
+User-Agent: Slurp
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /shared-content/
+
+User-Agent: Yahoo-Newscrawler
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /shared-content/
+
+User-Agent: YahooYSMcm
+Disallow:
+Disallow: /cgi-bin/
+Disallow: /shared-content/
+
+User-Agent: Topix
+Disallow:
+Disallow: /cgi-bin/
+Disallow: /shared-content/
+
+User-Agent: * 
+Disallow: / 

@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /bluebulbtech
+Disallow: /wiki
+Disallow: /code
+Disallow: /phpinfomation.php
+Disallow: /joomla
+Disallow: /coppermine
+Disallow: /gallery
+Disallow: /4images

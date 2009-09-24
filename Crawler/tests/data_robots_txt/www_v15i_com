@@ -1,0 +1,8 @@
+#
+# robots.txt for Discuz! Board
+# Version 2.5
+#
+
+User-agent: *
+Disallow: /foosun/
+Disallow: /inc/

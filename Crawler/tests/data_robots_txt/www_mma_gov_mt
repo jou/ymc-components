@@ -1,0 +1,10 @@
+User-agent: *
+Sitemap: http://www.mma.com/sitemap.xml
+Disallow: /*.js$
+Disallow: /*.cgi$
+Disallow: /cgi-bin/
+Disallow: /pics/
+Disallow: /cms/
+Disallow:/aspnet_client/
+Disallow:/radio/
+Disallow:/uploads/

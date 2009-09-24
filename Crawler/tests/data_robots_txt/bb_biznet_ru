@@ -1,0 +1,24 @@
+User-agent: *
+Disallow: /?sid=
+Disallow: /*?sid=
+
+User-agent: Slurp
+Crawl-delay: 30
+
+User-agent: msnbot
+Crawl-delay: 30
+
+User-agent: gigabot
+Crawl-delay: 30
+
+User-agent: teoma
+Crawl-delay: 30
+
+User-agent: ia_archiver
+Crawl-delay: 30
+
+User-agent: Webalta
+Crawl-delay: 30
+
+User-agent: Mediapartners-Google*
+Disallow:

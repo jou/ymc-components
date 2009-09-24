@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://www.guido-muehlwitz.de/sitemap.xml.gz

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /library/
+Disallow: /medlem/
+Disallow: /poll/
+Disallow: /search/
+Disallow: /smt/

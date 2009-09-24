@@ -1,0 +1,33 @@
+User-agent: Googlebot
+Disallow: /*/feed/$
+Disallow: /*/feed/rss/$
+Disallow: /*/feed/rdf/$
+Disallow: /*/feed/atom/$
+Disallow: /*/trackback/$
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*.css$
+Disallow: /*.gz$
+Disallow: /*.cgi$
+Disallow: /*.xhtml$
+
+# disable duggmirror
+User-agent: duggmirror
+Disallow: /
+
+User-agent: Newskraft.de
+Disallow: /
+
+User-agent: wikioblogs/0.9
+Disallow: /
+
+User-agent: Mozilla/5.0 (X11; compatible; newstin.com; HTTPClient 3.1)
+Disallow: /
+
+User-agent: Attentio/Nutch-0.9-dev
+Disallow: /
+
+User-agent: Seekbot/1.0
+Disallow: /
+

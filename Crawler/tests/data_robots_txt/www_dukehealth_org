@@ -1,0 +1,41 @@
+
+
+#
+# Exception for our LinkChecker
+#
+User-agent: LinkChecker
+Disallow:
+
+#
+# Block Fasterfox prefetching
+#
+User-agent: Fasterfox
+Disallow: /
+
+#
+# Rules for the duke-crawler
+#
+User-agent: duke-crawler
+Crawl-delay: 60
+Disallow: /trapper/
+Disallow: /HealthLibrary/News/news_archive
+
+
+#
+# Rules for the Yahoo crawler
+#
+User-agent: Slurp
+Crawl-delay: 60
+Disallow: /trapper/
+Disallow: /HealthLibrary/News/news_archive
+
+
+#
+# Rules for all other agents
+#
+User-agent: *
+Disallow: /trapper/
+Disallow: /HealthLibrary/News/news_archive
+
+
+

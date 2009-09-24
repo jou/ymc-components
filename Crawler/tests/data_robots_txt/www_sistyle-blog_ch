@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /login.aspx
+Disallow: /search.aspx
+Disallow: /error404.aspx
+Disallow: /archive.aspx
+Disallow: /admin/*
+sitemap: http://www.sistyle-blog.ch/sitemap.axd 

@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /social.rb
+Disallow: /sendart.rb
+Disallow: /ad/

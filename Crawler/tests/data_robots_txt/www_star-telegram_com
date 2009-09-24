@@ -1,0 +1,105 @@
+# robots updated: 2008/06/04 - pbuckley@mi 
+# robots updated: 2008/05/23 - chilton
+# robots updated: 2008/11/18 - kvetter
+
+# Made changes to old RTF - created 2008/10/02: User-agent: * Disallow: /
+User-Agent: *
+Disallow:	/images
+Disallow:       /static/images
+Disallow:       /includes
+Disallow:       /static/includes
+Disallow:       /static/testdir
+Disallow:       /pages/admin
+Disallow:       /static/pages/admin
+Disallow:       /scripts
+Disallow:       /static/scripts
+Disallow:       /styles
+Disallow:       /555	#Errors
+Disallow:       /370	#Polls
+Disallow:       /384	#RSS
+Disallow:       /547	#Search
+Disallow:       /632	#Test Home Page
+Disallow:       /365	#UNMAPPED
+Disallow:       /443	#Utilities
+Disallow:       /412	#Vendors
+Disallow:       /125	#Entertainment
+Disallow:       /140	#Arts
+Disallow:       /127	#Columnists
+Disallow:       /134	#Dining
+Disallow:       /142	#LiVe!
+Disallow:       /136	#Movies-TV
+Disallow:       /138	#Music
+Disallow:       /139	#Nightlife
+Disallow:       /145	#Television
+Disallow:       /146	#Visual Arts
+Disallow:       /381	#Weekend
+Disallow:       /147	#Go!
+Disallow:       /137	#Video / DVD
+
+# added additional sections - pbuckley 2009-02-11
+# Vendor sections
+Disallow: /554
+Disallow: /431
+Disallow: /429
+Disallow: /428
+Disallow: /427
+Disallow: /628
+Disallow: /426
+Disallow: /425
+Disallow: /433
+Disallow: /437
+Disallow: /424
+Disallow: /614
+Disallow: /421
+Disallow: /596
+Disallow: /577
+Disallow: /430
+Disallow: /567
+Disallow: /566
+Disallow: /423
+Disallow: /416
+Disallow: /552
+Disallow: /597
+Disallow: /422
+Disallow: /823
+Disallow: /420
+Disallow: /440
+Disallow: /419
+Disallow: /598
+Disallow: /607
+Disallow: /418
+Disallow: /780
+Disallow: /432
+Disallow: /417
+Disallow: /415
+Disallow: /414
+Disallow: /595
+Disallow: /413
+Disallow: /941
+Disallow: /884
+Disallow: /874
+Disallow: /803
+Disallow: /764
+Disallow: /553
+Disallow: /412
+# other sections that are tests or unused
+Disallow: /443
+Disallow: /617
+Disallow: /365
+Disallow: /442
+Disallow: /795
+Disallow: /640
+Disallow: /790
+Disallow: /953
+Disallow: /632
+Disallow: /705
+Disallow: /853
+Disallow: /555
+Disallow: /556
+Disallow: /557
+Disallow: /558
+Allow: /
+
+Sitemap: http://www.star-telegram.com/sitemap.xml
+Sitemap: http://www.star-telegram.com/news_sitemap.xml
+Sitemap: http://www.star-telegram.com/ror.xml

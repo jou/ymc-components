@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /about
+Disallow: /search
+Disallow: /common
+Disallow: /counter
+Disallow: /ajax
+Disallow: /messenger
+Disallow:
+Sitemap: http://iwc-wristwatch.webovastranka.sk/sitemap.xml

@@ -1,0 +1,11 @@
+# All robots will spider the domain
+
+User-agent: *
+Disallow: /ufs/
+Disallow: /assets/
+Disallow: /emailpage.php
+Disallow: /proxy.php
+Disallow: /ratepage.php
+Disallow: /servicea2z.php
+Disallow: /search.php
+Disallow: /textonly.php

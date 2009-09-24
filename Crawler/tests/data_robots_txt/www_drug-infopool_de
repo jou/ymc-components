@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /vielen-dank
+
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://www.drug-infopool.de/sitemap.xml
+# END XML-SITEMAP-PLUGIN

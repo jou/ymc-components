@@ -1,0 +1,13 @@
+# robots.txt
+# Gibt an, welche Unterverzeichnisse nicht durch einen Crawler durchsucht werden sollen
+
+User-agent: *
+#Disallow: /
+
+Disallow: /cms_addon
+Disallow: /cms_cache
+Disallow: /cms_docs
+Disallow: /redFACT
+Disallow: /inc
+Disallow: /pear
+Disallow: /tmp

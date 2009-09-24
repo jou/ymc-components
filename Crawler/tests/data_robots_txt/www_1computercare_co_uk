@@ -1,0 +1,5 @@
+# go away
+User-agent: *
+Disallow: /_*/
+Disallow: /f*/
+sitemap:http://cdn.automaticsitemap.com/sitemap/17132.xml.gz

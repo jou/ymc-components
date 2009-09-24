@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /test/
+Disallow: /VIP/
+Disallow: /vip/

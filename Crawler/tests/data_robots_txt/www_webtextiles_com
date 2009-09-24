@@ -1,0 +1,8 @@
+User-agent: *
+
+Disallow: /history_date/
+Disallow: /Userlogin/
+
+<sitemap_location>/sitemap.asp</sitemap_location>
+
+

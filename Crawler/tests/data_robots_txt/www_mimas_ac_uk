@@ -1,0 +1,23 @@
+User-agent: htdig_mimas
+Disallow:	/serverstats/
+Disallow:	/maps/
+Disallow:	/spatial/
+Disallow:	/crossfire/
+
+User-agent: *
+Disallow:	/KINDS/
+Disallow:	/argus/
+Disallow:	/calim/
+Disallow:	/kinds/
+Disallow:	/lamda/
+Disallow:	/maps/
+Disallow:	/mup/
+Disallow:	/nat-staff/
+Disallow:	/newsletters/
+Disallow:	/newstats/
+Disallow:	/rs/
+Disallow:	/sasweb/
+Disallow:	/sercuc/
+Disallow:	/serverstats/
+Disallow:	/spatial/
+

@@ -1,0 +1,846 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <title>Krusader: one file manager to rule them all </title>
+  
+  
+<meta name="description" content="I don't like KDE4. I don't like the Dolphin file manager either. There, I said it. I'm not trying to start a flame war. Really. But those dislikes are proportional to my concern about the future of Konqueror. For my money, it is just about one of the best things before and since sliced bread. I loved it enough to [write about here at length and in depth](http://www.freesoftwaremagazine.com/articles/konqueror_the_browser_file_manager_you_didnt_know). As a file manager it is packed to the gunnels with power features and as a browser it's not half bad either. The integration of both in this universal document viewer is the killer feature but it is getting rather left behind behind in the Web 2.0 goldrush. I worry that it might wither on the vine. Then, I discovered Krusader. It's a massively powerful and feature-packed twin panel file manager and if Dolphin isn't cutting the mustard Krusader might just be what you've been looking for.    ">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+  <!-- BEGIN read now odiogo.com #1 -->
+  <script type="text/javascript"
+    language="javascript" src="http://widget.odiogo.com/odiogo_js.php?feed_id=89932&platform=drupal"></script>
+  <!-- END read now odiogo.com #1 -->
+
+<link rel="shortcut icon" href="/sites/www.freesoftwaremagazine.com/themes/fsm_new/favicon.ico" type="image/x-icon" />
+  <style type="text/css" media="all">@import "/modules/aggregator/aggregator.css";</style>
+<style type="text/css" media="all">@import "/modules/book/book.css";</style>
+<style type="text/css" media="all">@import "/modules/node/node.css";</style>
+<style type="text/css" media="all">@import "/modules/poll/poll.css";</style>
+<style type="text/css" media="all">@import "/modules/system/defaults.css";</style>
+<style type="text/css" media="all">@import "/modules/system/system.css";</style>
+<style type="text/css" media="all">@import "/modules/user/user.css";</style>
+<style type="text/css" media="all">@import "/sites/all/modules/MAINTAINED_BY_TONY/extra_voting_forms/widgets/default/extra_voting_forms_all.css";</style>
+<style type="text/css" media="all">@import "/modules/comment/comment.css";</style>
+<style type="text/css" media="all">@import "/sites/www.freesoftwaremagazine.com/themes/fsm_new/style.css";</style>
+  <script type="text/javascript" src="/misc/jquery.js"></script>
+<script type="text/javascript" src="/misc/drupal.js"></script>
+<script type="text/javascript" src="/sites/all/modules/MAINTAINED_BY_TONY/extra_voting_forms/extra_voting_forms.js"></script>
+<script type="text/javascript">Drupal.extend({ settings: { "extra_voting_forms": { "only_one_vote": 1, "login_page": "user/login", "base_path": "/", "jquery_timeout": "2000", "hide_karma_form": false } } });</script>
+  <script type="text/javascript"> </script>
+
+</head>
+
+<body>
+  <!-- Karma module -->
+    <!-- /Karma module -->
+
+  <!-- Container -->
+  <div id="container">
+
+
+    <!-- Header -->
+    <div id="header" class="clearfix">
+      <h1><a href="/" title="Back to homepage">Free Software Magazine</a></h1>
+      
+                <div class="ads">
+
+ <script type="text/javascript">
+	sr_adspace_id = 3129407;
+	sr_adspace_width = 728;
+	sr_adspace_height = 90;
+	sr_adspace_type = "graphic";
+	sr_ad_new_window = true;
+	
+</script>
+<script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=3129407">
+</script>
+
+      </div>
+
+
+          
+    
+              <div class="menu1">
+          <ul class="links"><li  class="first menu-1-1-2"><a href="/column" title="Our authors have their say" class="menu-1-1-2">Columns</a></li>
+<li  class="menu-1-2-2"><a href="/community_post" title="Community posts" class="menu-1-2-2">Community posts</a></li>
+<li  class="menu-1-3-2"><a href="/issues" title="A list of all of currently available issues" class="menu-1-3-2">Issues</a></li>
+<li  class="menu-1-4-2"><a href="/book" title="Free Software Magazine books!" class="menu-1-4-2">Books</a></li>
+<li  class="menu-1-5-2"><a href="/forum" title="Free Software Magazine forums" class="menu-1-5-2">Forum</a></li>
+<li  class="last menu-1-6-2"><a href="/aggregator" title="Articles from free software sites" class="menu-1-6-2">FS news</a></li>
+</ul>        </div>
+           
+              <div class="menu2">
+          <ul class="links"><li  class="first menu-1-1-209"><a href="/reviews" title="Free software related book reviews" class="menu-1-1-209">Reviews</a></li>
+<li  class="menu-1-2-209"><a href="/newsletters" title="Newsletters" class="menu-1-2-209">Newsletters</a></li>
+<li  class="menu-1-3-209"><a href="/advertise" title="Advertise on our site" class="menu-1-3-209">Advertise</a></li>
+<li  class="menu-1-4-209"><a href="/sponsors" title="See who helps us make it happen" class="menu-1-4-209">Sponsors</a></li>
+<li  class="menu-1-5-209"><a href="/help_fsm" title="Contribute to FSM offering your help" class="menu-1-5-209">Help FSM</a></li>
+<li  class="menu-1-6-209"><a href="/write_for_us" title="Write for Free Software Magazine!" class="menu-1-6-209">Write for us</a></li>
+<li  class="menu-1-7-209"><a href="/contacts" title="Contact the FSM team" class="menu-1-7-209">Contacts</a></li>
+<li  class="last menu-1-8-209"><a href="/about" title="What Free Software Magazine does and why" class="menu-1-8-209">About</a></li>
+</ul>        </div>
+            
+          </div>
+    <!-- /Header -->
+
+
+
+    <!-- Content -->
+    <div id="content" class="clearfix">
+      <div id="content_inner">
+
+        <div id="content_center" class="column">
+
+          
+          <div class="breadcrumb"><a href="/">Home</a> » <a href="/column">Columns</a> » <a href="/poster/3653">Gary Richmond&#039;s posts</a></div>          
+                    
+                                        
+
+                     <!--
+          <p class="topbox">Before reading further... Are you a GNU/Linux fan and thinking of <b>buying a Linux laptop</b>? <script type="text/javascript" language="javascript" src="http://www.tkqlhce.com/placeholder-3081971?target=_top&mouseover=N"></script>. Support vendors that support GNU/Linux!</p>
+          -->
+
+          <p class="topbox">Before reading further... Are you looking for great <b>Linux hosting</b> from a company that <b>cares about GNU/Linux?</b> Pick <a rel="nofollow" href="/out/dreamhost">Dreamhost hosting</a>, get a 10% bonus to the disk space (and support Free Software Magazine in the meantime!)</p>
+
+
+          
+
+          <div class="node node-blog clearfix">
+
+
+<h1 class="title"><a href="/columns/krusader_one_file_manager_rule_them_all"  >Krusader: one file manager to rule them all</a></h1>
+
+
+
+
+<div class="articledata columnist ">
+      <div class="columnist_badge"><strong>FSM Columnist: Trusted</strong></div>
+    
+  <ul class="clearfix">
+    <li class="author"><a href="/user/3653" title="View user profile.">Gary Richmond</a></li>
+    <li class="published">2008-10-14</li>
+        <li class="vote"> 
+    <div class="extra_voting_forms karma_3_small">
+    <form action="/extra_voting_forms/handle" method="post" class="karma_form_promoted" id="xn3030">
+      <div>
+        
+        <span class="karma_score">2</span>
+        <span class="karma_buttons">
+          <label class="karma_up_not_clicked_clickable" for="u3030">
+            <input id="u3030" type="radio" name="karma_vote" value="1"/>
+            <span>Up</span>
+          </label>
+          <label class="karma_down_not_clicked_clickable" for="d3030">
+            <input id="d3030" type="radio" name="karma_vote" value="-1"/>
+            <span>Down</span>
+          </label>
+          <input type="hidden" name="oid" value="3030"/>
+          <input type="hidden" name="otype" value="n"/>
+          <input type="hidden" name="form_style" value="3"/>
+          <input type="hidden" name="form_type" value="form"/>
+          <input type="submit" name="submit" value="Vote" />
+          <input type="hidden" name="js_destination" value="columns%2Fkrusader_one_file_manager_rule_them_all" />
+        </span>
+      </div>
+    </form></div></li>    <li class="tags">Tags: <a href="/taxonomy/term/1554">filemanagers</a>, <a href="/taxonomy/term/630">kde</a>, <a href="/taxonomy/term/1137">konqueror</a>, <a href="/taxonomy/term/1553">krusader</a></li>  </ul>
+</div>
+
+
+
+
+
+      <p class="response"><a href="/node/add/blog/3030">Write a full post in response to this!</a></p>
+
+
+
+
+
+  <div class="ads">
+    <script type="text/javascript"><!--
+      google_ad_client = "pub-4408039167229399";
+      /* 468x15, created 2/25/08 */
+      google_ad_slot = "4617332389";
+      google_ad_width = 468;
+      google_ad_height = 15;
+      google_color_link = "669900";
+      google_color_url = "999999";
+      google_color_text = "666666";
+      //-->
+    </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+  </div>
+
+
+
+
+
+
+
+<div class="content">
+  
+  <!-- BEGIN listen now odiogo.com #2 -->
+  <script type="text/javascript" language="javascript">
+showOdiogoReadNowButton ('89932', 'Krusader: one file manager to rule them all', '3030', 290, 55);
+</script>
+<!-- END listen now odiogo.com #2 -->
+<br />
+<!-- BEGIN listen now odiogo.com #3 -->
+<script type="text/javascript" language="javascript">
+showInitialOdiogoReadNowFrame ('89932', '3030', 290, 0);
+</script>
+<!--paging_filter--><p>I don&#8217;t like KDE4. I don&#8217;t like the Dolphin file manager either. There, I said it. I&#8217;m not trying to start a flame war. Really. But those dislikes are proportional to my concern about the future of Konqueror. For my money, it is just about one of the best things before and since sliced bread. I loved it enough to <a href="http://www.freesoftwaremagazine.com/articles/konqueror_the_browser_file_manager_you_didnt_know">write about here at length and in depth</a>. As a file manager it is packed to the gunnels with power features and as a browser it&#8217;s not half bad either. The integration of both in this universal document viewer is the killer feature but it is getting rather left behind behind in the Web 2.0 goldrush. I worry that it might wither on the vine. Then, I discovered Krusader. It&#8217;s a massively powerful and feature-packed twin panel file manager and if Dolphin isn&#8217;t cutting the mustard Krusader might just be what you&#8217;ve been looking for.</p>
+
+<h1>The crew done good. Yo!</h1>
+
+<p class="zoom" align="center">
+
+<b>Like the hairbear bunch, Krusader Crew are the good guys and the&#8217;ve created a file manager with impeccable credentials</b>
+
+</p>
+
+<p><a href="http://www.krusader.org/">Krusader</a> is the brainchild of the &#8220;the krusader krew&#8221; which does rather make them sound like a bunch of Harlem hoodies, but don&#8217;t let that put you off. They don&#8217;t mug and they don&#8217;t graffiti. Like the Hairbear Bunch, they&#8217;re the good guys and they have created a file manager with impeccable credentials stretching all the way back to Norton and Total Commander. Hell, they&#8217;ve even trying to port an experimental version of Krusader to Windows. Primarily however, Kruasder is the lovechild of free software with its developers freely admitting that they stole shamelessly from other file managers and it will run on any GNU/Linux distro, dependencies notwithstanding; and it has been released under the chocolately goodness of the GPL. Nothing there to offend Unix purists then. The latest version is &#8220;phoenix egg&#8221; (2.0.0.beta1), released in July 2008 as a port to KDE4. Other than live CDs, I am not using KDE4 at the moment so my screenshots of Krusader are from KDE3.</p>
+
+<p>This is not a HOWTO for Krusader, but a look at the features that make it the proverbial, killer application for file management. You should be able to grab a copy of Krusader from your distro&#8217;s repositories via the package manager. If you dislike bloat and prefer minimalist windows managers like XFCE or Fluxbox, the good news is that Krusader will run without KDE&#8212;provided you have the necessary libraries installed (and if you toggle between various window managers and have KDE installed, you will be good to go). All screenshots are from version 1.9 running under GNOME in Fedora 9.</p>
+
+<h1>Krusader and the Orthodox File Manager (OFM) paradigm</h1>
+
+<p class="zoom" align="center">
+
+<b>You will recognize too Krusader&#8217;s pedigree stretching back to the Norton and Midnight Commander</b>
+
+</p>
+
+<p>Dolphin and Konqueror can display split screens. In fact, Konqueror can be split into as many screens as you want (unlike Dolphin) but a split screen file manager is not the same as a two-pane file manager. That is the proper description of Krusader. It launches with a (resizable) twin pane view by default. Konqueror would require a profile to do that. Why? Because Krusader conforms to the <a href="http://www.softpanorama.org/OFM/index.shtml">OFM paradigm.</a>.</p>
+
+<p>OFM is too detailed to discuss here, but if I had to sum it up I would say that it is the only type of file manager that is standardized and the skills are transferable from command line to GUI and back. Dr. Nikolai Bezroukov&#8217;s <a href="http://www.softpanorama.org/OFM/Paradigm/index.shtml">e-book</a> on the OFM paradigm would classify Krusader as &#8220;a visual shell for Unix&#8221;. Once you have read his ten commandments for OFMs you will recognize the krusader profile immediately. You will recognize too Krusader&#8217;s pedigree stretching back to the Norton and Midnight Commander file managers. The Krusader crew clearly know the commandments and have applied them rigorously. No dancing around the Golden Calf here and that paradigm will explain the thinking behind all the features that make Krusader an absolutely must have file manager that should be in everyone&#8217;s toolbox. In OFM terms, Krusader includes support for scripting via useractions, cross-panel awareness, focus on keyboard control, built-in viewer and editor and verbose output of actions.</p>
+
+<h1>KDE integration from the first launch</h1>
+
+<p>The first thing that you notice after installing Krusader is that it integrates tightly with KDE. So tightly in fact that when you launch it for the first time you have to jump through several hoops before actually using it:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader's_first_launch.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader's_first_launch.jpg" alt="Figure 1: Krusader's first launch" title="Figure 1: Krusader's first launch"></a></dt><dd><caption>Figure 1: Krusader&#8217;s first launch</caption></dd></dl>
+
+<p>The clue is the reference to &#8220;external applications&#8221;. Krusader&#8217;s power and transparency rely on and exploit those features of KDE familiar to anyone who uses Konqueror: <a href="http://en.wikipedia.org/wiki/KParts">KPart</a> <a href="http://en.wikipedia.org/wiki/KIO">KIO</a> and <a href="http://en.wikipedia.org/wiki/DCOP">DCOP</a> (superseded by <a href="http://en.wikipedia.org/wiki/D-Bus">D-Bus</a> in KDE4). KPart is particularly important as it allows any applications that implements its object model to embed itself in Krusader:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader's_search_results_for_packers.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader's_search_results_for_packers.jpg" alt="Figure 2: Krusader's search results for packers" title="Figure 2: Krusader's search results for packers"></a></dt><dd><caption>Figure 2: Krusader&#8217;s search results for packers</caption></dd></dl>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader_searches_for_external_tools.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader_searches_for_external_tools.jpg" alt="Figure 3: Krusader searches for external tools" title="Figure 3: Krusader searches for external tools"></a></dt><dd><caption>Figure 3: Krusader searches for external tools</caption></dd></dl>
+
+<p>At this point you make want to keep your package manager handy to install any missing software to complete Krusader&#8217;s toolset. Krusader will then present you with the configuration screen:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Konfigurator_Creating_Your_Own_Krusader.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Konfigurator_Creating_Your_Own_Krusader.jpg" alt="Figure 4: Konfigurator: Creating Your Own Krusader" title="Figure 4: Konfigurator: Creating Your Own Krusader"></a></dt><dd><caption>Figure 4: Konfigurator: Creating Your Own Krusader</caption></dd></dl>
+
+<p>You can choose to do it all there and then, or cancel and explore it later. Configuring Krusader is a happy task for a long, damp autumnal evening. It is jam packed with features and tweaks. And so at last you arrive at the main screen. Phew!:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader's_main_screen.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader's_main_screen.jpg" alt="Figure 5: Krusader's main screen" title="Figure 5: Krusader's main screen"></a></dt><dd><caption>Figure 5: Krusader&#8217;s main screen</caption></dd></dl>
+
+<p>The twin panel is the default; if you prefer it can be displayed horizontally too, which is very useful if you have files with long names that do not display well in the vertical twin panel:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader_in_Horizontal_mode.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader_in_Horizontal_mode.jpg" alt="Figure 6: Krusader in Horizontal mode" title="Figure 6: Krusader in Horizontal mode"></a></dt><dd><caption>Figure 6: Krusader in Horizontal mode</caption></dd></dl>
+
+<p>There are also a (toggable) command line prompt and a series of buttons along the bottom covering many of the most used and popular commands: <code>view</code>, <code>edit</code>, <code>copy</code>, <code>move</code>, <code>mkdir</code>, <code>delete</code> and <code>rename</code>. Tabbed browsing of local or remote files is now a given, and Krusader does the business there too, using the same icons&#8212;but at the bottom. Drag and drop is there too, as you would demand. Right clicking on a file will render a preview with the option to open it with a specified application which can be customised by the user, overriding the defaults. So far so normal.</p>
+
+<h1>Features that make Krusader special</h1>
+
+<p>One of the first and best discoveries you will make about Krusader is that it has the ability to search through both archived and ISO files as if they were conventional directories.  Of course, you can search through an ISO file by mounting it as a loop device, but Krusader is easier and much faster. Krusader settles the eternal debate command line purists and advocates of the GUI by giving the user both, just like Konqueror. In fact you get two for the price of one. Krusader allows you to call up a separate konsole or an embedded terminal inside Krusader:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader_with_embedded_terminal.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader_with_embedded_terminal.jpg" alt="Figure 7: Krusader with embedded terminal" title="Figure 7: Krusader with embedded terminal"></a></dt><dd><caption>Figure 7: Krusader with embedded terminal</caption></dd></dl>
+
+<p>This allows you to navigate through the directory structure without, if you prefer, having to navigate on the command line yet still view the one screen panel following the other. It&#8217;s great as a tool for demonstrating to newcomers the relationship between the two.</p>
+
+<p>Everyone who uses any browser will be familiar with the history facility (particularly handy if you crash before saving a bookmark). Krusader has this valuable feature which allows you to select any directory and open it. Krusader is not a browser, but it has borrowed that idea and it keeps a record of all the file locations you visit&#8212;including remote sites (Krusader supports the <code>ftp</code>, <code>sftp</code>, <code>fish</code> and <code>SMB</code> protocols). Similarly, Krusader has a bookmark manager (BookMan) which functions more or less in the same fashion as a web browser bookmark manager. This is a very powerful way to organise the results of your file browsing and learning to use it is already in the bag as everyone has used a file browser. <code>popular urls</code> is a dynamic list of &#8220;sites&#8221; visited, constantly updated to reflect usage, as the name suggests. Think of it as bookmarks on the fly for file locations when you don&#8217;t want bookmark (or simply can&#8217;t be bothered).</p>
+
+<h2>Pop up panel</h2>
+
+<p>By default, Kruasder conforms to the OFM paradigm but you can expand it with an additional panel (as well as with tabs) by clicking on the button at the bottom-right hand side of the right panel:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader's_pop_up_panel.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader's_pop_up_panel.jpg" alt="Figure 8: Krusader's pop up panel" title="Figure 8: Krusader's pop up panel"></a></dt><dd><caption>Figure 8: Krusader&#8217;s pop up panel</caption></dd></dl>
+
+<p>This embeds a view of disk usage which will be familiar to anyone who has ever used Filelight or Baobab. The view is customisable too: it can be displayed as a detailed file view or as a horizontal bar graph.</p>
+
+<p>If you prefer, you can view disk usage in a separate window under any of those three views:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Disk_Usage_in_file_view.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Disk_Usage_in_file_view.jpg" alt="Figure 9: Disk Usage in file view" title="Figure 9: Disk Usage in file view"></a></dt><dd><caption>Figure 9: Disk Usage in file view</caption></dd></dl>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Disk_Usage_in_bar_graph_view.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Disk_Usage_in_bar_graph_view.jpg" alt="Figure 10: Disk_Usage-in_bar_graph_view" title="Figure 10: Disk_Usage-in_bar_graph_view"></a></dt><dd><caption>Figure 10: Disk_Usage-in_bar_graph_view</caption></dd></dl>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Disk_Usage_in_filelight_view.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Disk_Usage_in_filelight_view.jpg" alt="Figure 11: Disk Usage in filelight view" title="Figure 11: Disk Usage in filelight view"></a></dt><dd><caption>Figure 11: Disk Usage in filelight view</caption></dd></dl>
+
+<p>You also have the ability to toggle between the three views via three buttons at the top. The colour scheme is customisable too. This is not just a static viewer: you can open files from this location, and if you are viewing graphics files Krusader had its own internal, built-in  tabbed viewer, Krviewer, which can be called as a stand-alone window or from within Krusader itself. It uses code from Konqueror and can therefore view any file type that is viewable in Konqueror. If you want a more powerful graphics package to manipulate images, you can revert to the standard file manager, right click, make your own selection and tick a check box to ensure that Krusader remembers your choice as the default the next time you click on a file.</p>
+
+<h2>Jump points</h2>
+
+<p>It doesn&#8217;t take long to disappear down the labyrinth of a file system like an over enthusiastic terrier. Before you know it, you&#8217;ve got a little lost&#8212;but Krusader can help you. Think of it like Ariadne&#8217;s thread in the Minotaur&#8217;s maze. If you&#8217;ve lost your bearing, well, before you set off make a reference point and any others you care to make as you explore your file system. Customising the toolbar is definitely useful here as these features can be added and are only one mouse click away. With jump back you can set your point of origin anywhere in the file system you want and retain your sanity and economise on the mouse clicks.</p>
+
+<h2>Useractions</h2>
+
+<p class="zoom" align="center">
+
+<b>Useractions is what puts Krusader on steroids</b>
+
+</p>
+
+<p>In some ways this is the crown jewels of Krusader. It is what really makes it so powerful and customisable. Perhaps it is Krusader&#8217;s answer to Konqueror&#8217;s underused extensions. Either way, it is what puts Krusader on steroids. Essentially, what you have here is user-specified scripts that do not require expert programming skills and can executed with a single mouse click or a keystroke.</p>
+
+<p>The quickest to see the default install of useractions is to right click any file:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader's_default_useractions.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader's_default_useractions.jpg" alt="Figure 12: Krusader's default useractions" title="Figure 12: Krusader's default useractions"></a></dt><dd><caption>Figure 12: Krusader&#8217;s default useractions</caption></dd></dl>
+
+<p>The &#8220;default&#8221; will vary according to what external tools and packages were detected and installed at first run (see Figures 1 and 2) and what missing packages you installed subsequently; however, you can certainly add to the list. The easy way is to avail of the efforts of others across the internet: point your browser to <a href="http://www.kde-files.org/index.php?xcontentmode=662">KDE-org</a> and download the useractions of choice. Compared to Konqueror&#8217;s service menus (about 250 available) the choice is limited</p>
+
+<p>Make a directory called, say, Krusader user scripts, and save your useractions there. To add them to Krusader&#8217;s right context menu you need to call up Userman, Krusader&#8217;s GUI for managing scripts. This is called from Konfigurator:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/ActionMan:_Manage_Your_Useractions.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/ActionMan:_Manage_Your_Useractions.jpg" alt="Figure 13: ActionMan: Manage Your Useractions" title="Figure 13: ActionMan: Manage Your Useractions"></a></dt><dd><caption>Figure 13: ActionMan: Manage Your Useractions</caption></dd></dl>
+
+<p>Userman allows you to call external applications using variable parameters. Fortunately the <a href="http://www.krusader.org/handbook/">Krusader handbook</a> provides a detailed guide to user actions. (It is an HTML file with links. Request to the &#8220;krew&#8221;: it would be very useful to have the option to view this as a single page so that it could be saved for offline viewing. Better still, add an option to view/download as PDF.) Userscripts can extend Krusader&#8217;s file management capabilities and learning how to write them is good way to become a power user by extending the context menu.</p>
+
+<h2>Mountman</h2>
+
+<p>Time was when getting external, removable media to work on GNU/Linux meant being a geek expert on the command line; today, no self-respecting distro would dare venture into daylight now without the ability to auto mount such media. If you prefer, you can cancel the popups and do it your way with Mountman or exploit Krusader&#8217;s tight KDE integration with Kio slaves and type media:/ in the location bar to view CDs, DVDs, USB flash sticks and USB drives and then access all the richness of the right-click context menu.</p>
+
+<p>Mountman is slightly different. It is a GUI tool to manage mounted file systems. Clicking on any mounted file system will display it in a pie chart, double clicking it will open the chosen file system inside Krusader and right clicking it will offer a number of options (mount, unmount, eject). Krusader had no problems displaying and opening my iRiver mp3 player:</p>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/MountMan _displays_and_manages_your_file_system.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/MountMan _displays_and_manages_your_file_system.jpg" alt="Figure 14: MountMan displays and manages your file system" title="Figure 14: MountMan displays and manages your file system"></a></dt><dd><caption>Figure 14: MountMan displays and manages your file system</caption></dd></dl>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/Krusader_displays_contents_of_iRiver_player_in_multiple_views.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/Krusader_displays_contents_of_iRiver_player_in_multiple_views.jpg" alt="Figure 15: Krusader displays contents of iRiver player in multiple views" title="Figure 15: Krusader displays contents of iRiver player in multiple views"></a></dt><dd><caption>Figure 15: Krusader displays contents of iRiver player in multiple views</caption></dd></dl>
+
+<p>From any of these views you can open files in your application of choice (and if you prefer set the file icons and applications in Kcontrol. Krusader&#8217;s icons are not hard coded.)</p>
+
+<h2>Synchronizer</h2>
+
+<dl class="image"><dt><a href="/files/www.freesoftwaremagazine.com/nodes/3030/The_default_Synchronizer_screen.jpg"><img src="/files/www.freesoftwaremagazine.com/nodes/3030/ss/The_default_Synchronizer_screen.jpg" alt="Figure 16: The default Synchronizer screen" title="Figure 16: The default Synchronizer screen"></a></dt><dd><caption>Figure 16: The default Synchronizer screen</caption></dd></dl>
+
+<p class="zoom" align="center">
+
+<b>The final tasty morsel in Krusader&#8217;s Smorgesbord of goodies is the built-in facility to synchronize files</b>
+
+</p>
+
+<p>The final tasty morsel in Krusader&#8217;s Smorgesbord of goodies is the built-in facility to synchronize files. It is immensely powerful and it is impossible to precis its features in a general overview. Suffice it to say that the entry for this feature is the biggest in the user manual, and the crew seem to packed in every conceivable feature. You can of course use Rsync (still under development) or Unison (no longer in development) on the command line or their GUI frontends (Grsync and GTKUnison respectfully); however, if you want to manage everything from one interface without calling external applications then Krusader is the tool for the job. Basically, Synchronizer&#8217;s function is to keep two directories in sync and in doing so it offers a blizzard of options for the power user: comparing, filtering, colour coding, asymmetric synchronisation, ad hoc backup, integration with Kget (if installed) with the ability to schedule local and (pause) remote FTP files.</p>
+
+<h1>Conclusion</h1>
+
+<p>It is impossible to overstate the range of Krusader&#8217;s feature set. The developers seem to have thought of just about everything. By integrating it tightly to the very best features of KDE they have ensured that it is immensely customisable and extensible. They have maintained an impressive release cycle and are highly receptive to users&#8217; wishlists.</p>
+
+<p>In that spirit let me add a few items to those lists.</p>
+
+<p>Krusader is a file browser and it supports a large number of protocols, so here is my heretical suggestion: add the <code>http</code> protocol and a rendering engine and transform Krudaser into a reincarnation of Konqueror. As it is already tied into KDE and it already uses Konqueror code, making Krusader into a universal document viewer would not be an insurmountable undertaking&#8212;but why? We already have Konqueror. Yes, but with the arrival of Dolphin as the default file manager for KDE4 (though with Konqueror included) and the browser side of it lagging somewhat behind browsers like Flock, Firefox and Opera, there is a danger that Konqueror will shrivel on the vine for want of some tender loving care. That would be a shame. In spite of all the bells and whistles of Web 2.0 applications Konqueror still remains a priceless asset in GNU/Linux. If it is going to be neglected, can those nice young Krusader developers think the unthinkable and make it the new Konqueror? Integrate K3b too? The icing on the cake would be for Krusader to utilize Konqueror&#8217;s KDE service menus. Result.</p>
+</div>
+
+     
+ 
+
+
+
+      <p class="response"><a href="/node/add/blog/3030">Write a full post in response to this!</a></p>
+  
+
+
+
+
+
+  <div class="similar clearfix">
+    
+          <div class="ads">
+
+
+<!-- Begin Adify tag for "Blog article bottom" Ad Space (120x240) ID #2501507 -->
+<script type="text/javascript">
+	sr_adspace_id = 2501507;
+	sr_adspace_width = 120;
+	sr_adspace_height = 240;
+	sr_adspace_type = "graphic";
+	sr_ad_new_window = true;
+</script>
+<script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=2501507">
+</script>
+<!-- End Adify tag for "Blog article bottom" Ad Space (120x240) ID #2501507 -->
+
+
+
+      </div>
+      
+          <h1>Similar articles</h1>
+      <div class="item-list"><ul><li><a href="/coumns/seagate_freeagent_pro_hardware_comes_proprietary_software" rel="nofollow">Seagate Freeagent Pro: hardware that comes with proprietary software</a></li><li><a href="/columns/getting_help_powerful_man_ual" rel="nofollow">Getting help: the powerful man(ual)</a></li><li><a href="/articles/konqueror_the_browser_file_manager_you_didnt_know" rel="nofollow">Konqueror: doing it all from one interface </a></li></ul></div>        
+  </div>
+
+
+  <div class="vote clearfix">
+    
+    <div class="extra_voting_forms karma_3_big">
+    <form action="/extra_voting_forms/handle" method="post" class="karma_form_promoted" id="xn3030">
+      <div>
+        
+        <span class="karma_score">2</span>
+        <span class="karma_buttons">
+          <label class="karma_up_not_clicked_clickable" for="u3030">
+            <input id="u3030" type="radio" name="karma_vote" value="1"/>
+            <span>Up</span>
+          </label>
+          <label class="karma_down_not_clicked_clickable" for="d3030">
+            <input id="d3030" type="radio" name="karma_vote" value="-1"/>
+            <span>Down</span>
+          </label>
+          <input type="hidden" name="oid" value="3030"/>
+          <input type="hidden" name="otype" value="n"/>
+          <input type="hidden" name="form_style" value="3"/>
+          <input type="hidden" name="form_type" value="form"/>
+          <input type="submit" name="submit" value="Vote" />
+          <input type="hidden" name="js_destination" value="columns%2Fkrusader_one_file_manager_rule_them_all" />
+        </span>
+      </div>
+    </form></div>    <h1>
+      Do you like this post?<br />
+      <strong>Vote for it!</strong></h1>
+  </div>
+
+
+  <h1>Copyright information</h1>
+  <p>This entry is (C) Copyright by its author, 2004-2008. Unless a different license is specified in the entry's body, the following license applies: "Verbatim copying and distribution of this entire article is permitted in any medium without royalty provided this notice is preserved and appropriate attribution information (author, original site, original URL) is included". </p>
+  
+      <div class="biography">
+      <h1>Biography</h1>
+      <p><a href="/user/3653" title="View user profile.">Gary Richmond</a>: <p>An aspiring wanabee--geek whose background is a B.A.(hons) and an M.Phil in seventeenth-century English, twenty five years in local government and recently semi-retired to enjoy my ill-gotten gains.</p>
+
+
+
+
+
+</p>    </div>
+  
+
+<ul class="links"><li  class="first blog_usernames_blog"><a href="/poster/3653" title="Read Gary Richmond&#039;s latest posts." class="blog_usernames_blog">Gary Richmond&#039;s posts</a></li>
+<li  class="comment_forbidden"><span class="comment_forbidden"><a href="/user/login?destination=node/3030%2523comment-form">Login</a> or <a href="/user/register?destination=node/3030%2523comment-form">register</a> to post comments</span></li>
+<li  class="statistics_counter"><span class="statistics_counter">10540 reads</span></li>
+<li  class="print"><a href="/gaining_extra_features" title="" class="print">Printer friendly version (unavailable!)</a></li>
+<li  class="service_links_delicious"><a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.freesoftwaremagazine.com%2Fcolumns%2Fkrusader_one_file_manager_rule_them_all&amp;title=Krusader%3A+one+file+manager+to+rule+them+all" title="Bookmark this post on del.icio.us." rel="nofollow" class="service_links_delicious"><img src="/sites/all/modules/service_links/delicious.png" alt="Delicious" /></a></li>
+<li  class="service_links_digg"><a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.freesoftwaremagazine.com%2Fcolumns%2Fkrusader_one_file_manager_rule_them_all&amp;title=Krusader%3A+one+file+manager+to+rule+them+all" title="Digg this post on digg.com." rel="nofollow" class="service_links_digg"><img src="/sites/all/modules/service_links/digg.png" alt="Digg" /></a></li>
+<li  class="service_links_reddit"><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.freesoftwaremagazine.com%2Fcolumns%2Fkrusader_one_file_manager_rule_them_all&amp;title=Krusader%3A+one+file+manager+to+rule+them+all" title="Submit this post on reddit.com." rel="nofollow" class="service_links_reddit"><img src="/sites/all/modules/service_links/reddit.png" alt="Reddit" /></a></li>
+<li  class="last service_links_fsdaily"><a href="http://www.fsdaily.com/submit?url=http%3A%2F%2Fwww.freesoftwaremagazine.com%2Fcolumns%2Fkrusader_one_file_manager_rule_them_all" title="Bookmark this post on FSDaily." rel="nofollow" class="service_links_fsdaily"><img src="/sites/all/modules/service_links/fsdaily.png" alt="FSDaily" /></a></li>
+</ul>
+</div>
+<div id="comments"></div>        </div>
+
+        <div id="content_left" class="column">
+          
+                      <div class="ads">
+
+
+<!-- Begin CJ left hand ad -->
+<SCRIPT type="text/javascript" LANGUAGE="javascript" src="http://www.qksz.net/1e-fixh"> </SCRIPT>
+<br />
+<!-- END CJ left hand ad -->
+
+
+<!-- Begin Adify tag for "Left hand tower" Ad Space (160x600) ID #2501707 -->
+<script type="text/javascript">
+	sr_adspace_id = 2501707;
+	sr_adspace_width = 160;
+	sr_adspace_height = 600;
+	sr_adspace_type = "graphic";
+	sr_ad_new_window = true;
+	
+</script>
+<script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=2501707">
+</script>
+<!-- End Adify tag for "Left hand tower" Ad Space (160x600) ID #2501707 -->
+
+
+            </div>
+                  
+            <div class="block block-block" id="block-block-62">
+        <div class="content"><h1>Looking for <a href="/linux_hosting/reviews_coupons_user_comments">Linux hosting, reviews, coupons</a>, etc.? See out user-voted list</h1>
+<ol>
+<li><a href="/linux_hosting/dreamhost_review">Dreamhost (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/hostpapa_review">HostPapa (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/hostmonster_review">Hostmonster (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/inmotion_review">InMotion (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/dot5hosting_review">Dot5Hosting (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/fastdomain_review">FastDomain (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/startlogic_review">StartLogic (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/bluehost_review">BlueHost (reviews, coupons)</a></li>
+<li><a href="/linux_hosting/3fn_review">3fn (reviews, coupons)</a></li>
+</ol>
+</div>
+ </div>
+  <div class="block block-block" id="block-block-30">
+        <div class="content"><p><!-- START TD Content Module v1.1 --></p>
+<script language="JavaScript" type="text/javascript">
+ord=Math.random()*10000000000000000;
+document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/idg.us.cpw.tdn/;pos=tdn;sz=160x192;ord=' + ord + '?" type="text/javascript"></scr' + 'ipt>');
+</script><p><noscript><a href="http://ad.doubleclick.net/jump/idg.us.cpw.tdn/;pos=tdn;sz=160x192;ord=123456789?" target="_blank"><img src="http://ad.doubleclick.net/ad/idg.us.cpw.tdn/;pos=tdn;sz=160x192;ord=123456789?" width="160" height="192" border="0" alt=""></a></noscript><br />
+<!-- END TD Content Module v1.1 --> </p>
+<p><!-- Begin Adify tag for "Free Software Mag160" Ad Space (160x600) ID #1027607 --></p>
+<script type="text/javascript">
+<!--
+       sr_adspace_id = 1027607;
+       sr_adspace_width = 160;
+       sr_adspace_height = 600;
+       sr_adspace_type = "graphic";
+       sr_color_back = "#FFFFFF";
+       sr_color_text = "#000000";
+       sr_color_url = "#E15F00";
+       sr_color_title = "#3F66B3";
+       sr_color_border = "#3366CC";
+       sr_color_your_ad = "#2852A3";
+       sr_color_your_adbk = "#FFDD81";
+       sr_text_your_ad = "Advertise with us";
+       sr_ad_new_window = true;
+
+
+-->
+</script><script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=1027607">
+</script><script type="text/javascript">srExecute();</script><p><!-- End Adify tag for "Free Software Mag160" Ad Space (160x600) ID #1027607 --></p>
+</div>
+ </div>
+  <div class="block block-popular_blocks" id="block-popular_blocks-3">
+          <h2 class="title">Best voted contents</h2>
+        <div class="content"><ul><ul>
+<li>
+  <strong><a href="/columns/why_bizarre_cathedral_licence_non_free">Why is The Bizarre Cathedral licence &quot;non-free&quot;?</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-21</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/free_software_tools_for_designing_productive_community_sites">Free software tools for designing productive community sites</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-10-07</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/deploying_cc_common_good_buy4commons">Deploying CC+ for the common good: Buy4Commons</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-10-20</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/supporting_your_free_software_dont_burn_out">Supporting your free software? Don&#039;t burn out</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-10-15</small>
+</li>
+    </ul></ul></div>
+ </div>
+  <div class="block block-block" id="block-block-60">
+        <div class="content"><p><!-- Begin Adify tag for "No Privacy Policy Badge - 125x125 Dark" Widget Space (125x125) ID #29472 --></p>
+<script type="text/javascript">
+	sr_widget_id = 29472;
+	sr_widget_width = 125;
+	sr_widget_height = 125;
+</script><script type="text/javascript" src="http://feed.afy11.net/srwidget.js?wId=29472">
+</script><p><!-- End Adify tag for "No Privacy Policy Badge - 125x125 Dark" Widget Space (125x125) ID #29472 --></p>
+</div>
+ </div>
+        </div>
+    
+        <div id="content_right" class="column">
+                      <div class="ads">
+
+
+<!-- Begin Adify tag for "Right column big square - bigger" Ad Space (336x280) ID #3062507 -->
+<script type="text/javascript">
+	sr_adspace_id = 3062507;
+	sr_adspace_width = 336;
+	sr_adspace_height = 280;
+	sr_adspace_type = "graphic";
+	sr_ad_new_window = true;
+	
+</script>
+<script type="text/javascript" src="http://ad.afy11.net/srad.js?azId=3062507">
+</script>
+<!-- End Adify tag for "Right column big square - bigger" Ad Space (336x280) ID #3062507 -->
+
+
+            </div>
+                
+            <div class="block block-block" id="block-block-58">
+        <div class="content"><a href="/columns/bizarre_cathedral_28">
+
+<img src="/files/www.freesoftwaremagazine.com/nodes/3041/ss/strip.jpg" />
+
+</a></div>
+ </div>
+          
+          <div id="content_right_subcolumn1">
+
+                      <div class="block block-subscribe">
+              <a href="/user/register" class="subscribe" title="Subscribe for FREE now! You'll receive a free subscription to Free Software Magazine and the Free Software Magazine newsletter!"><strong>Subscribe for FREE now!</strong> You'll receive a free subscription to Free Software Magazine and the Free Software Magazine newsletter!</a>
+              <a href="/user/user" class="login" title="Login">Login</a>
+            </div>
+                        <div class="block block-block" id="block-block-61">
+        <div class="content"><p><a href="http://www.jdoqocy.com/click-3120337-10544984" target="_top"><br />
+<img src="http://www.tqlkg.com/image-3120337-10544984" width="120" height="90" alt="Two free webcam w/ the purchase of select Dell PCs" border="0"/></a></p>
+<p></p>
+</div>
+ </div>
+  <div class="block block-similar" id="block-similar-0">
+          <h2 class="title">Similar entries</h2>
+        <div class="content"><div class="item-list"><ul><li><a href="/coumns/seagate_freeagent_pro_hardware_comes_proprietary_software" rel="nofollow">Seagate Freeagent Pro: hardware that comes with proprietary software</a></li><li><a href="/columns/getting_help_powerful_man_ual" rel="nofollow">Getting help: the powerful man(ual)</a></li><li><a href="/articles/konqueror_the_browser_file_manager_you_didnt_know" rel="nofollow">Konqueror: doing it all from one interface </a></li></ul></div></div>
+ </div>
+  <div class="block block-block" id="block-block-51">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-52">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=2");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+
+</div>
+ </div>
+  <div class="block block-popular_blocks" id="block-popular_blocks-2">
+          <h2 class="title">Buzz authors</h2>
+        <div class="content"><ul><li> <a href="/poster/25804">Laurie Langham</a></li><li> <a href="/poster/36">Rosalyn Hunter</a></li><li> <a href="/poster/3653">Gary Richmond</a></li><li> <a href="/poster/2585">Rob Strover</a></li><li> <a href="/poster/8833">Ryan Cartwright</a></li></ul></div>
+ </div>
+  <div class="block block-aggregator" id="block-aggregator-category-2">
+          <h2 class="title">All news</h2>
+        <div class="content"><div class="item-list"><ul><li><a href="http://blog.nixternal.com/2008.10.30/ant-rpm-why-do-my-dashes-become-underscores/">Richard Johnson: Ant, RPM, why do my dashes become underscores?</a>
+</li><li><a href="http://www.mythbuntu.org/8.10/release">Mythbuntu: Mythbuntu 8.10 Intrepid Ibex Is Here!</a>
+</li><li><a href="http://joeb454.co.uk/2008/10/31/ubuntu-810-intrepid-ibex-pt-1/">Joe Barker: Ubuntu 8.10 (Intrepid Ibex) Pt. 1</a>
+</li><li><a href="http://jbailey.livejournal.com/61645.html">Jeff Bailey: Sickness, birthday, and planning for the next year.</a>
+</li><li><a href="http://www.jonobacon.org/?p=1371">Jono Bacon: Intrepid Is Out! San Fran Drinks Tonight.</a>
+</li></ul></div><div class="more-link"><a href="/aggregator/categories/2" title="View this category&#039;s recent news.">more</a></div></div>
+ </div>
+  <div class="block block-block" id="block-block-53">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=3");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-59">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=8");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-54">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=4");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-55">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=5");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-56">
+        <div class="content"><script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php':'http://www.freesoftwaremagazine.com/openx/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=6");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script></div>
+ </div>
+  <div class="block block-block" id="block-block-47">
+        <div class="content"><script type="text/javascript">
+  var box_width = "160px";
+  var box_height = "450px";
+  var text_size = "8";
+  
+  var section = "All";
+  var how_many = 8;
+  var show_karma = 1;
+  
+  var logo_style = "light";
+  var bg_color = "eaf5fa";
+  var text_color = "666666";
+  var link_color = "333333";
+  var border_color = "cccccc";
+  var score_bg_color = "ffe995";
+  var score_text_color = "663300";
+  var score_border_color = "ffe995";
+</script><script type="text/javascript" src="http://www.fsdaily.com/files/www.fsdaily.com/drigg_box.js"></script></div>
+ </div>
+          </div>
+          
+          <div id="content_right_subcolumn2">
+              <div class="block block-block" id="block-block-39">
+          <h2 class="title">Other sites</h2>
+        <div class="content"><ul>
+<li><a href="http://www.thetop10everything.com/">The Top 10 Everything</a> (Dave). The good, the bad and the ugly.</li> 
+<li><a href="http://www.fsdaily.com/">Free Software news</a> (Dave & Bridget). All about free software -- free as in freedom!</li>
+<li><a href="http://www.illiterarty.com/">Book Reviews: Illiterarty</a> (Bridget). Book reviews, blogs, and short stories.</li>
+</ul>
+</div>
+ </div>
+  <div class="block block-search" id="block-search-0">
+        <div class="content"><form action="/columns/krusader_one_file_manager_rule_them_all"  accept-charset="UTF-8" method="post" id="search-block-form">
+<div><div class="container-inline"><div class="form-item" id="edit-search-block-form-keys-wrapper">
+ <input type="text" maxlength="128" name="search_block_form_keys" id="edit-search-block-form-keys"  size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+</div></form>
+</div>
+ </div>
+  <div class="block block-popular_blocks" id="block-popular_blocks-1">
+          <h2 class="title">Hot topics - last 60 days</h2>
+        <div class="content"><ul>
+<li>
+  <strong><a href="/columns/linux_has_horse_bolted">Linux: has the horse bolted?</a></a></strong><br />
+  <small><a href="/user/25804">Laurie Langham</a>, 2008-09-10</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/copyleft_has_no_impact_project_activity">Copyleft has no impact on project activity?!</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-09-10</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/ten_easy_ways_attract_women_your_free_software_project">Ten easy ways to attract women to your free software project</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-09-22</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/why_bizarre_cathedral_licence_non_free">Why is The Bizarre Cathedral licence &quot;non-free&quot;?</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-21</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/becoming_free_software_developer_part_v_when_and_where_did_you_learn">Becoming a free software developer, part V: When and where did you learn?</a></a></strong><br />
+  <small><a href="/user/36">Rosalyn Hunter</a>, 2008-09-24</small>
+</li>
+    </ul></div>
+ </div>
+  <div class="block block-popular_blocks" id="block-popular_blocks-0">
+          <h2 class="title">Hot topics - last 21 days</h2>
+        <div class="content"><ul>
+<li>
+  <strong><a href="/columns/why_bizarre_cathedral_licence_non_free">Why is The Bizarre Cathedral licence &quot;non-free&quot;?</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-21</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/fighting_the_legacy_reputations_of_linux_seventeen_years_later">Fighting the &quot;legacy&quot; reputations of GNU/Linux, seventeen years later</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-13</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/supporting_your_free_software_dont_burn_out">Supporting your free software? Don&#039;t burn out</a></a></strong><br />
+  <small><a href="/user/5">Terry Hancock</a>, 2008-10-15</small>
+</li>
+    
+<li>
+  <strong><a href="/columns/bizarre_cathedral_27">The Bizarre Cathedral - 27</a></a></strong><br />
+  <small><a href="/user/8833">Ryan Cartwright</a>, 2008-10-19</small>
+</li>
+    </ul></div>
+ </div>
+  <div class="block block-block" id="block-block-49">
+        <div class="content"><div class="ad_3fn">
+<a href="http://www.3fn.net/" target="blank"><img src="/images/3fn150x75hosting.gif">Dedicated server</a>
+</div>
+</div>
+ </div>
+  <div class="block block-odiogo" id="block-odiogo-0">
+          <h2 class="title">Odiogo</h2>
+        <div class="content">
+<script type="text/javascript" language="javascript">showOdiogoSubscribeButton(_odiogo_directory_name);</script>
+</div>
+ </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /Content -->
+
+
+
+    <!-- Footer -->
+    <div id="footer">
+    </div>
+    <!-- /Footer -->
+
+
+  </div>
+</div>
+<!-- /Container --> 
+          <img src="sites/www.freesoftwaremagazine.com/themes/fsm_new/img/footer_idg.gif" />
+
+
+
+ <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+ <script type="text/javascript">
+  _uacct = "UA-113503-1";
+  urchinTracker();
+ </script>
+
+</body>
+</html>

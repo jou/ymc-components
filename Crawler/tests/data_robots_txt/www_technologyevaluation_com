@@ -1,0 +1,94 @@
+
+User-agent: SERPAnalytics
+Disallow: /
+
+User-Agent: *
+Disallow: /_
+Disallow: /a/
+Disallow: /A/
+Disallow: /ads/
+Disallow: /Ads/
+Disallow: /asp_datafiles/
+Disallow: /dll/
+Disallow: /documents/software-selection/
+Disallow: /download/
+Disallow: /Download/
+Disallow: /include/
+Disallow: /Include/
+Disallow: /payment/
+Disallow: /Payment/
+Disallow: /registration/
+Disallow: /Registration/
+Disallow: /request/
+Disallow: /Request/
+Disallow: /templates/
+Disallow: /Templates/
+Disallow: /test/
+Disallow: /Test/
+Disallow: /web_survey/
+
+Disallow: /search/for/for/*
+
+Disallow: /search/search*
+Disallow: /Search/Search*
+Disallow: /*search/search*
+Disallow: /*Search/Search*
+Disallow: /search/*?*
+Disallow: /Search/*?*
+Disallow: /*/search/
+Disallow: /*/Search/
+
+Disallow: /r.asp*
+Disallow: /tec_tellafriend.asp*
+Disallow: /send_article_to_a_friend.asp*
+Disallow: /send_newsletter_to_a_friend.asp*
+Disallow: /common/uploads/
+Disallow: /rateArticle.asp*
+Disallow: /u.asp*
+Disallow: /login.asp*
+Disallow: /Registration/Password/
+
+User-agent: Adbot-Google
+Allow: /Request/
+Allow: /request/
+
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_dynamic_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_1_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_A_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_B_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_C_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_D_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_E_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_F_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_G_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_H_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_I_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_ind_kb_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_J_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_K_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_L_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_M_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_N_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_O_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_P_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_Q_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_R_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_S_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_T_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_U_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_V_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_W_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_X_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_Y_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_search_keyword_Z_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/en/tec_sitemap_static_en.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/es/tec_sitemap_dynamic_es.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/es/tec_sitemap_static_es.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/fr/tec_sitemap_dynamic_fr.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/fr/tec_sitemap_static_fr.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/ja/tec_sitemap_dynamic_ja.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/ja/tec_sitemap_static_ja.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/zh/tec_sitemap_dynamic_zh.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/zh/tec_sitemap_search_pages_zh.xml
+Sitemap: http://www.technologyevaluation.com/sitemap/zh/tec_sitemap_static_zh.xml
+

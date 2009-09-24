@@ -1,0 +1,40 @@
+# BEGIN ROBOTS FOR ALL BOTS
+User-agent: *
+Disallow: /oas/
+Disallow: /fi/analytics/
+Disallow: /search/
+Disallow: /sections/search/
+Disallow: /templates/
+Disallow: /wap/
+Disallow: /common/gabriels/
+Disallow: /common/tools/
+Disallow: /common/gsa/
+Disallow: /common/printer/
+Disallow: /common/pluck/
+Disallow: /common/tools/
+Disallow: /common/zvents/
+Disallow: /common/bc/
+Disallow: /common/bc3/
+ 
+# BEGIN ROBOTS FOR SPECIFIC BOTS
+ 
+# BEGIN ROBOTS FOR GSA
+User-agent: gsa-crawler
+Allow: /common/gsa/
+ 
+# BEGIN ROBOTS FOR GOOGLEBOT
+User-agent: Googlebot
+Allow: /common/archives/$
+Allow: /common/archives/?cat=*$
+Disallow: *?wap=*
+Disallow: *?orderby=*
+Disallow: *?referrer=*
+Disallow: *?ucgid=*
+Disallow: /oas/
+Disallow: /fi/analytics/
+Disallow: /search/
+Disallow: /sections/search/
+Disallow: /templates/
+Disallow: /wap/
+Disallow: /common/ 
+Disallow: /common/archives/?cat=*&order=*$

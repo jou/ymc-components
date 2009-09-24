@@ -1,0 +1,29 @@
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: WebduniaBot  
+Disallow: /
+
+User-agent: dotbot
+Disallow: / 
+
+User-agent: ShopWiki
+Disallow: /
+
+User-agent: Netcraft
+Disallow: /
+
+User-agent: msnbot
+Crawl-Delay: 2
+
+User-agent: msnbot-media
+Crawl-Delay: 2
+
+User-agent: twiceler
+Crawl-delay: 5
+
+User-agent: *
+Disallow: /get_software/
+Disallow: /get_driver/
+Disallow: /human_check/
+Disallow: /report/

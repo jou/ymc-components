@@ -1,0 +1,2 @@
+<input type="submit" value="Speichern" name="save" />
+<input type="submit" value="L&ouml;schen" name="delete" />

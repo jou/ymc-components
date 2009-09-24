@@ -1,0 +1,12 @@
+User-agent: * 
+Disallow: /administrator/ 
+Disallow: /classes/
+Disallow: /components/
+Disallow: /editor/ 
+Disallow: /includes/ 
+Disallow: /language/ 
+Disallow: /mambots/ 
+Disallow: /media/ 
+Disallow: /modules/ 
+Disallow: /templates/ 
+Disallow: /uploadfiles/ 

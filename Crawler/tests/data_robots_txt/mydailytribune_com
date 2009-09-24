@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /pages/results/search_results/
+Disallow: /pages/business_details/search_results/
+Disallow: /pages/ad_details/search_results/
+Disallow: /pages/classifieds/search_results/
+Disallow: /pages/business_directory/search_results/
+Disallow: /pages/results_businesses/search_results/
+Disallow: /pages/*/search_results/
+Disallow: /pages/results/recommend_listing/
+Disallow: /pages/recommend_ad
+Disallow: /*/add_tag
+Disallow: /pages/results/search_results/add_tag
+Disallow: /*/remove_tag
+Disallow: /pages/results/search_results/remove_tag
+Disallow: /*/exclude_tag
+Disallow: /pages/results/search_results/exclude_tag
+
+User-Agent: googlebot
+Crawl-Delay: 10
+
+User-Agent: msnbot
+Crawl-Delay: 10
+
+User-Agent: Slurp
+Crawl-Delay: 10
+
+User-agent: Mediapartners-Google*
+Disallow:
+

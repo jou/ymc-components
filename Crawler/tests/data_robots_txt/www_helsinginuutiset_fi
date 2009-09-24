@@ -1,0 +1,47 @@
+User-agent: *
+Allow: /
+Disallow: /Palvelut
+Disallow: /var
+Disallow: /Bak
+Disallow: /content
+Disallow: /content/*
+Disallow: /layout
+Disallow: /ezinfo
+Disallow: /user
+Disallow: /*(month)*
+Disallow: /misc/flash
+Disallow: /search
+Disallow: /thumbsrating
+Disallow: /article_topic
+Disallow: /visual
+Disallow: /extension
+Disallow: /Sivustot
+Disallow: /Yhteiso/Keskustelupalstat/Aiheittain/Ajankohtaista
+Disallow: /Minun-Kuopioni/Keskustelupalstat/Aiheittain/Ajankohtaista
+Disallow: /Keskustelut/Keskustelupalstat/Aiheittain/Ajankohtaista
+Disallow: /1
+Disallow: /?inappropriate_object_id=*
+Disallow: /Ota-yhteytta/Ilmoitusmyynti/Ilmoita-asiaton-sisalto/
+Disallow: /Asiakaspalvelu/Ilmoitusmyynti/Ilmoita-asiaton-sisalto/
+Disallow: /Palvelut/Palveluhakemisto/?service_search_category=106997&service_search_sub_category=107053&service_search_company=166348
+
+# Kuopionkaupunkilehti.fi
+Disallow: /news.php
+Disallow: /columns.php
+Disallow: /editorial.php
+Disallow: /tarakka.php
+Disallow: /events.php
+Disallow: /linkit.php
+Disallow: /paper.php
+
+# Tamperelainen.fi
+Disallow: /ta_mediakortti.html
+Disallow: /ta_persoonat.html
+Disallow: /ta_yhteystiedot.html
+Disallow: /ta_kumppanit.html
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Jyxobot
+Disallow: /

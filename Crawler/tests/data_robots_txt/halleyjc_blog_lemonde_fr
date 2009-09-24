@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-register.php
+Disallow: /wp-signup.php
+Disallow: /signaler.php
+Disallow: /token.php
+Disallow: /xmlrpc.php
+Disallow: /akamai-sureroute-test-object.htm

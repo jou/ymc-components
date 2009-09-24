@@ -1,0 +1,7 @@
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /search
+
+Sitemap: http://michigan-mobile-home82161.blogspot.com/feeds/posts/default?orderby=updated

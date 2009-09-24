@@ -1,0 +1,35 @@
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: Googlebot
+Disallow: /*merchant,*
+Disallow: /*brand,*
+Disallow: /*price,*
+Disallow: /public/info2.aspx
+Disallow: /public/info.aspx
+Disallow: /public/Click.aspx
+Disallow: /public/BuyNow.aspx
+Disallow: /h/info2.aspx
+Disallow: /h/info.aspx
+Disallow: /h/Click.aspx
+Disallow: /h/BuyNow.aspx
+Disallow: /info2.aspx
+Disallow: /info.aspx
+Disallow: /Click.aspx
+Disallow: /BuyNow.aspx
+
+
+User-agent: *
+Disallow: /public/info2.aspx
+Disallow: /public/info.aspx
+Disallow: /public/Click.aspx
+Disallow: /public/BuyNow.aspx
+Disallow: /h/info2.aspx
+Disallow: /h/info.aspx
+Disallow: /h/Click.aspx
+Disallow: /h/BuyNow.aspx
+Disallow: /info2.aspx
+Disallow: /info.aspx
+Disallow: /Click.aspx
+Disallow: /BuyNow.aspx
+

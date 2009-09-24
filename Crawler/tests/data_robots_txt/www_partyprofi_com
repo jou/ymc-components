@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Sitemap: http://www.partyprofi.com/sitemap.xml
+Sitemap: http://www.partyprofi.com/sitemap2.xml
+Sitemap: http://www.partyprofi.com/sitemap_mp.xml

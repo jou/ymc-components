@@ -1,0 +1,8 @@
+
+
+User-agent: *                   #
+Disallow: /css/                 # dirs: nothing of interrest
+Disallow: /images/              # 
+#
+# -- eof ----------------------------------------------------
+

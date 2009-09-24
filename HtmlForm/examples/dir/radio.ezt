@@ -1,0 +1,21 @@
+{use $form}
+
+{var $e=$form['type']}
+
+<fieldset class="{if $e->failed}failed{/if}">
+  <legend>Benutzertyp</legend>
+
+  <input name="type" value="user" type="radio" {if $e->value == 'user'}checked="checked"{/if}>
+  <label for="user">Nutzer</label><br>
+  
+  <input name="type" value="accountadmin" type="radio" {if $e->value == 'accountadmin'}checked="checked"{/if}>
+  <label for="accountadmin">Administrator</label><br>
+      
+  <input name="type" value="consultant" type="radio" {if $e->value == 'consultant'}checked="checked"{/if}>
+  <label for="consultant">Consultant</label><br>
+  
+  This one is not valid:
+  <input name="type" value="developer" type="radio">
+  <label for="developer">Developer</label><br>
+  
+</fieldset>

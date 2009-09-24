@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow: /links.php
+Disallow: /rssreader.php

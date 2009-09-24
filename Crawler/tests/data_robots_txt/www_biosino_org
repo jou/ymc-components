@@ -1,0 +1,15 @@
+User-Agent: Googlebot
+Disallow: /cgi-bin/
+Disallow: /DIDWeb/*?*
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /DIDWeb/*?*
+Disallow: /images/
+Disallow: /private/
+Disallow: /DIDWeb/
+Disallow: /members/
+Disallow: /ubb/
+Disallow: /tmp/
+Disallow: /mirror/
+Disallow: /~joe/

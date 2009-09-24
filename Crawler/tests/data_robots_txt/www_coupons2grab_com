@@ -1,0 +1,7 @@
+User-agent: linksmanager_bot
+Disallow: /
+User-agent: *
+Disallow: /grab.php
+Disallow: /productdesc.php
+Disallow: /moreinfo.php
+Disallow: /howtoget.php

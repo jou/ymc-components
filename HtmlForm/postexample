@@ -1,0 +1,189 @@
+print_r
+=======
+
+Array
+(
+    [userId] => 4
+    [nickname] => ymc-toko
+    [email] => thomas.koch@ymc.ch
+    [password] => 
+    [password2] => 
+    [identifier] => thomas.koch.ro
+    [accountId] => 1
+    [firstName] => Thomas
+    [lastName] => Koch
+    [position] => 
+    [street] => 
+    [location] => 
+    [phone] => 
+    [mobile] => 
+    [agentMorning] => Array
+        (
+            [10] => on
+            [11] => on
+            [13] => on
+            [14] => on
+            [16] => on
+            [18] => on
+            [19] => on
+            [21] => on
+            [22] => on
+            [23] => on
+            [24] => on
+            [25] => on
+            [26] => on
+            [66] => on
+            [69] => on
+            [94] => on
+            [128] => on
+            [158] => on
+            [159] => on
+            [160] => on
+            [161] => on
+        )
+
+    [type] => admin
+    [timeMorning] => 0730
+    [timeAfternoon] => 1500
+    [days] => Array
+        (
+            [monday] => on
+            [tuesday] => on
+            [wednesday] => on
+            [thursday] => on
+            [friday] => on
+        )
+
+    [format] => both
+    [summarize] => yes
+    [content] => Array
+        (
+            [resultset] => on
+            [introduction] => on
+        )
+
+    [save] => Benutzer speichern
+)
+
+
+var_dump
+========
+
+array
+  'userId' => string '4' (length=1)
+  'nickname' => string 'ymc-toko' (length=8)
+  'email' => string 'thomas.koch@ymc.ch' (length=18)
+  'password' => string '' (length=0)
+  'password2' => string '' (length=0)
+  'identifier' => string 'thomas.koch.ro' (length=14)
+  'accountId' => string '1' (length=1)
+  'firstName' => string 'Thomas' (length=6)
+  'lastName' => string 'Koch' (length=4)
+  'position' => string '' (length=0)
+  'street' => string '' (length=0)
+  'location' => string '' (length=0)
+  'phone' => string '' (length=0)
+  'mobile' => string '' (length=0)
+  'agentMorning' => 
+    array
+      10 => string 'on' (length=2)
+      11 => string 'on' (length=2)
+      13 => string 'on' (length=2)
+      14 => string 'on' (length=2)
+      16 => string 'on' (length=2)
+      18 => string 'on' (length=2)
+      19 => string 'on' (length=2)
+      21 => string 'on' (length=2)
+      22 => string 'on' (length=2)
+      23 => string 'on' (length=2)
+      24 => string 'on' (length=2)
+      25 => string 'on' (length=2)
+      26 => string 'on' (length=2)
+      66 => string 'on' (length=2)
+      69 => string 'on' (length=2)
+      94 => string 'on' (length=2)
+      128 => string 'on' (length=2)
+      158 => string 'on' (length=2)
+      159 => string 'on' (length=2)
+      160 => string 'on' (length=2)
+      161 => string 'on' (length=2)
+  'type' => string 'admin' (length=5)
+  'timeMorning' => string '0730' (length=4)
+  'timeAfternoon' => string '1500' (length=4)
+  'days' => 
+    array
+      'monday' => string 'on' (length=2)
+      'tuesday' => string 'on' (length=2)
+      'wednesday' => string 'on' (length=2)
+      'thursday' => string 'on' (length=2)
+      'friday' => string 'on' (length=2)
+  'format' => string 'both' (length=4)
+  'summarize' => string 'yes' (length=3)
+  'content' => 
+    array
+      'resultset' => string 'on' (length=2)
+      'introduction' => string 'on' (length=2)
+  'save' => string 'Benutzer speichern' (length=18)
+
+var_export
+==========
+
+array (
+  'userId' => '4',
+  'nickname' => 'ymc-toko',
+  'email' => 'thomas.koch@ymc.ch',
+  'password' => '',
+  'password2' => '',
+  'identifier' => 'thomas.koch.ro',
+  'accountId' => '1',
+  'firstName' => 'Thomas',
+  'lastName' => 'Koch',
+  'position' => '',
+  'street' => '',
+  'location' => '',
+  'phone' => '',
+  'mobile' => '',
+  'agentMorning' => 
+  array (
+    10 => 'on',
+    11 => 'on',
+    13 => 'on',
+    14 => 'on',
+    16 => 'on',
+    18 => 'on',
+    19 => 'on',
+    21 => 'on',
+    22 => 'on',
+    23 => 'on',
+    24 => 'on',
+    25 => 'on',
+    26 => 'on',
+    66 => 'on',
+    69 => 'on',
+    94 => 'on',
+    128 => 'on',
+    158 => 'on',
+    159 => 'on',
+    160 => 'on',
+    161 => 'on',
+  ),
+  'type' => 'admin',
+  'timeMorning' => '0730',
+  'timeAfternoon' => '1500',
+  'days' => 
+  array (
+    'monday' => 'on',
+    'tuesday' => 'on',
+    'wednesday' => 'on',
+    'thursday' => 'on',
+    'friday' => 'on',
+  ),
+  'format' => 'both',
+  'summarize' => 'yes',
+  'content' => 
+  array (
+    'resultset' => 'on',
+    'introduction' => 'on',
+  ),
+  'save' => 'Benutzer speichern',
+)

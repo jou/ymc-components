@@ -1,0 +1,10 @@
+Sitemap: http://www.mein-parteibuch.com/sitemap.xml
+Sitemap: http://www.mein-parteibuch.com/blog/sitemap.xml.gz
+Sitemap: http://www.mein-parteibuch.com/wiki/sitemap-index-katzesql1-mw111_.xml
+
+User-agent: Slurp
+Disallow: /wiki/?title
+
+User-agent: SnapPreviewBot
+Disallow: /
+

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /img/
+Disallow: /album/
+Disallow: /gallery/
+Disallow: /lib/
+Disallow: /public_templates/
+Disallow: /ttf/db/
+Disallow: /files/

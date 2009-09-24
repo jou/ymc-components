@@ -1,0 +1,4 @@
+# Zugriff auf alle Dateien erlauben
+User-agent: *
+Disallow:
+Sitemap: http://www.the-pimp.de/sitemap.xml

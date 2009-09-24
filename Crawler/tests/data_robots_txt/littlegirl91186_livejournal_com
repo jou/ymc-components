@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow: /
+
+# If you also support the allow directive let us know
+User-Agent: Googlebot
+Disallow: /
+Allow: /data/foaf
+
+User-Agent: Slurp
+Disallow: /
+Allow: /data/foaf
+
+User-Agent: Teoma
+Disallow: /
+Allow: /data/foaf
+

@@ -1,0 +1,26 @@
+User-Agent: *
+Disallow:/Hotels/*?act
+Allow:/Hotels/*/Leisure-Info/Activities/*?act
+Disallow:/Hotels/*activityId
+Allow:/Hotels/*/Leisure-Info/Activities/*activityId
+Disallow:/Hotels/*ThemeNumber
+Allow:/Hotels/*/Regional-Info/*ThemeNumber
+Disallow:/Hotels/*Month
+Allow:/Hotels/*/Whats-On-When/*Month
+Disallow:/Hotels/*Event
+Allow:/Hotels/*/Regional-Info/Whats-On-When/*Event
+Disallow:/Hotels/*Type
+Allow:/Hotels/*/Leisure-Info/Health-Beauty/*Type
+Allow:/Hotels/*/Meetings/Default.aspx?ImageType=Meeting
+Disallow:/*Transition.aspx?
+Disallow: /Hotels/*Microsite
+Disallow: /*Image=
+Disallow: /*/Airport-Hotels.aspx?Text=
+Disallow: /*/Participating-Hotels.aspx?Text=
+Disallow: /Call-Me-Back/
+Disallow: /My-Details/
+Disallow: *error.html
+
+Sitemap: http://www.bestwestern.co.uk/bw-index.xml
+
+This message has been scanned for viruses

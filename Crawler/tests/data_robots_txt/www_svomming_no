@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /*print=1
+Disallow: /redirect.php*

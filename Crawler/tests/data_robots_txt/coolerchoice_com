@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+# BEGIN XML-SITEMAP-PLUGIN
+Sitemap: http://coolerchoice.com/sitemap.xml.gz
+# END XML-SITEMAP-PLUGIN

@@ -1,0 +1,28 @@
+##ACAP version=1.0
+
+# Allow all
+User-agent:  *
+Disallow: /search/
+Disallow: /*.ece$
+Disallow: /*startindex=
+Disallow: /*from=*
+Disallow: /*service=Print
+Disallow: /*action=Email
+Disallow: /*comment_form
+Disallow: /*r=RSS
+Disallow: /topics/
+
+Sitemap: http://www.goreyguardian.ie/generateSitemap.jsp
+
+# Changes in Trunk
+
+ACAP-crawler: *
+ACAP-disallow-crawl: /search/
+ACAP-disallow-crawl: /*.ece$
+ACAP-disallow-crawl: /*startindex=
+ACAP-disallow-crawl: /*from=*
+ACAP-disallow-crawl: /*service=Print
+ACAP-disallow-crawl: /*action=Email
+ACAP-disallow-crawl: /*comment_form
+ACAP-disallow-crawl: /*r=RSS
+ACAP-disallow-crawl: /topics/

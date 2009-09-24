@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /openLink.do
+Disallow: /editClaim.do
+Disallow: /triptoe/js/
+Disallow: /Photos_of*
+Disallow: /Map_of*
+Disallow: /*-Deals-*
+Disallow: /Budget_Hotels*
+Disallow: /Mid_Range_Hotels*
+Disallow: /Luxury_Hotels*

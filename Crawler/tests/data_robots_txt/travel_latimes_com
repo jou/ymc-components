@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /images/
+Disallow: /stylesheets/
+Disallow: /javascripts/
+Disallow: /admin
+Disallow: /daily-deal-blog/wp-admin
+Disallow: /adtest
+Sitemap: http://travel.latimes.com/sitemap.xml
+Sitemap: http://travel.latimes.com/sitemap_index.xml

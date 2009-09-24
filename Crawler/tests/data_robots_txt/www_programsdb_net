@@ -1,0 +1,30 @@
+User-agent: *
+Disallow: /admin/
+
+Sitemap: http://www.programsdb.net/sitemap/Windows.xml
+Sitemap: http://www.programsdb.net/sitemap/Linux.xml
+Sitemap: http://www.programsdb.net/sitemap/Mac.xml
+Sitemap: http://www.programsdb.net/sitemap/Mobile.xml
+Sitemap: http://www.programsdb.net/sitemap/Tjera.xml
+
+Sitemap: http://www.programsdb.net/sitemap/Windows.txt
+Sitemap: http://www.programsdb.net/sitemap/Linux.txt
+Sitemap: http://www.programsdb.net/sitemap/Mac.txt
+Sitemap: http://www.programsdb.net/sitemap/Mobile.txt
+Sitemap: http://www.programsdb.net/sitemap/Tjera.txt
+
+
+Sitemap: http://www.avirusi.info/avirusi.txt
+Sitemap: http://www.avirusi.info/avirusi.xml
+
+
+
+Sitemap: http://www.thedownload.info/xmap/Windows.xml
+Sitemap: http://www.thedownload.info/xmap/Linux.xml
+Sitemap: http://www.thedownload.info/xmap/Mac.xml
+Sitemap: http://www.thedownload.info/xmap/Mobile.xml
+
+Sitemap: http://www.thedownload.info/xmap/Windows.txt
+Sitemap: http://www.thedownload.info/xmap/Linux.txt
+Sitemap: http://www.thedownload.info/xmap/Mac.txt
+Sitemap: http://www.thedownload.info/xmap/Mobile.txt

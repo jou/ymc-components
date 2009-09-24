@@ -1,0 +1,8 @@
+User-agent: penthesilea
+Disallow: /
+User-agent: Slurp
+Disallow: /
+User-agent: sistrix
+Disallow: /
+User-agent: dotbot
+Disallow: /

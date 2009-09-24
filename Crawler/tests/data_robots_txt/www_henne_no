@@ -1,0 +1,31 @@
+
+  User-agent: *
+  Disallow:    /php/sok.php
+  Disallow:    /phpf/sok.php
+  Disallow:    /phpf/js
+  Disallow:    /php/forum/feed.php
+  Disallow:    /phpf/debatt/view_article-topic.js.php
+  Disallow:    /phpf/debatt/logout.php
+  Disallow:    /phpf/forum/artikkel_js.php
+  Disallow:    /utskrift/
+  Allow:       /
+
+  User-Agent: Googlebot
+  Disallow:    /php/sok.php
+  Disallow:    /phpf/sok.php
+  Disallow:    /phpf/js
+  Disallow:    /php/forum/feed.php
+  Disallow:    /phpf/debatt/view_article-topic.js.php
+  Disallow:    /phpf/debatt/logout.php
+  Disallow:    /phpf/forum/artikkel_js.php
+  Disallow:    /mobil/
+  Disallow:    /utskrift/
+  Allow:       /
+
+  User-Agent: Googlebot-Mobile
+  Allow:       /mobil/
+  Disallow:    /php*
+  Disallow:    /pub*
+  Disallow:    /utskrift/
+  Allow:       /
+
