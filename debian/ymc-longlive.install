@@ -1,2 +1,2 @@
-ymc-longlive/src /usr/share/ymc-components/LongLive
-ymc-longlive/src/*_autoload.php /usr/share/ymc-components/autoload
+LongLive/src /usr/share/ymc-components/LongLive
+LongLive/src/*_autoload.php /usr/share/ymc-components/autoload

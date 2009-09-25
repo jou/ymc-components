@@ -1,2 +1,2 @@
-ymc-pipe/src /usr/share/ymc-components/Pipe
-ymc-pipe/src/*_autoload.php /usr/share/ymc-components/autoload
+Pipe/src /usr/share/ymc-components/Pipe
+Pipe/src/*_autoload.php /usr/share/ymc-components/autoload

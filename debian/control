@@ -12,25 +12,25 @@ Description: Common Infrastructure for all components
  some description..
 
 Package: ymc-crawler
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ymc-components
 Architecture: all
 Description: Diverse helpers to build crawlers
  some description..
 
 Package: ymc-curl
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ymc-components
 Architecture: all
 Description: Some helper classes for php-curl
  Provides a request, response and multihandle class.
 
 Package: ymc-ezcaddons
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ymc-components
 Architecture: all
 Description: Classes that adds additional functionality to eZ Components
  some description...
 
 Package: ymc-htmlform
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ymc-components
 Architecture: all
 Description: Component to support the validation of HTML forms.
  Everything can be overridden and addapted
@@ -38,13 +38,13 @@ Description: Component to support the validation of HTML forms.
  Written in the style of eZ Components.
 
 Package: ymc-longlive
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ymc-components
 Architecture: all
 Description: Classes that helps to build long running background jobs in PHP
  some description...
 
 Package: ymc-pipe
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ymc-components
 Architecture: all
 Description: PHP based, graph oriented data manipulation framework
  Data can be manipulated by nodes of graph, where every node gets the 

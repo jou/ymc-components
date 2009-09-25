@@ -1,2 +1,2 @@
-ymc-crawler/src /usr/share/ymc-components/Crawler
-ymc-crawler/src/*_autoload.php /usr/share/ymc-components/autoload
+Crawler/src /usr/share/ymc-components/Crawler
+Crawler/src/*_autoload.php /usr/share/ymc-components/autoload

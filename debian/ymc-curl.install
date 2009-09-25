@@ -1,2 +1,2 @@
-ymc-curl/src /usr/share/ymc-components/Curl
-ymc-curl/src/*_autoload.php /usr/share/ymc-components/autoload
+Curl/src /usr/share/ymc-components/Curl
+Curl/src/*_autoload.php /usr/share/ymc-components/autoload
