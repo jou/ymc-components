@@ -32,7 +32,7 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess
     {
         if( !is_integer( $value ) )
         {
-            throw new Exception;
+            throw new ezcBaseValueException( 'bitset integer', $value, 'integer', 'parameter' );
         }
         $this->value = $value;
     }
@@ -61,21 +61,36 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess
         {
             if( !is_integer( $key ) )
             {
-                throw new Exception;
+                throw new ezcBaseValueException( 'bit offset', $key, 'integer', 'parameter' );
             }
             if( !is_string( $value ) )
             {
-                throw new Exception;
+                throw new ezcBaseValueException( 'bit offset name', $value, 'string', 'offset '.$key );
             }
             // Check that enum strings are unique
             if( array_key_exists( $value, $reverseBitSetMapping ) )
             {
-                throw new Exception;
+                throw new Exception( 'duplicate '.$value );
             }
             $reverseBitSetMapping[$value] = $key;
         }
         $this->bitSetMapping = $bitSetMapping;
         $this->reverseBitSetMapping = $reverseBitSetMapping;
+    }
+
+    /**
+     * Returns the bitset as an array representation with names as keys.
+     * 
+     * @return array( string => bool )
+     */
+    public function toNamedArray()
+    {
+        $bitset = array();
+        foreach( $this->bitSetMapping as $offset => $name )
+        {
+            $bitset[$name] = $this->getByPosition( $offset );
+        }
+        return $bitset;
     }
 
     public function __get( $name )
@@ -109,7 +124,7 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess
     {
         if( !is_bool( $value ) )
         {
-            throw new Exception;
+            throw new ezcBaseValueException( $name, $value, 'boolean', 'parameter' );
         }
         if( is_string( $name ) )
         {
@@ -138,7 +153,13 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess
     {
         $bit = 1 << $position;
 
-        $this->value = $this->value | $bit & ( $value ? ~0 : 0 );
+        // reset the bit
+        $this->value = $this->value & ~$bit;
+
+        if( $value )
+        {
+            $this->value = $this->value | $bit;
+        }
     }
 
     public function __isset( $name )

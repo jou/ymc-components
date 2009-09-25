@@ -11,18 +11,23 @@ class ymcEzcPersistentObjectBitSetConverter implements ezcPersistentPropertyConv
 
     public function fromDatabase( $databaseValue )
     {
-        if ( !is_integer( $databaseValue ) )
+        if ( !is_numeric( $databaseValue ) )
         {
-            throw new Exception;
+            throw new ezcBaseValueException( 'databaseValue', $databaseValue, 'numeric', 'parameter' );
         }
         $obj = new $this->bitSetClass;
-        $obj->setInteger( $databaseValue );
+        $obj->setInteger( ( int )$databaseValue );
         return $obj;
     }
 
-    public function toDatabase( $obj )
+    public function toDatabase( $propertyValue )
     {
-        return $obj->getInteger();
+        if( !is_object( $propertyValue ) )
+        {
+            throw new ezcBaseValueException( 'propertyValue', $propertyValue, 'object', 'parameter' );
+        }
+
+        return $propertyValue->getInteger();
     }
 
     public static function __set_state( Array $state )

@@ -78,4 +78,30 @@ class ymcEzcPersistentObjectNamedBitSetTest extends PHPUnit_Framework_TestCase
         $bitset[0] = TRUE;
         $this->assertEquals( 1, $bitset->getInteger() );
     }
+
+    public function testSetBitTrueAndBackToFalse()
+    {
+        $bitset = new ymcEzcPersistentObjectNamedBitSet;
+        $bitset->setBitSetMapping( $this->goodBitSetMapping );
+
+        $bitset[1] = TRUE;
+        $bitset[1] = FALSE;
+        $this->assertFalse( $bitset[1] );
+    }
+
+    public function testSetBitTrueAndBackToFalseWhileOthersRemainTrue()
+    {
+        $bitset = new ymcEzcPersistentObjectNamedBitSet;
+        $bitset->setBitSetMapping( $this->goodBitSetMapping );
+
+        $bitset[1] = TRUE;
+        $bitset[2] = TRUE;
+        $bitset[3] = TRUE;
+
+        $bitset[2] = FALSE;
+
+        $this->assertTrue( $bitset[1] );
+        $this->assertFalse( $bitset[2] );
+        $this->assertTrue( $bitset[3] );
+    }
 }
