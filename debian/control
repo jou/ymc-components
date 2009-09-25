@@ -1,15 +1,33 @@
 Source: ymc-components
 Section: web
 Priority: optional
-Build-Depends: debhelper (>= 7.0.15)
+Build-Depends: debhelper (>= 7.0.15), cdbs
 Maintainer: Thomas Koch <thomas.koch@ymc.ch>
 Standards-Version: 3.8.3
+
+Package: ymc-components
+Depends: ${misc:Depends}
+Architecture: all
+Description: Common Infrastructure for all components
+ some description..
+
+Package: ymc-crawler
+Depends: ${misc:Depends}
+Architecture: all
+Description: Diverse helpers to build crawlers
+ some description..
 
 Package: ymc-curl
 Depends: ${misc:Depends}
 Architecture: all
 Description: Some helper classes for php-curl
  Provides a request, response and multihandle class.
+
+Package: ymc-ezcaddons
+Depends: ${misc:Depends}
+Architecture: all
+Description: Classes that adds additional functionality to eZ Components
+ some description...
 
 Package: ymc-htmlform
 Depends: ${misc:Depends}
@@ -18,6 +36,12 @@ Description: Component to support the validation of HTML forms.
  Everything can be overridden and addapted
  Forms are PHP classes
  Written in the style of eZ Components.
+
+Package: ymc-longlive
+Depends: ${misc:Depends}
+Architecture: all
+Description: Classes that helps to build long running background jobs in PHP
+ some description...
 
 Package: ymc-pipe
 Depends: ${misc:Depends}

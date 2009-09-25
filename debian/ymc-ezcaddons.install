@@ -1,0 +1,2 @@
+ymc-ezcaddons/src /usr/share/ymc-components/EzcAddons
+ymc-ezcaddons/src/*_autoload.php /usr/share/ymc-components/autoload

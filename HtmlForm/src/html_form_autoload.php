@@ -1,0 +1,27 @@
+<?php 
+return array (
+  'ymcHtmlFormElementsGroup' => './HtmlForm/src/interfaces/elements_group.php',
+  'ymcHtmlForm' => './HtmlForm/src/interfaces/form.php',
+  'ymcHtmlFormElementBase' => './HtmlForm/src/interfaces/element_base.php',
+  'ymcHtmlFormInputSource' => './HtmlForm/src/interfaces/input_source.php',
+  'ymcHtmlFormElement' => './HtmlForm/src/interfaces/element.php',
+  'ymcHtmlFormFailure' => './HtmlForm/src/failure.php',
+  'ymcHtmlFormElementRadio' => './HtmlForm/src/elements/radio.php',
+  'ymcHtmlFormElementSingleSelect' => './HtmlForm/src/elements/single_select.php',
+  'ymcHtmlFormElementPassword' => './HtmlForm/src/elements/password.php',
+  'ymcHtmlFormElementEmail' => './HtmlForm/src/elements/email.php',
+  'ymcHtmlFormElementCheckboxArray' => './HtmlForm/src/elements/checkbox_array.php',
+  'ymcHtmlFormElementText' => './HtmlForm/src/elements/text.php',
+  'ymcHtmlFormElementButton' => './HtmlForm/src/elements/button.php',
+  'ymcHtmlFormInputSourceDummy' => './HtmlForm/src/input_sources/dummy.php',
+  'ymcHtmlFormInputSourceFilterExtension' => './HtmlForm/src/input_sources/filter_extension.php',
+  'ymcHtmlFormFailureNotInSet' => './HtmlForm/src/failures/not_in_set.php',
+  'ymcHtmlFormFailureFilter' => './HtmlForm/src/failures/filter.php',
+  'ymcHtmlFormFailureEmpty' => './HtmlForm/src/failures/empty.php',
+  'ymcHtmlFormElementsGroupGeneric' => './HtmlForm/src/elements_group_generic.php',
+  'ymcHtmlFormDuplicateNameException' => './HtmlForm/src/exceptions/duplicate_name.php',
+  'ymcHtmlFormException' => './HtmlForm/src/exceptions/base.php',
+  'ymcHtmlFormElementOptions' => './HtmlForm/src/options/element.php',
+  'ymcHtmlFormGeneric' => './HtmlForm/src/form_generic.php',
+);
+?>

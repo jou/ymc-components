@@ -1,0 +1,2 @@
+ymc-htmlform/src /usr/share/ymc-components/HtmlForm
+ymc-htmlform/src/*_autoload.php /usr/share/ymc-components/autoload
