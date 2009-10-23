@@ -104,4 +104,16 @@ class ymcEzcPersistentObjectNamedBitSetTest extends PHPUnit_Framework_TestCase
         $this->assertFalse( $bitset[2] );
         $this->assertTrue( $bitset[3] );
     }
+
+    public function testNamedBitSetIsSerializable()
+    {
+        $bitset = new ymcEzcPersistentObjectNamedBitSet;
+        $bitset[1] = TRUE;
+        $bitset[3] = TRUE;
+
+        $serialized = serialize( $bitset );
+        $newBitset = unserialize( $serialized );
+
+        $this->assertEquals( $bitset->getInteger(), $newBitset->getInteger() );
+    }
 }

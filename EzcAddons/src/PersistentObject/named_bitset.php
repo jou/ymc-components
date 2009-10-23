@@ -4,7 +4,7 @@
  * Class that helps to represent a set of named boolean values as an integer.
  * 
  */
-class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess
+class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, serializable
 {
     private $value = 0;
 
@@ -27,6 +27,21 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess
      * @var array( string => int )
      */
     private $reverseBitSetMapping = array();
+
+    public function __construct()
+    {
+        $this->initBitSetMapping();
+    }
+
+    /**
+     * This method can be overwritten to initialize the name mapping.
+     * 
+     * @access public
+     * @return void
+     */
+    protected function initBitSetMapping()
+    {
+    }
 
     public function setInteger( $value )
     {
@@ -192,5 +207,18 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess
     public function offsetUnset ( $offset )
     {
         $this->__unset( $offset );
+    }
+
+    // methods implementing interface serializable
+
+    public function serialize()
+    {
+        return ( string )$this->value;
+    }
+
+    public function unserialize( $value )
+    {
+        $this->initBitSetMapping();
+        $this->value = ( int )$value;
     }
 }
