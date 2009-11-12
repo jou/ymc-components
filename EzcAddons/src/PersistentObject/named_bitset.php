@@ -2,7 +2,7 @@
 
 /**
  * Class that helps to represent a set of named boolean values as an integer.
- * 
+ *
  */
 class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, serializable
 {
@@ -11,19 +11,19 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, serializable
     /**
      * Contains the enum definition as a number indexed array
      *
-     * ex. array( 
+     * ex. array(
      *   0 => 'monday',
      *   1 => 'tuesday',
      *   ...
      * )
-     * 
+     *
      * @var array( int => string )
      */
     private $bitSetMapping = array();
 
     /**
      * The reverse of $enumMapping.
-     * 
+     *
      * @var array( string => int )
      */
     private $reverseBitSetMapping = array();
@@ -35,7 +35,7 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, serializable
 
     /**
      * This method can be overwritten to initialize the name mapping.
-     * 
+     *
      * @access public
      * @return void
      */
@@ -64,9 +64,9 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, serializable
 
     /**
      *
-     * 
+     *
      * @todo strict error checking
-     * @param Array $enumMapping 
+     * @param Array $enumMapping
      */
     public function setBitSetMapping( Array $bitSetMapping )
     {
@@ -95,7 +95,7 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, serializable
 
     /**
      * Returns the bitset as an array representation with names as keys.
-     * 
+     *
      * @return array( string => bool )
      */
     public function toNamedArray()
