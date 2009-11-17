@@ -46,4 +46,18 @@ class ymcEzcPersistentObjectBitSetConverterTest extends PHPUnit_Framework_TestCa
 
         $this->assertEquals( 'hallo leute,hallo tiere', $conv->toDatabase( array('hallo leute', 'hallo tiere') ) );
     }
+
+    public function testLeadingWhitespaceIsIgnored()
+    {
+        $conv = new ymcEzcPersistentObjectSeparatedListConverter;
+
+        $this->assertEquals( array('hallo welt','und mond'), $conv->fromDatabase( '  hallo welt,und mond' ) );
+    }
+
+    public function testTrailingWhitespaceIsIgnored()
+    {
+        $conv = new ymcEzcPersistentObjectSeparatedListConverter;
+
+        $this->assertEquals( array('hallo welt','und mond'), $conv->fromDatabase( 'hallo welt,und mond  ' ) );
+    }
 }

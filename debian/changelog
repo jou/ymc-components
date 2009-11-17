@@ -1,3 +1,9 @@
+ymc-components (20091117) memo; urgency=low
+
+  * bugfix: whitespace made problems in separated_list converter 
+
+ -- Thomas Koch <thomas.koch@ymc.ch>  Tue, 17 Nov 2009 14:49:08 +0100
+
 ymc-components (20091023) memo; urgency=low
 
   * made named_bitset serializable

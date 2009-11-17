@@ -35,7 +35,7 @@ class ymcEzcPersistentObjectSeparatedListConverter implements ezcPersistentPrope
             return array();
         }
 
-        return explode( $this->separator, $databaseValue );
+        return explode( $this->separator, trim( $databaseValue ) );
     }
 
     public function toDatabase( $propertyValue )
