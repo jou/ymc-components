@@ -49,3 +49,10 @@ Architecture: all
 Description: PHP based, graph oriented data manipulation framework
  Data can be manipulated by nodes of graph, where every node gets the 
  output of incoming nodes as input.
+
+Package: ymc-standard
+Depends: ${misc:Depends}, ymc-components
+Architecture: all
+Description: Low level classes and data structures that should be part of PHP itself
+ Includes:
+ - stream wrappers

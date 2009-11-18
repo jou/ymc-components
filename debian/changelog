@@ -1,3 +1,10 @@
+ymc-components (20091118) memo; urgency=low
+
+  * Added ymc-standard component including a stream wrapper to write 
+    to / read from variables 
+
+ -- Thomas Koch <thomas.koch@ymc.ch>  Wed, 18 Nov 2009 14:30:04 +0100
+
 ymc-components (20091117) memo; urgency=low
 
   * bugfix: whitespace made problems in separated_list converter 
