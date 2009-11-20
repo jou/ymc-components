@@ -4,9 +4,11 @@
  * Class that helps to represent a set of named boolean values as an integer.
  *
  */
-class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, serializable
+class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, Iterator, serializable
 {
     private $value = 0;
+
+    private $iteratorPosition = 0;
 
     /**
      * Contains the enum definition as a number indexed array
@@ -220,5 +222,32 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, serializable
     {
         $this->initBitSetMapping();
         $this->value = ( int )$value;
+    }
+
+    // methods implementing interface Iterator
+
+    public function current()
+    {
+        return $this->getByPosition( $this->iteratorPosition );
+    }
+
+    public function key()
+    {
+        return $this->bitSetMapping[$this->iteratorPosition];
+    }
+
+    public function next()
+    {
+        ++$this->iteratorPosition;
+    }
+
+    public function rewind()
+    {
+        $this->iteratorPosition = 0;
+    }
+
+    public function valid()
+    {
+        return $this->iteratorPosition < count( $this->bitSetMapping );
     }
 }

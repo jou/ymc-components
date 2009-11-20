@@ -1,3 +1,9 @@
+ymc-components (20091120) memo; urgency=low
+
+  * namedBitSet can be iterated 
+
+ -- Thomas Koch <thomas.koch@ymc.ch>  Fri, 20 Nov 2009 10:14:21 +0100
+
 ymc-components (20091118) memo; urgency=low
 
   * Added ymc-standard component including a stream wrapper to write 
