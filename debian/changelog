@@ -1,3 +1,9 @@
+ymc-components (20091124) memo; urgency=low
+
+  * Method to set all bits of a named bitset to true.
+
+ -- Thomas Koch <thomas.koch@ymc.ch>  Tue, 24 Nov 2009 10:23:20 +0100
+
 ymc-components (20091120) memo; urgency=low
 
   * namedBitSet can be iterated 

@@ -54,6 +54,11 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, Iterator, serial
         $this->value = $value;
     }
 
+    public function setAllTrue()
+    {
+        $this->value = pow( 2, count( $this->bitSetMapping ) ) - 1;
+    }
+
     public function getInteger()
     {
         return $this->value;
@@ -108,6 +113,14 @@ class ymcEzcPersistentObjectNamedBitSet implements ArrayAccess, Iterator, serial
             $bitset[$name] = $this->getByPosition( $offset );
         }
         return $bitset;
+    }
+
+    public function fromNamedArray( Array $data )
+    {
+        foreach( $data as $name => $value )
+        {
+            $this->setByName( $name, $value );
+        }
     }
 
     public function __get( $name )

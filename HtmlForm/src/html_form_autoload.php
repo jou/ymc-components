@@ -13,6 +13,7 @@ return array (
   'ymcHtmlFormElementCheckboxArray' => './HtmlForm/src/elements/checkbox_array.php',
   'ymcHtmlFormElementText' => './HtmlForm/src/elements/text.php',
   'ymcHtmlFormElementButton' => './HtmlForm/src/elements/button.php',
+  'ymcHtmlFormElementDateTime' => './HtmlForm/src/elements/datetime.php',
   'ymcHtmlFormInputSourceDummy' => './HtmlForm/src/input_sources/dummy.php',
   'ymcHtmlFormInputSourceFilterExtension' => './HtmlForm/src/input_sources/filter_extension.php',
   'ymcHtmlFormFailureNotInSet' => './HtmlForm/src/failures/not_in_set.php',
