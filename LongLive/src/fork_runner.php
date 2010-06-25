@@ -66,7 +66,7 @@ class ymcLongLiveForkRunner
                     sleep( $snooze );
                 }
                 $return = $fork->run();
-                exit();
+                exit($return);
             }
             else
             {
@@ -99,7 +99,7 @@ class ymcLongLiveForkRunner
      * 
      * @param callback $ticker callback to call during each loop
      */
-    public function supervise( $ticker = NULL )
+    public function supervise( $ticker = NULL, $respawnChecker = NULL )
     {
         // loop and monitor children
         while( !empty( $this->children ) )
@@ -139,7 +139,13 @@ class ymcLongLiveForkRunner
                                     $fork->getDurationSeconds()
                                   ), ezcLog::INFO );
                                   //@TODO make reforking configurable
-                                  if( $this->respawn )
+                                  $respawn = $this->respawn;
+                                  if ( $respawn && is_callable( $respawnChecker ) )
+                                  {
+                                      $respawn = call_user_func( $respawnChecker, $pid, $exitstatus );
+                                  }
+
+                                  if( $respawn )
                                   {
                                       self::log( 'refork '.$fork->description, ezcLog::INFO );
                                       $this->fork( $fork );
