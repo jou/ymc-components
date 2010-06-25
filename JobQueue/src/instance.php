@@ -6,7 +6,7 @@ class ymcJobQueueInstance
      * Identifier of the instance that will be returned
      * when you call get() without arguments.
      *
-     * @see ezcPersistentSessionInstance::get()
+     * @see ymcJobQueueInstance::get()
      * @var string
      */
     static private $defaultInstanceIdentifier = null;
@@ -86,7 +86,7 @@ class ymcJobQueueInstance
      * To retrieve the default database instance
      * call get() with no parameters..
      *
-     * @see ezcPersistentSessionInstance::get().
+     * @see ymcJobQueueInstance::get().
      * @param string $identifier
      * @return void
      */
