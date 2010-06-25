@@ -110,10 +110,10 @@ class ymcJobQueueInstance
      *
      * @return void
      */
-    public function reset()
+    public static function reset()
     {
-        $this->defaultInstanceIdentifier = false;
-        $this->instances = array();
+        self::resetDefault();
+        self::$instances = array();
     }
 }
 
