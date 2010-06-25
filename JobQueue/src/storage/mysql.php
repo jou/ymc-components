@@ -100,12 +100,12 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
      * @param array $jobClasses To filter the jobs
      * @return array
      */
-    public function pop( $jobClasses = array() )
+    public function pop( $jobClasses = array(), $randomizeList = true )
     {
         // get me the numeric keys of the classes I'm searching for
         $classes = array_keys( array_intersect( $this->jobClasses, $jobClasses ) );
         
-        $id = $this->popJobId( $classes );
+        $id = $this->popJobId( $classes, $randomizeList );
         if( !$id ) return $id;
 
         $q = $this->db->createSelectQuery();
@@ -130,7 +130,7 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
      * @access public
      * @return void
      */
-    public function popJobId( Array $classes )
+    public function popJobId( Array $classes, $randomizeList = true )
     {
         $q = $this->db->createSelectQuery();
         $q->select( 'id' )->from( self::TABLE );
@@ -153,12 +153,12 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
 
         if( empty( $ids ) ) return NULL;
 
-        // try the first id
-        //$id = array_pop( $ids );
-        //if( $this->lock( $id ) ) return $id;
+        // Try to acquire a lock
+        if ( $randomizeList )
+        {
+            shuffle( $ids );
+        }
 
-        // Try the rest in random order
-        shuffle( $ids );
         while( $id = array_shift( $ids ) )
         {
             if( $this->lock( $id ) ) return $id;

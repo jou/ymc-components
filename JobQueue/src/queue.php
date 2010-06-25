@@ -46,11 +46,12 @@ class ymcJobQueue
      * Returns a job and locks it but doesn't deletes it from the DB.
      * 
      * @param array $jobClasses optional list of job types I'd like to receive.
+     * @param bool $randomizeJobList Whether to shuffle job list before trying to aquire a lock.
      * @return ymcJobQueueJob
      */
-    public function pop( $jobClasses = array() )
+    public function pop( $jobClasses = array(), $randomizeJobList = true )
     {
-        $job = $this->storage->pop( $jobClasses );
+        $job = $this->storage->pop( $jobClasses, $randomizeJobList );
 
         if( !$job ) return NULL;
         
