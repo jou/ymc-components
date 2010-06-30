@@ -1,2 +1,2 @@
-LongLive/src /usr/share/ymc-components/JobQueue
-LongLive/src/*_autoload.php /usr/share/ymc-components/autoload
+JobQueue/src /usr/share/ymc-components/JobQueue
+JobQueue/src/*_autoload.php /usr/share/ymc-components/autoload
