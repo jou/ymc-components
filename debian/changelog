@@ -1,3 +1,10 @@
+ymc-components (20100706) memo; urgency=low
+
+  * JobQueue: Timed job execution
+  * ymcLongLiveForkRunner: hook to determine child respawn
+
+ -- Jiayong Ou <jiayong.ou@ymc.ch>  Tue, 06 Jul 2010 16:47:02 +0200
+
 ymc-components (20100621) memo; urgency=low
 
   * Added JobQueue component
