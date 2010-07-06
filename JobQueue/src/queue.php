@@ -38,7 +38,7 @@ class ymcJobQueue
         {
             $state = '';
         }
-        $id = $this->storage->push( get_class( $job ), $state, $activate ? $job->priority : 0 );
+        $id = $this->storage->push( get_class( $job ), $state, $job->executeAt, $activate ? $job->priority : 0 );
         $job->id = $id;
     }
 
@@ -103,6 +103,7 @@ class ymcJobQueue
         return array( 
             'class' => get_class( $job ),
             'priority' => $job->priority,
+            'executeAt' => $job->executeAt,
             'state' => $job instanceof Serializable
                        ? $job->serialize()
                        : ''
@@ -129,6 +130,7 @@ class ymcJobQueue
         }
         $job->id = $jobArray['id'];
         $job->priority = $jobArray['priority'];
+		$job->executeAt = $jobArray['execute_at'];
 
         return $job;
     }
@@ -148,7 +150,7 @@ class ymcJobQueue
         {
             $state = '';
         }
-        $this->storage->update( $job->id, get_class( $job ), $state, $job->priority );
+        $this->storage->update( $job->id, get_class( $job ), $state, $job->executeAt, $job->priority );
     }
 
     /**

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Base class for jobs.
+ *
+ * @property-read DateTime $executeAt When to execute the job or null if there's no time constraint
+ * @property-write DateTime|int|string|null $executeAt Integers are interpreted as unix timestamps, strings are passed to DateTime::__construct().
+ */
 abstract class ymcJobQueueJob implements Serializable
 {
     public $id;
@@ -12,6 +18,14 @@ abstract class ymcJobQueueJob implements Serializable
      * @var array
      */
     protected $state = array();
+
+	/**
+	 * When to execute this job. NULL says it can be executed any time.
+	 * __set() takes care of the conversion to DateTime.
+	 *
+	 * @var DateTime
+	 */
+	protected $executeAt;
 
     private $_needsUpdate_ = FALSE;
 
@@ -67,17 +81,46 @@ abstract class ymcJobQueueJob implements Serializable
 
     public function __set( $property, $value )
     {
-        $this->state[$property] = $value;
+        switch ( $property ) 
+        {
+            case 'executeAt':
+				if ( is_int( $value ) || is_numeric( $value ) )
+                {
+                    $value = DateTime::createFromFormat( 'U', (int)$value );
+                }
+				elseif ( is_string( $value ) )
+                {
+                    $value = new DateTime($value);
+                }
+
+				// Still neither a DateTime nor a null? So long!
+                if ( ( $value !== null ) && !( $value instanceof DateTime ) )
+                {
+                    throw new Exception( "No valid time given" );
+                }
+
+                $this->executeAt = $value;
+                break;
+            default:
+                $this->state[$property] = $value;
+                break;
+        }
     }
 
     public function __get( $property )
     {
-        if( isset( $this->state[$property]) )
-        {
-            return $this->state[$property];
-        }
+		switch ( $property )
+		{
+			case 'executeAt':
+				return $this->$property;
+			default:
+				if( isset( $this->state[$property]) )
+				{
+					return $this->state[$property];
+				}
 
-        return NULL;
+				return NULL;
+		}
     }
 
     public function __isset( $property )

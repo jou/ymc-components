@@ -4,6 +4,15 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
 {
     const TABLE = 'job_queue';
     const LOCKPREFIX = 'jq';
+    const DB_TIMEZONE = 'UTC';
+
+    /**
+     * Timezone of the DB as PHP DateTimeZone object. 
+     * Created by the constructor if is hasn't been created yet.
+     *
+     * @var DateTimeZone
+     */
+    private static $dbTimezone;
 
     /**
      * Database instance to work on.
@@ -40,12 +49,17 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
      */
     private $pushStmt;
 
-    private $pushParamClass, $pushParamPriority, $pushParamState;
+    private $pushParamClass, $pushParamPriority, $pushParamState, $pushParamExecuteAt;
 
     public function __construct( ezcDbHandlerMysql $db, Array $jobClasses )
     {
         $this->db = $db;
         $this->jobClasses = $jobClasses;
+
+        if ( self::$dbTimezone === null )
+        {
+            self::$dbTimezone = new DateTimeZone( self::DB_TIMEZONE );
+        }
     }
 
     /**
@@ -120,6 +134,12 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
         {
             $result['class'] = $this->jobClasses[$result['class']];
         }
+
+        if ( isset( $result['execute_at'] ) && ( $result['execute_at'] !== null ) )
+        {
+            $result['execute_at'] = new DateTime( $result['execute_at'], self::$dbTimezone );
+        }
+
         return $result;
     }
 
@@ -134,13 +154,20 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
     {
         $q = $this->db->createSelectQuery();
         $q->select( 'id' )->from( self::TABLE );
+        $e = $q->expr;
 
         // Don't run deactivated jobs
-        $q->where( $q->expr->neq( 'priority', 0 ) );
+        $q->where( $e->neq( 'priority', 0 ) );
+
+        // Ignore jobs that are to be executed later
+        $q->where( $e->lOr( 
+            $e->lte( 'execute_at', $e->now() ),
+            $e->isNull( 'execute_at' )
+        ) );
 
         if( !empty( $classes ) )
         {
-            $q->where( $q->expr->in( 'class', $classes ) );
+            $q->where( $e->in( 'class', $classes ) );
         }
 
         $q->orderBy( 'priority', ezcQuerySelect::ASC )
@@ -171,15 +198,24 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
      * 
      * @param integer $jobClass 1-255, see jobClasses
      * @param integer $priority 1-255, 1 is most important
+     * @param DateTime $executeAt When the job can be executed at the earliest, or null if it can be executed at any time
      * @param string  $state    binary, serialized state
      * @access public
      * @return void
      */
-    public function push( $jobClass, $state, $priority = 0 )
+    public function push( $jobClass, $state, DateTime $executeAt = null, $priority = 0 )
     {
-        $this->pushParamClass    = array_search( $jobClass, $this->jobClasses );
-        $this->pushParamPriority = $priority;
-        $this->pushParamState    = $state;
+
+        $this->pushParamClass     = array_search( $jobClass, $this->jobClasses );
+        $this->pushParamPriority  = $priority;
+        $this->pushParamState     = $state;
+		$this->pushParamExecuteAt = null;
+
+		if( $executeAt !== null )
+		{
+			$executeAt->setTimezone( self::$dbTimezone );
+			$this->pushParamExecuteAt = $executeAt->format( 'Y-m-d H:i:s' );
+		}
 
         if( NULL === $this->pushStmt )
         {
@@ -188,6 +224,7 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
             $q->set( 'class',    $q->bindParam( $this->pushParamClass ) );
             $q->set( 'priority', $q->bindParam( $this->pushParamPriority ) );
             $q->set( 'state',    $q->bindParam( $this->pushParamState ) );
+            $q->set( 'execute_at', $q->bindParam( $this->pushParamExecuteAt ) );
             $this->pushStmt = $q->prepare();
         }
         $this->pushStmt->execute();
@@ -224,7 +261,7 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
             $this->db->beginTransaction();
             foreach( $followUpJobs as $fJob )
             {
-                $this->push( $fJob['class'], $fJob['state'], $fJob['priority'] );
+                $this->push( $fJob['class'], $fJob['state'], $fJob['executeAt'], $fJob['priority'] );
             }
         }
 
@@ -250,13 +287,19 @@ class ymcJobQueueStorageMysql //implements ymcJobQueueStorage
         $q->prepare()->execute();
     }
 
-    public function update( $id, $jobClass, $state, $priority )
+    public function update( $id, $jobClass, $state, DateTime $executeAt, $priority )
     {
         $q = $this->db->createUpdateQuery();
         $q->update( self::TABLE );
         $q->set( 'class',    $q->bindValue( array_search( $jobClass, $this->jobClasses ) ) );
         $q->set( 'priority', $q->bindValue( $priority ) );
         $q->set( 'state',    $q->bindValue( $state ) );
+		if( $executeAt !== null )
+		{
+			$executeAt->setTimezone( self::$dbTimezone );
+			$q->set( 'execute_at', $q->bindValue( $executeAt->format( 'Y-m-d H:i:s' ) ) );
+		}
+
         $q->where( $q->expr->eq( 'id', $q->bindValue( $id ) ) );
 
         $q->prepare()->execute();
