@@ -57,6 +57,13 @@ Description: Low level classes and data structures that should be part of PHP it
  Includes:
  - stream wrappers
 
+Package: ymc-i18n
+Depends: ${misc:Depends}, ymc-components
+Architecture: all
+Description: Helper Classes for I18N
+ Includes:
+ - date format symbols (week, month names) for different languages
+
 Package: ymc-jobqueue
 Depends: ${misc:Depends}, ymc-components
 Architecture: all
