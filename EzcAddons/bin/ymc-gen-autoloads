@@ -120,7 +120,7 @@ if( $prefix )
     $autoloadArray = filterByPrefix( $autoloadArray, $prefix );
     //The autoload framework searches also for two word prefixes. So we need to
     //convert the prefix DbSchema to the filename db_schema_autoload.php
-    preg_match_all( '/[A-Z][a-z]+/', $prefix, $matches );
+    preg_match_all( '/[A-Z][a-z0-9]+/', $prefix, $matches );
     $filename = strtolower( implode( '_', $matches[0] ) ).'_autoload.php';
 }
 else
