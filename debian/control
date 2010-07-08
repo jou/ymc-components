@@ -56,3 +56,9 @@ Architecture: all
 Description: Low level classes and data structures that should be part of PHP itself
  Includes:
  - stream wrappers
+
+Package: ymc-jobqueue
+Depends: ${misc:Depends}, ymc-components
+Architecture: all
+Description: Implements a simple work queue in PHP
+ pluggable persistence (e.g. MySQL), job priority

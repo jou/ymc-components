@@ -1,3 +1,9 @@
+ymc-components (20100621) memo; urgency=low
+
+  * Added JobQueue component
+
+ -- Jiayong Ou <jiayong.ou@ymc.ch>  Mon, 21 Jun 2010 16:45:51 +0200
+
 ymc-components (20091124) memo; urgency=low
 
   * Method to set all bits of a named bitset to true.
@@ -31,7 +37,7 @@ ymc-components (20091023) memo; urgency=low
 
  -- Thomas Koch <thomas.koch@ymc.ch>  Fri, 23 Oct 2009 11:34:44 +0200
 
-ymc-components (20090926) memo; urgency=low
+ymc-components (20090925) memo; urgency=low
 
   * Initial release.
 
