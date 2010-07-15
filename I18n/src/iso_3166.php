@@ -3,6 +3,7 @@
 class ymcI18nIso3166
 {
     const XMLPATH = '/usr/share/xml/iso-codes/iso_3166.xml';
+    const DOMAIN = 'iso_3166';
 
     private static $countries;
 
@@ -18,6 +19,7 @@ class ymcI18nIso3166
             $this->doNotTranslate = TRUE;
         }
         self::initCountries();
+        bind_textdomain_codeset( self::DOMAIN, 'UTF-8' );
     }
 
     public function getLocaleCountryName( $countryAlpha2 )
@@ -68,7 +70,7 @@ class ymcI18nIso3166
         {
             return $countryName;
         }
-        return dgettext( 'iso_3166', $countryName );
+        return dgettext( self::DOMAIN, $countryName );
     }
 
     private function initCountries()
