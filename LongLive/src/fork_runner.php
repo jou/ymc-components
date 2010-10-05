@@ -9,7 +9,7 @@ class ymcLongLiveForkRunner
 
     /**
      * All processes forked by this runner.
-     * 
+     *
      * @var array( pid => ymcLongLiveFork )
      */
     private $children = array();
@@ -18,17 +18,32 @@ class ymcLongLiveForkRunner
      * Whether terminated children should be restarted.
      *
      * Must be set to false when receiving a SIGKILL. Otherwise the program is unstoppable.
-     * 
+     *
      * @var boolean
      */
     protected $respawn = TRUE;
 
     /**
+    * Port to listen for status requests.
+    *
+    * @var integer
+    */
+    protected $port = 5678;
+
+    public function __construct($statusPort=null)
+    {
+        if($statusPort!=null)
+        {
+            $this->statusPort = $statusPort;
+        }
+    }
+
+    /**
      * Starts $count clones of $fork
-     * 
-     * @param int $count 
-     * @param ymcLongLiveFork $fork 
-     * @param int $snooze 
+     *
+     * @param int $count
+     * @param ymcLongLiveFork $fork
+     * @param int $snooze
      */
     public function multiFork( $count, ymcLongLiveFork $fork, $snooze = 0 )
     {
@@ -40,7 +55,7 @@ class ymcLongLiveForkRunner
 
     /**
      * Starts a fork
-     * 
+     *
      * @param ymcLongLiveFork $fork contains the callback to run in the forked child
      * @param float $snooze   wait $snooze seconds before entering the callback
      *
@@ -54,8 +69,8 @@ class ymcLongLiveForkRunner
         if( $pid === -1 )
         {
             throw new Exception('could not fork');
-        } 
-        else 
+        }
+        else
         {
             if( $pid === 0 )
             {
@@ -79,8 +94,8 @@ class ymcLongLiveForkRunner
 
     /**
      * Sends $signal to all forks started by this runner
-     * 
-     * @param int $signal 
+     *
+     * @param int $signal
      */
     public function propagateSignal( $signal )
     {
@@ -96,7 +111,7 @@ class ymcLongLiveForkRunner
 
     /**
      * Supervise the children and react on finished processes.
-     * 
+     *
      * @param callback $ticker callback to call during each loop
      */
     public function supervise( $ticker = NULL, $respawnChecker = NULL )
@@ -119,7 +134,7 @@ class ymcLongLiveForkRunner
                             // signal which was not caught
                             case pcntl_wifsignaled( $status ):
                                 self::log(
-                                  sprintf( 
+                                  sprintf(
                                     'Child %d, %s terminated from signal %d after running %d seconds.',
                                     $pid,
                                     $fork->description,
@@ -131,7 +146,7 @@ class ymcLongLiveForkRunner
                             case pcntl_wifexited( $status ):
                                 $exitstatus = pcntl_wexitstatus( $status );
                                 self::log(
-                                  sprintf( 
+                                  sprintf(
                                     'Child %d, %s exited with status %d after running %d seconds.',
                                     $pid,
                                     $fork->description,
@@ -191,14 +206,14 @@ class ymcLongLiveForkRunner
 
     /**
      * having this method here in the fork runner is an ugly hack.
-     * 
+     *
      */
     protected function runServer()
     {
         static $server;
         if( !$server )
         {
-            $server = new ymcLongLiveSimpleServer( 5678 );
+            $server = new ymcLongLiveSimpleServer( $this->statusPort );
         }
         $line = $server->getLine( 5 );
         if( !$line )
@@ -213,11 +228,11 @@ class ymcLongLiveForkRunner
                 $now = time();
                 foreach( $this->children as $pid => $fork )
                 {
-                    $out = sprintf( "[%8d] %10d s %s\n", 
+                    $out = sprintf( "[%8d] %10d s %s\n",
                                     (int)$pid,
                                     (int)$now - $fork->startTime->format( 'U' ),
                                     $fork->description
-                                    );    
+                                    );
                     $server->write( $out );
                 }
             break;
@@ -238,7 +253,7 @@ class ymcLongLiveForkRunner
 
     /**
      * would be better to use trigger_error as described in the eZ Components docs.
-     * 
+     *
      */
     protected static function log( $message, $severity = ezcLog::DEBUG, Array $attributes = array() )
     {
